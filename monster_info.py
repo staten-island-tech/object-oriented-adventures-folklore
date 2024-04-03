@@ -1,3 +1,2 @@
-class monsters:
-    
-    
+import json
+import os
