@@ -1,0 +1,21 @@
+[{
+    "name": "Maldachaunians",
+    "description": "",
+    "loot": "2 - 5 pieces of gold, 3 - 10 pieces of silver, Cabbage (Food), Fowl (Food)"
+},{
+    "name": "Wimitescu",
+    "description": "",
+    "loot": "3 - 8 pieces of gold, 8 - 15 pieces of silver, Broken wooden mallets"
+},{
+    "name": "Elves",
+    "description": "",
+    "loot": "5 - 15 pieces of gold, 10 - 20 pieces of silver, Broken Bow, (20% chance of) a healing potion"
+},{
+    "name": "Water Spirits",
+    "description": "",
+    "loot": ""
+},{
+    "name": "Unknown",
+    "description": "[redacted]",
+    "loot": "[redacted]"
+}]
