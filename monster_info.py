@@ -12,3 +12,9 @@ class monster_info:
                 print(i['Name'])
                 print(i['Description'])
                 print(i['Loot'])
+
+class Maldachaunians:
+    def attack():
+        hp = 100
+        print("OOGAH BOOGAH!")
+        
