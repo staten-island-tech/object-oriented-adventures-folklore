@@ -1,7 +1,8 @@
 [{
     "Name": "Maldachaunians",
     "Description": "",
-    "Loot": "2 - 5 pieces of gold, 3 - 10 pieces of silver, Cabbage (Food), Fowl (Food)"
+    "Loot": "2 - 5 pieces of gold, 3 - 10 pieces of silver, Cabbage (Food), Fowl (Food)",
+    "Hp": "100"
 },{
     "Name": "Wimitescu",
     "Description": "",
