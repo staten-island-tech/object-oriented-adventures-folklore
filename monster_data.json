@@ -6,15 +6,18 @@
 },{
     "Name": "Wimitescu",
     "Description": "",
-    "Loot": "3 - 8 pieces of gold, 8 - 15 pieces of silver, Broken wooden mallets"
+    "Loot": "3 - 8 pieces of gold, 8 - 15 pieces of silver, Broken wooden mallets",
+    "Hp": "200"
 },{
     "Name": "Elves",
     "Description": "",
-    "Loot": "5 - 15 pieces of gold, 10 - 20 pieces of silver, Broken Bow, (20% chance of) a healing potion"
+    "Loot": "5 - 15 pieces of gold, 10 - 20 pieces of silver, Broken Bow, (20% chance of) a healing potion",
+    "Hp": "100"
 },{
     "Name": "Water Spirits",
     "Description": "",
-    "Loot": ""
+    "Loot": "",
+    "Hp": "150"
 },{
     "Name": "Final Boss: Unknown",
     "Description": "[redacted]",
