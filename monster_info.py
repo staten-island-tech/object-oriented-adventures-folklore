@@ -18,18 +18,16 @@ class monster_info:
         for i in monster_data:
             if loot in i['Loot'].upper():
                 print(i['Name'])
-    def search_hp():
-        while True: 
-            hp = input("What monsters have an hp of:\n")
-            for h in monster_data:
-                    if hp == h['Hp']:
-                        print(h['Name'])
-                        break
-                    else:
-                        print(f"No monster with {hp} Hp!\n(Reminder: Monsters only have hps of: 50, 100, 150, or 200)\n")
-                        break
-        
-monster_info.search_hp()
+    def search_hp(): 
+        hp = input("What monsters have an hp of:\n")
+        for h in monster_data:
+            if hp in h['Hp']:
+                print(h['Name'])
+                break
+            else:
+                print(f"No monster with {hp} Hp!\n(Reminder: Monsters only have hps of: 50, 100, 150, or 200)\n")
+                break
+                
 class monsters:
     def maldachaunians():
         hp = 100
