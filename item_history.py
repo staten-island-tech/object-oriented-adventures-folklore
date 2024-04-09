@@ -26,9 +26,6 @@ def data_collection():
 if __name__ == "__main__":
     data_collection()
 
-    if input == ("item.help"):
-        print (Item_description)
-
 Item_description = [{
     'Item name': "Sword",
     'Item cateogory': "Weapon/Combat",
@@ -46,9 +43,22 @@ Item_description = [{
     'Item cateogory': "Spell",
     'Description': "",
 },{
-    'Item name': "",
-    'Item cateogory':"",
-    'Description': "",
+    'Item name': "Meat",
+    'Item cateogory':"Food",
+    'Description': "This item can be consumed. Restores HP for each piece of meat eaten (pork, steak, chicken, lamb)",
+},{
+    'Item name': "Pickaxe",
+    'Item cateogory':"Weapon/Combat",
+    'Description': "Used in combat: Strength is dependent on the level of the Pickaxe",
+},{
+    'Item name': "Cake",
+    'Item cateogory':"Food",
+    'Description': "Can be consumed. Item is made using ingredients: flour, milk, egg, and sugar",
+},{
+    'Item name': "Bow and Arrow",
+    'Item cateogory':"Weapon/Combat",
+    'Description': "Used in combat: Strength is dependent on level and the use of arrow(s)",
 }]
-    
-print(Item_description)
+
+if input == ("item.help"):
+    print (Item_description)   
