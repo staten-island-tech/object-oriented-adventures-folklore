@@ -1,5 +1,4 @@
 import json
-import os
 
 test = open("monster_data.json", encoding = "utf8")
 monster_data = json.load(test)
@@ -19,27 +18,16 @@ class monster_info:
             if loot in i['Loot'].upper():
                 print(i['Name'])
     def search_hp(): 
-        hp = input("What monsters have an hp of:\n")
-        for h in monster_data:
-            if hp in h['Hp']:
-                print(h['Name'])
-                break
-            else:
-                print(f"No monster with {hp} Hp!\n(Reminder: Monsters only have hps of: 50, 100, 150, or 200)\n")
-                break
-                
-class monsters:
-    def maldachaunians():
-        hp = 100
-        print("OOGAH BOOGAH!")
-    def wimitescu():
-        hp = 200
-    def elves():
-        hp = 100
-    def water_spirits():
-        hp = 150 
+        h = int(input("What monsters have an hp of:\n(Reminder: Monsters only have hps of: 50, 100, 150, or 200)\n"))
+        for x in monster_data:
+            if h == x["Hp"]:
+                print(x['Name'])   
 
 class encounter:
+    def Maldachaunians():
+        hp = 100
+        print("OOOGA BOOGA!!")
+
     def enco_monster():
         while True:
             choose = input("What would you like to do? A/B/C\n(Type: 'help' for explanation on encounters)\n").upper()
