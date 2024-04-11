@@ -2,20 +2,17 @@ import json
 import os
 
 class history:
-    def __init__(self, name, age, gender):
+    def __init__(self, name):
         self.name = name
-        self.age = age
-        self.gender = gender
+    
     def __str__(self):
-        return f"{self.name},{self.age}, {self.gender}"
+        return f"{self.name}"
     
 with open("player_history.json", "r") as f:
     player_data = json.load(f)
 
 name = input("What is your name?\n")
-age = input("How old are you?\n")
-gender = input("What gender do you identify as?\n")
-x = history(name,age,gender)
+x = history(name)
 player_data.append(x.__dict__)
 
 new_file = "updated.json"
