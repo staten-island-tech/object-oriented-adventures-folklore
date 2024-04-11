@@ -61,4 +61,4 @@ Item_description = [{
 }]
 
 if input == ("item.help"):
-    print (Item_description)   
+    print(Item_description)   
