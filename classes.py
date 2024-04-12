@@ -12,20 +12,18 @@ monster_data = json.load(test)
 
 class start:
     def interface():
-        os.system('cls')
         print("1. Start Game")
         print("2. How to play")
         print("3. Exit Game")
-        pick_option = int(input("What would you like to do? (ex: 1, 2, 3, or 4): \n"))
+        pick_option = input("What would you like to do? (ex: 1, 2, or 3): \n")
         os.system('cls')
 
-        if pick_option == 1:
+        if pick_option == "1":
             print()
-        elif pick_option == 2:
+        elif pick_option == "2":
             print()
-        elif pick_option == 3:
+        elif pick_option == "3":
             print("Bye bye!")
-            os.system('cls')
 
 class monster_info:
     def search_name():
