@@ -25,12 +25,12 @@ class boxes:
 
 class Global:
     global picking_friends
-    picking_friends = input("Would you like to go up, straight or down? B(Up) C(Straight Foward) J(Down)")
+    picking_friends = input("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
 
 class Betty:
     def bet():
                 #After arriving in the village for the first time and you pick Betty as your friend.
-        if picking_friends == "B":
+        if picking_friends == "A":
                     #Betty's Lines
             os.system('cls')
             print("\x1B[3m You saw a magnifcent tower.\nA strong magically energy draws you near.\nAs you apoarched you saw a girl and you ask for her name.")
@@ -38,29 +38,28 @@ class Betty:
             os.system('cls')
 
             print("\x1B[0mTraveller:")
-            print("Hi, I am new to this town.\nCan you tell me your name?")
+            print(boxed_msg("Hi, I am new to this town.\nCan you tell me your name?"))
             time.sleep(5)
             os.system('cls')
 
             print("\x1B[0mBetty:")
-            print("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely.")
+            print(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
             time.sleep(5)
             os.system('cls')
 
             print("\x1B[0mTraveller:")
-            print("Thank you.")
+            print(boxed_msg("Thank you."))
             time.sleep(5)
             os.system('cls')
 
             print("\x1B[0mBetty:")    
-            print("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap.")
+            print(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
             time.sleep(5)
             os.system('cls')
 
 class MrsChu:
-    
     def Chu():
-        if picking_friends == "C":
+        if picking_friends == "W":
             os.system('cls')
             print("\x1B[3mYou saw a fountain.\nThe flowers flew out of the structure like fairies covering the square in a shimmering light.\nA powerful rejuvenating shock went through you.\nAs you walk up to the fountain, you found your math teacher from your previous world.\nMrs. Chu looks shocked and quickly waved to you.")
             time.sleep(7)
@@ -88,7 +87,7 @@ class MrsChu:
 
             print("\x1B[0mTraveller:")
             print(boxed_msg("Do you know how I can get back?"))
-            time.sleep(5)
+            time.sleep(3)
             os.system('cls')
 
             print("\x1B[0mMrs.Chu:")
@@ -96,6 +95,73 @@ class MrsChu:
             time.sleep(10)
             os.system('cls')
 
+class James:
+    def Jame():
+        if picking_friends == "S":
+            os.system('cls')
+            print("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to a old lady and sneakly take her purse from her pockets. \nYou followed him behind and noticed you.")
 
+           
+            print("\x1B[0mStranger:")
+            print(boxed_msg("You are not being sneaky following me like that."))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[0mTraveller:")
+            print(boxed_msg("..."))
+            time.sleep(2)
+            os.system('cls')
+
+            print("\x1B[0mStranger:")
+            print(boxed_msg("How come I never seen you around here?"))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[0mTraveller:")
+            print(boxed_msg("I am new to this town."))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[0mStranger:")
+            print(boxed_msg("I know you saw what I did.\n So either you join me or I will end you right here and now."))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[0mTraveller:")
+            print(boxed_msg("I guess I would join you."))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[0mStranger:")
+            print(boxed_msg("Okay great. \nI will show you around. \nMy names is James by the way. \nThis is the underground alley of this town.\nThis is basically the black market."))
+            time.sleep(3)
+            os.system('cls')
+
+            print("\x1B[3mYou have the option to punch him, while he is distracted or just wait and see what happends...")
+            PunchJames = input("Would you like to punch games? (yes/no)").upper()
+            if PunchJames == "YES":
+                print("\x1B[0mJames:")
+                print(boxed_msg("You back stabbing mole rat!"))
+                time.sleep(3)
+                os.system('cls')
+
+                PunchingJames = input("Run or Slaughter him? (run/slaughter)").upper()
+                if PunchingJames == "Run":
+                    print("\x1B[0mYou have escaped and you reached the merchant.")
+                else:
+                    print("\x1B[0mYou murdered James, and you run to the river to clean yourself up. Then you ran towards the mercahnt to get other materials.")
+                os.system('cls')
+
+            if PunchJames == "NO":
+                print("\x1B[0mJames:")
+                print(boxed_msg("You should never trust a me."))
+                time.sleep(3)
+                os.system('cls')
+
+                print("\x1B[0mJames murdered you.")
+
+
+
+James.Jame()
 MrsChu.Chu()
 Betty.bet()
