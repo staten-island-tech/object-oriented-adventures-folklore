@@ -1,3 +1,5 @@
+import json
+
 class Items():
     def __init__(self, item, description)-> None:
         self.item = item
@@ -23,18 +25,29 @@ def data_collection():
             break
         else:
             print("Invalid option. Please enter 'YES' or 'NO'")
-        data_collection()
+        data_collection(data)
+        for i in data:
+            print(i)
+ 
+ with open("data.json", "r") as f:
+    # Serialize the updated Python list to a JSON string
+    data = json.load(f)
+    pokemon_list= [Items.__dict__]
+    data.append(Items)
+    ##Call classes in here
 
 #No code needed below this line
 # Creates a new JSON file with the updated data
 new_file = "updated.json"
 with open(new_file, "w") as f:
     # Serialize the updated Python list to a JSON string
-    json_string = json.dumps(data)
+    json_string = json.dumps()
 
     # Write the JSON string to the new JSON file
     f.write(json_string)
-    
+    f.close()
+
+
 Item_description = [{
     'Item name': "Sword",
     'Item cateogory': "Weapon/Combat",
@@ -103,3 +116,7 @@ Item_description = [{
  """
 if input == ("item.help"):
     print (Item_description)   
+
+json_object = json.dumps(Item_description, indent = 4) 
+# Print JSON object
+print(json_object) 
