@@ -1,3 +1,5 @@
+import os
+
 class start:
     def interface():
         print("1. Start Game")
