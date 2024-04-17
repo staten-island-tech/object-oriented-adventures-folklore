@@ -29,7 +29,7 @@ def data_collection():
         for i in data:
             print(i)
  
- with open("data.json", "r") as f:
+with open("data.json", "r") as f:
     # Serialize the updated Python list to a JSON string
     data = json.load(f)
     pokemon_list= [Items.__dict__]
@@ -115,7 +115,7 @@ Item_description = [{
 'Description': "", 
  """
 if input == ("item.help"):
-    print (Item_description)   
+    print(Item_description)   
 
 json_object = json.dumps(Item_description, indent = 4) 
 # Print JSON object
