@@ -47,7 +47,7 @@ class monster_info:
 
 class encounter:
     def Maldachaunians():
-        hp = 100
+        m_hp = 100
         print("OOOGA BOOGA!!")
 
     def enco_monster():
