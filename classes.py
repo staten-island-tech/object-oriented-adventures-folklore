@@ -20,10 +20,15 @@ class start:
 
         if pick_option == "1":
             print()
+            os.system('cls')
+
         elif pick_option == "2":
             print()
+            os.system('cls')
+
         elif pick_option == "3":
             print("Bye bye!")
+            os.system('cls')
 
 class monster_info:
     def search_name():
