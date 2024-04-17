@@ -45,41 +45,67 @@ class boxes:
 class Global:
     global picking_friends
     picking_friends = typingInput("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
+    global encountering_characters
+    def encountering_characters():
+        Meeting_Another_Character = typingInput("\x1B[3m You decided to back to the road.")
+        time.sleep(5)
+        os.system('cls')
+        ###work from here
+
+
+
 
 class Betty:
-    global bet
-    def bet():
+    def first_en_bet():
                 #After arriving in the village for the first time and you pick Betty as your friend.
         if picking_friends == "A":
                     #Betty's Lines
             os.system('cls')
-            typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.")
+            typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning yoy to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
             time.sleep(5)
             os.system('cls')
 
-            print("\x1B[0mTraveller:")
-            typingPrint(boxed_msg("Hi, I am new to this town.\nCan you tell me your name?"))
+            going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no").upper()
+            if going_to_Betty == "YES":
+                bet_Continue()
+            
+            if going_to_Betty == "NO":
+                bet_notcontinue()
             time.sleep(5)
             os.system('cls')
+            
+            def bet_Continue():
+                print("\x1B[0mStranger:")    
+                typingPrint(boxed_msg("Are you here to climb the tower?"))
+                time.sleep(2)
+                os.system('cls')
 
-            print("\x1B[0mBetty:")
-            typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
-            time.sleep(5)
-            os.system('cls')
+                print("\x1B[0mTraveller:")
+                typingPrint(boxed_msg("No, not really.\n I am new to this town."))
+                time.sleep(5)
+                os.system('cls')
 
-            print("\x1B[0mTraveller:")
-            typingPrint(boxed_msg("Thank you."))
-            time.sleep(5)
-            os.system('cls')
+                print("\x1B[0mBetty:")
+                typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
+                time.sleep(5)
+                os.system('cls')
 
-            print("\x1B[0mBetty:")    
-            typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
-            time.sleep(5)
-            os.system('cls')
+                print("\x1B[0mTraveller:")
+                typingPrint(boxed_msg("Thank you."))
+                time.sleep(5)
+                os.system('cls')
+
+                print("\x1B[0mBetty:")    
+                typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
+                time.sleep(5)
+                os.system('cls')
+
+            def bet_notcontinue():
+
+
 
 class MrsChu:
-    global Chu
-    def Chu():
+    def first_en_Chu():
         if picking_friends == "W":
             os.system('cls')
             typingPrint("\x1B[3mYou saw a fountain.\nThe flowers flew out of the structure like fairies covering the square in a shimmering light.\nA powerful rejuvenating shock went through you.\nAs you walk up to the fountain, you found your math teacher from your previous world.\nMrs. Chu looks shocked and quickly waved to you.")
@@ -117,8 +143,7 @@ class MrsChu:
             os.system('cls')
 
 class James:
-    global James
-    def Jame():
+    def first_en_Jame():
         if picking_friends == "S":
             os.system('cls')
             typingPrint("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to a old lady and sneakly take her purse from her pockets. \nYou followed him behind and noticed you.")
@@ -184,6 +209,6 @@ class James:
 
 
 
-James.Jame()
-MrsChu.Chu()
-Betty.bet()
+James.first_en_Jame()
+MrsChu.first_en_Chu()
+Betty.first_en_bet()
