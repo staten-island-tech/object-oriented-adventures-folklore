@@ -8,4 +8,3 @@ class hp:
     
     full_hp = 100
     hp_history = []
-
