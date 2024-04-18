@@ -43,10 +43,13 @@ class boxes:
         return res.strip()
 
 class Global:
-    global picking_friends
-    picking_friends = typingInput("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
+    global picking_friend
+    def picking_friend():
+        global picking_friends
+        picking_friends = typingInput("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
     global encountering_characters
     def encountering_characters():
+        global Meeting_Another_Character
         Meeting_Another_Character = typingInput("\x1B[3m You decided to back to the road.")
         time.sleep(5)
         os.system('cls')
@@ -58,14 +61,15 @@ class Global:
 class Betty:
     def first_en_bet():
                 #After arriving in the village for the first time and you pick Betty as your friend.
+        picking_friend()
         if picking_friends == "A":
                     #Betty's Lines
             os.system('cls')
-            typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning yoy to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
+            typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
             time.sleep(5)
             os.system('cls')
 
-            going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no").upper()
+            going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
             if going_to_Betty == "YES":
                 bet_Continue()
             
@@ -74,6 +78,7 @@ class Betty:
             time.sleep(5)
             os.system('cls')
             
+            global bet_Continue
             def bet_Continue():
                 print("\x1B[0mStranger:")    
                 typingPrint(boxed_msg("Are you here to climb the tower?"))
@@ -101,12 +106,14 @@ class Betty:
                 os.system('cls')
 
             def bet_notcontinue():
+                encountering_characters()
 
 
 
 class MrsChu:
     def first_en_Chu():
-        if picking_friends == "W":
+        picking_friend()
+        if picking_friend == "W":
             os.system('cls')
             typingPrint("\x1B[3mYou saw a fountain.\nThe flowers flew out of the structure like fairies covering the square in a shimmering light.\nA powerful rejuvenating shock went through you.\nAs you walk up to the fountain, you found your math teacher from your previous world.\nMrs. Chu looks shocked and quickly waved to you.")
             time.sleep(7)
@@ -144,7 +151,8 @@ class MrsChu:
 
 class James:
     def first_en_Jame():
-        if picking_friends == "S":
+        picking_friend()
+        if picking_friend == "S":
             os.system('cls')
             typingPrint("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to a old lady and sneakly take her purse from her pockets. \nYou followed him behind and noticed you.")
 
