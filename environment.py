@@ -14,6 +14,6 @@ def environment():
             print("You have spawned in your last saved position. Press enter to continue with your journey.", seconds)
             print("You are forest right now. Try obtaining wood and creating a weapon just in case you come across enemies", seconds)
         else:
-            print("Enjoy your day... for now...",seconds)
+            print("....",seconds)
 environment()
         
