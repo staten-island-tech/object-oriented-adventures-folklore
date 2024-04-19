@@ -45,18 +45,17 @@ class boxes:
 class Global:
     global picking_friend
     def picking_friend():
-        global picking_friends
+        global picking_friends        
         picking_friends = typingInput("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
+
     global encountering_characters
     def encountering_characters():
         global Meeting_Another_Character
-        Meeting_Another_Character = typingInput("\x1B[3m You decided to back to the road.")
-        time.sleep(5)
+        typingPrint("\x1B[3m You decided to back to the road.")
+        time.sleep(2)
         os.system('cls')
+        Betty.first_en_bet()
         ###work from here
-
-
-
 
 class Betty:
     def first_en_bet():
@@ -68,15 +67,6 @@ class Betty:
             typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
             time.sleep(5)
             os.system('cls')
-
-            going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
-            if going_to_Betty == "YES":
-                bet_Continue()
-            
-            if going_to_Betty == "NO":
-                bet_notcontinue()
-            time.sleep(5)
-            os.system('cls')
             
             def bet_Continue():
                 print("\x1B[0mStranger:")    
@@ -84,6 +74,7 @@ class Betty:
                 time.sleep(2)
                 os.system('cls')
 
+                climb_wizard_tower = typingInput 
                 print("\x1B[0mTraveller:")
                 typingPrint(boxed_msg("No, not really.\n I am new to this town."))
                 time.sleep(5)
@@ -106,5 +97,14 @@ class Betty:
 
             def bet_notcontinue():
                 encountering_characters()
+
+            going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
+            if going_to_Betty == "YES":
+                bet_Continue()
+            
+            if going_to_Betty == "NO":
+                bet_notcontinue()
+            time.sleep(5)
+            os.system('cls')
 
 Betty.first_en_bet()
