@@ -53,47 +53,49 @@ class Global:
         global Meeting_Another_Character
         typingPrint("\x1B[3m You decided to back to the road.")
         time.sleep(2)
-        os.system('cls')
+        os.system('clear')
         Betty.first_en_bet()
         ###work from here
 
 class Betty:
+    os.system('clear')
     def first_en_bet():
                 #After arriving in the village for the first time and you pick Betty as your friend.
         picking_friend()
         if picking_friends == "A":
                     #Betty's Lines
-            os.system('cls')
+            os.system('clear')
             typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
             time.sleep(5)
-            os.system('cls')
+            os.system('clear')
             
             def bet_Continue():
                 print("\x1B[0mStranger:")    
-                typingPrint(boxed_msg("Are you here to climb the tower?"))
+                Climb_Poets_Tower = typingInput(boxed_msg("Are you here to climb the tortured tower? (yes/no)\n(You also have the option to ask for information about the tower.\n )")).upper()
                 time.sleep(2)
-                os.system('cls')
+                os.system('clear')
 
-                climb_wizard_tower = typingInput 
+                if Climb_Poets_Tower == "Yes":
+                    typingPrint(boxed_msg("You better be careful")) 
                 print("\x1B[0mTraveller:")
                 typingPrint(boxed_msg("No, not really.\n I am new to this town."))
                 time.sleep(5)
-                os.system('cls')
+                os.system('clear')
 
                 print("\x1B[0mBetty:")
                 typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
                 time.sleep(5)
-                os.system('cls')
+                os.system('clear')
 
                 print("\x1B[0mTraveller:")
                 typingPrint(boxed_msg("Thank you."))
                 time.sleep(5)
-                os.system('cls')
+                os.system('clear')
 
                 print("\x1B[0mBetty:")    
                 typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
                 time.sleep(5)
-                os.system('cls')
+                os.system('clear')
 
             def bet_notcontinue():
                 encountering_characters()
@@ -105,6 +107,6 @@ class Betty:
             if going_to_Betty == "NO":
                 bet_notcontinue()
             time.sleep(5)
-            os.system('cls')
+            os.system('clear')
 
 Betty.first_en_bet()
