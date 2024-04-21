@@ -50,7 +50,6 @@ class Global:
 
     global encountering_characters
     def encountering_characters():
-        global Meeting_Another_Character
         typingPrint("\x1B[3m You decided to back to the road.")
         time.sleep(2)
         os.system('clear')
@@ -75,38 +74,62 @@ class Betty:
                 time.sleep(2)
                 os.system('clear')
 
-                if Climb_Poets_Tower == "Yes":
-                    typingPrint(boxed_msg("You better be careful")) 
-                print("\x1B[0mTraveller:")
-                typingPrint(boxed_msg("No, not really.\n I am new to this town."))
-                time.sleep(5)
-                os.system('clear')
+                if Climb_Poets_Tower == "YES":
+                    os.system('clear')
+                    print("Stranger")
+                    typingPrint(boxed_msg("You better be careful. \nThe tower belonged to a powerful moonlit witch. \nNo one has ever made it to the top."))
+                    time.sleep(5)
+                    os.system('clear')
 
-                print("\x1B[0mBetty:")
-                typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
-                time.sleep(5)
-                os.system('clear')
+                    print("Travler:")
+                    typingPrint(boxed_msg("Thank you for the advice."))
+                    time.sleep(1)
+                    os.system('clear')
 
-                print("\x1B[0mTraveller:")
-                typingPrint(boxed_msg("Thank you."))
-                time.sleep(5)
-                os.system('clear')
+                    typingPrint("\x1B[3m You entered through the gates of the tower, knowing full well you have no experience.\n As you arrived to the stairs of the tower, a forced consumed you and you were transported back in time.")
+                    time.sleep(5)
+                    os.system('clear')
 
-                print("\x1B[0mBetty:")    
-                typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
-                time.sleep(5)
-                os.system('clear')
+                    Betty.first_en_bet()
 
-            def bet_notcontinue():
-                encountering_characters()
+
+                    
+                elif Climb_Poets_Tower == "NO":
+                    os.system('clear')
+                    not_climb_poet_tower()
+                else:
+                    os.system('clear')
+                    print("Betty:")
+                    typingPrint(boxed_msg("The tower is"))
+
+                def not_climb_poet_tower():
+                    print("\x1B[0mTraveller:")
+                    typingPrint(boxed_msg("No, not really.\n I am new to this town."))
+                    time.sleep(5)
+                    os.system('clear')
+
+                    print("\x1B[0mBetty:")
+                    typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
+                    time.sleep(5)
+                    os.system('clear')
+
+                    print("\x1B[0mTraveller:")
+                    typingPrint(boxed_msg("Thank you."))
+                    time.sleep(5)
+                    os.system('clear')
+
+                    print("\x1B[0mBetty:")    
+                    typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
+                    time.sleep(5)
+                    os.system('clear')
+
 
             going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
             if going_to_Betty == "YES":
                 bet_Continue()
-            
+                
             if going_to_Betty == "NO":
-                bet_notcontinue()
-            time.sleep(5)
-            os.system('clear')
+                encountering_characters()
+
 
 Betty.first_en_bet()
