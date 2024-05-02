@@ -107,9 +107,9 @@ class James:
                 os.system('cls')
 
                 PunchingJames = typingInput("Run or Slaughter him? (run/slaughter)").upper()
-                if PunchingJames == "Run":
+                if PunchingJames == "RUN":
                     typingPrint("\x1B[0mYou have escaped and you reached the merchant.")
-                else:
+                if PunchingJames == "SLAUGHTER":
                     typingPrint("\x1B[0mYou murdered James, and you run to the river to clean yourself up. Then you ran towards the mercahnt to get other materials.")
                 os.system('cls')
 
@@ -119,6 +119,6 @@ class James:
                 time.sleep(3)
                 os.system('cls')
 
-                typingPrint("\x1B[0mJames murdered you.")
+                typingPrint("\x1B[3mJames murdered you.")
 
 James.first_en_Jame()

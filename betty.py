@@ -4,19 +4,19 @@ import sys
 class typer():
     global typingPrint
     global typingInput
-
-
+    global typingspeed
+    typingspeed = 0.01
     def typingPrint(text):
         for character in text:
             sys.stdout.write(character)
             sys.stdout.flush()
-            time.sleep(0.01)
+            time.sleep(typingspeed)
     
     def typingInput(text):
         for character in text:
             sys.stdout.write(character)
             sys.stdout.flush()
-            time.sleep(0.01)
+            time.sleep(typingspeed)
         value = input()  
         return value  
 
@@ -76,30 +76,7 @@ class Betty:
 
                 if Climb_Poets_Tower == "YES":
                     os.system('cls')
-                    print("Stranger")
-                    typingPrint(boxed_msg("You better be careful. \nThe tower belonged to a powerful moonlit witch. \nNo one has ever made it to the top."))
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("Travler:")
-                    typingPrint(boxed_msg("Thank you for the advice."))
-                    time.sleep(1)
-                    os.system('cls')
-
-                    typingPrint("\x1B[3m You entered through the gates of the tower, knowing full well you have no experience.\n As you arrived to the stairs of the tower, a forced consumed you and you were transported back in time.\n You ended put back on the fork in the world. \nThe place your journey began.")
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("Travler:")
-                    typingPrint(boxed_msg("\x1B[0mWhat happened?"))
-                    time.sleep(1)
-                    os.system('cls')
-
-
-                    Betty.first_en_bet()
-
-
-                    
+                    yes_to_climb_poets_tower ()
                 elif Climb_Poets_Tower == "NO":
                     os.system('cls')
                     not_climb_poet_tower()
@@ -110,7 +87,27 @@ class Betty:
 
                     os.system('cls')
                     print("Betty:")
-                    typingPrint(boxed_msg("It was said that this tower belong to a powerful witch. \nHowever she wasn't the one who built this tower. \nLegends"))
+                    typingPrint(boxed_msg("It was said that this tower belong to a powerful witch. \nHowever she wasn't the one who built this tower. \nLegends said that this was a mental asylum. \nPeople who have gone in, never came back. \nOnly one person ever made it out alive, and he came out insane."))
+                    continuing_to_otrtued_poets()
+
+                    def continuing_to_otrtued_poets():
+                        os.system('cls')
+                        print("\x1B[0mStranger:")    
+                        Continue_to_climb_poet = typingInput(boxed_msg("Are you still going to climb the Tortured Poets Department?\n (yes/no)")).upper()
+                        time.sleep(2)
+                        os.system('cls')
+
+                        if Continue_to_climb_poet == "NO":
+                            not_climb_poet_tower()
+                        elif Continue_to_climb_poet == "YES":
+                            yes_to_climb_poets_tower()
+                        else:
+                            os.system('cls')
+                            typingPrint("\x1B[3m That isn't an option.")
+                            time.sleep(5)
+                            os.system('cls')
+                            continuing_to_otrtued_poets()
+
 
                 def not_climb_poet_tower():
                     print("\x1B[0mTraveller:")
@@ -132,6 +129,30 @@ class Betty:
                     typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
                     time.sleep(5)
                     os.system('cls')
+
+                def yes_to_climb_poets_tower():
+                    os.system('cls')
+                    print("Stranger")
+                    typingPrint(boxed_msg("You better be careful. \nThe tower belonged to a powerful moonlit witch. \nNo one has ever made it to the top."))
+                    time.sleep(5)
+                    os.system('cls')
+
+                    print("Travler:")
+                    typingPrint(boxed_msg("Thank you for the advice."))
+                    time.sleep(1)
+                    os.system('cls')
+
+                    typingPrint("\x1B[3m You entered through the gates of the tower, knowing full well you have no experience.\n As you arrived to the stairs of the tower, a forced consumed you and you were transported back in time.\n You ended put back on the fork in the world. \nThe place your journey began.")
+                    time.sleep(5)
+                    os.system('cls')
+
+                    print("Travler:")
+                    typingPrint(boxed_msg("\x1B[0mWhat happened?"))
+                    time.sleep(1)
+                    os.system('cls')
+
+
+                    Betty.first_en_bet()
 
 
             going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
