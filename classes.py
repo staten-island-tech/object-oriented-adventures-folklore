@@ -38,8 +38,9 @@ class boxes:
         return res.strip()
     
 class player:
-    def __init__(self, name):
+    def __init__(self, name: str, hp: int):
         self.name = name
+        self.hp = hp
     def __str__(self):
         return f"{self.name}"
 
