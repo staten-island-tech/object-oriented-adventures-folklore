@@ -32,7 +32,7 @@ def data_collection():
             print(i)
     data_collection()
 
-with open("data.json", "r") as f:
+with open("item_history.json", "r") as f:
     # Serialize the updated Python list to a JSON string
     data = json.load(f)
     pokemon_list= [Items.__dict__]
@@ -49,13 +49,3 @@ with open(new_file, "w") as f:
     # Write the JSON string to the new JSON file
     f.write(json_string)
     f.close()
-
-
-""" 'Item name': "",
-'Item cateogory':",
-'Description': "", 
- """  
-
-json_object = json.dumps(Item_description, indent = 4) 
-# Print JSON object
-print(json_object) 
