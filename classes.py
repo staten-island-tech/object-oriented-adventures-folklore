@@ -47,26 +47,6 @@ class player:
 test = open("monster_data.json", encoding = "utf8")
 monster_data = json.load(test)
 
-class start:
-    def interface():
-        print("1. Start Game")
-        print("2. How to play")
-        print("3. Exit Game")
-        pick_option = input("What would you like to do? (ex: 1, 2, or 3): \n")
-        os.system('cls')
-
-        if pick_option == "1":
-            print()
-            os.system('cls')
-
-        elif pick_option == "2":
-            print()
-            os.system('cls')
-
-        elif pick_option == "3":
-            print("Bye bye!")
-            os.system('cls')
-
 class monster_info:
     def search_name():
         name = input("Which monster would you like to know about?\n").upper()
@@ -88,10 +68,6 @@ class monster_info:
                 print(x['Name'])   
 
 class encounter:
-    def Maldachaunians():
-        m_hp = 100
-        print("OOOGA BOOGA!!")
-
     def enco_monster():
         while True:
             choose = input("What would you like to do? A/B/C\n(Type: 'help' for explanation on encounters)\n").upper()
