@@ -1,7 +1,7 @@
 [{
     "Item name": "Sword",
     "Item category": "Weapon/Combat",
-    "Description": "Used in combat: Strength is dependent on the sharpness and level of the sword ()"
+    "Description": "Used in combat: Strength is dependent on the sharpness and level of the sword"
 }, {
     "Item name": "Armor",
     "Item category": "Combat",
@@ -16,19 +16,19 @@
     "Description": "Used in combat: Strength is dependent on level and the use of arrow(s)"
 },{
     "Item name": "Health Potion",
-    "Item category": "Spell",
+    "Item category": "Potion",
     "Description": "By intiating this potion, you gain 2 HP for every second that passes (Note: this potion lasts 10 seconds)"
 },{
     "Item name": "Speed Potion",
-    "Item category": "Spell",
+    "Item category": "Potion",
     "Description": "By intiating this potion, you gain 2x speed for 6 seconds"
 },{
     "Item name": "Strength Potion",
-    "Item category": "Spell",
+    "Item category": "Potion",
     "Description": "By intiating this potion, your increase your chances of crit damage by 15%"
 },{
     "Item name": "Defense Potion",
-    "Item category": "Spell",
+    "Item category": "Potion",
     "Description": "By intiating this potion, all damage dealt to you is reduced by 20%"
 },{
     "Item name": "Meat",
