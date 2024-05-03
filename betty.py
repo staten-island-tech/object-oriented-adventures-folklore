@@ -59,6 +59,7 @@ class Global:
 class Betty:
     os.system('cls')
     def first_en_bet():
+        
                 #After arriving in the village for the first time and you pick Betty as your friend.
         picking_friend()
         if picking_friends == "A":
@@ -76,7 +77,30 @@ class Betty:
 
                 if Climb_Poets_Tower == "YES":
                     os.system('cls')
-                    yes_to_climb_poets_tower ()
+                    def yes_to_climb_poets_tower():
+                        os.system('cls')
+                        print("Stranger")
+                        typingPrint(boxed_msg("You better be careful. \nThe tower belonged to a powerful moonlit witch. \nNo one has ever made it to the top."))
+                        time.sleep(5)
+                        os.system('cls')
+
+                        print("Travler:")
+                        typingPrint(boxed_msg("Thank you for the advice."))
+                        time.sleep(1)
+                        os.system('cls')
+
+                        typingPrint("\x1B[3m You entered through the gates of the tower, knowing full well you have no experience.\n As you arrived to the stairs of the tower, a forced consumed you and you were transported back in time.\n You ended put back on the fork in the world. \nThe place your journey began.")
+                        time.sleep(5)
+                        os.system('cls')
+
+                        print("Travler:")
+                        typingPrint(boxed_msg("\x1B[0mWhat happened?"))
+                        time.sleep(1)
+                        os.system('cls')
+
+                        Betty.first_en_bet()
+                    yes_to_climb_poets_tower()
+
                 elif Climb_Poets_Tower == "NO":
                     os.system('cls')
                     not_climb_poet_tower()
@@ -129,30 +153,8 @@ class Betty:
                     typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
                     time.sleep(5)
                     os.system('cls')
-
-                def yes_to_climb_poets_tower():
-                    os.system('cls')
-                    print("Stranger")
-                    typingPrint(boxed_msg("You better be careful. \nThe tower belonged to a powerful moonlit witch. \nNo one has ever made it to the top."))
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("Travler:")
-                    typingPrint(boxed_msg("Thank you for the advice."))
-                    time.sleep(1)
-                    os.system('cls')
-
-                    typingPrint("\x1B[3m You entered through the gates of the tower, knowing full well you have no experience.\n As you arrived to the stairs of the tower, a forced consumed you and you were transported back in time.\n You ended put back on the fork in the world. \nThe place your journey began.")
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("Travler:")
-                    typingPrint(boxed_msg("\x1B[0mWhat happened?"))
-                    time.sleep(1)
-                    os.system('cls')
-
-
-                    Betty.first_en_bet()
+                
+                
 
 
             going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
