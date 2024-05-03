@@ -43,6 +43,7 @@ class player:
         self.hp = hp
     def __str__(self):
         return f"{self.name}"
+    
 
 test = open("monster_data.json", encoding = "utf8")
 monster_data = json.load(test)
@@ -69,6 +70,8 @@ class monster_info:
 
 class start:
     def interface():
+        print("Welcome to the Folklore Game!")
+        name = input("What is your name?\n")
         print("1. Start Game")
         print("2. How to play")
         print("3. Exit Game")
