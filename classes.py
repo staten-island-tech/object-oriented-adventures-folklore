@@ -72,6 +72,8 @@ class start:
     def interface():
         print("Welcome to the Folklore Game!")
         name = input("What is your name?\n")
+        os.system('cls')
+
         print("1. Start Game")
         print("2. How to play")
         print("3. Exit Game")
