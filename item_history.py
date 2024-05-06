@@ -3,7 +3,7 @@ test = open("item_history.json", encoding = "utf8")
 data = json.load(test)
 
 class Items():
-    def __init__(self, item, description)-> None:
+    def __init__(self, item, description):
         self.item = item
         self.description = description
 
