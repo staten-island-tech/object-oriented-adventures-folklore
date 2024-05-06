@@ -1,35 +1,73 @@
 [{
-    "Item name": "Sword",
+    "Item name": "Wooden Sword",
     "Item category": "Weapon/Combat",
-    "Description": "Used in combat: Strength is dependent on the sharpness and level of the sword"
+    "Description": "Used in combat: Strength is dependent on the type of sword.\n The wooden sword does 5 damage on it's own.",
+    "Damage": 5
 }, {
-    "Item name": "Armor",
-    "Item category": "Combat",
-    "Description": "A layer of protection that increases the damage needed to be dealt to you in order to lose health"
+    "Item name": "Stone Sword",
+    "Item category": "Weapon/Combat",
+    "Description": "Used in combat: Strength is dependent on the type of sword.\n The stone sword does 10 damage on it's own.",
+    "Damage": 10
 },{
-    "Item name": "Pickaxe",
+    "Item name": "Iron Sword",
+    "Item category": "Weapon/Combat",
+    "Description": "Used in combat: Strength is dependent on the type of sword.\n The iron sword does 20 damage on it's own.",
+    "Damage": 20
+},{
+    "Item name": "Leather Armor",
+    "Item category": "Armor",
+    "Description": "A layer of protection that increases the damage needed to be dealt to you in order to lose health.\nLeather is the weakest armor.\nIt gives +20 shield to the player.",
+    "Protection": 20
+},{
+    "Item name": "Chainmail Armor",
+    "Item category": "Armor",
+    "Description": "A layer of protection that increases the damage needed to be dealt to you in order to lose health.\nChainmail is an okay armor. It gives +30 shield to the player.",
+    "Protection": 30
+},{
+    "Item name": "Iron Armor",
+    "Item category": "Armor",
+    "Description": "A layer of protection that increases the damage needed to be dealt to you in order to lose health.\nIron armor is the strongest armor in the game.\nIt gives +50 sheild to the player.",
+    "Protection": 50
+},{
+    "Item name": "Wooden Pickaxe",
     "Item category":"Weapon/Combat",
-    "Description": "Used in combat: Strength is dependent on the level of the Pickaxe"
+    "Description": "Used in combat: Strength is dependent on the type of pickaxe.\nA wooden pickaxe does 5 damage ",
+    "Damage": 5
+},{
+    "Item name": "Stone Pickaxe",
+    "Item category":"Weapon/Combat",
+    "Description": "Used in combat: Strength is dependent on the type of pickaxe.\nA stone pickaxe does 10 damage ",
+    "Damage": 10
+},{
+    "Item name": "Iron Pickaxe",
+    "Item category":"Weapon/Combat",
+    "Description": "Used in combat: Strength is dependent on the type of pickaxe.\nA stone pickaxe does 15 damage ",
+    "Damage": 15
 },{
     "Item name": "Bow and Arrow",
     "Item category":"Weapon/Combat",
-    "Description": "Used in combat: Strength is dependent on level and the use of arrow(s)"
+    "Description": "Used in combat: A bow and arrow does 10 damage to the opponent if the attack is successful.",
+    "Damage": 10
 },{
     "Item name": "Health Potion",
     "Item category": "Potion",
-    "Description": "By intiating this potion, you gain 2 HP for every second that passes (Note: this potion lasts 10 seconds)"
+    "Description": "Effect of potions depends on the potion type.\nMutiple health potions can be consumed.",
+    "Effect": "+10 hp"
 },{
     "Item name": "Speed Potion",
     "Item category": "Potion",
-    "Description": "By intiating this potion, you gain 2x speed for 6 seconds"
+    "Description": "Effect of potions depends on the potion type.\nEffects will wear off once the battle is over.\nOnly one speed potion can be consumed during batle.",
+    "Effect": "2x speed during the battle that you are in."
 },{
     "Item name": "Strength Potion",
     "Item category": "Potion",
-    "Description": "By intiating this potion, your increase your chances of crit damage by 15%"
+    "Description": "Effect of potions depends on the potion type.\nEffects will wear off once the battle is over.\nOnly one strength potion can be consumed during batle.",
+    "Effect": "+15 damage to attack"
 },{
     "Item name": "Defense Potion",
     "Item category": "Potion",
-    "Description": "By intiating this potion, all damage dealt to you is reduced by 20%"
+    "Description": "Effect of potions depends on the potion type.\nMutiple defense potions can be consumed.",
+    "Effect": "+10 shield"
 },{
     "Item name": "Meat",
     "Item category":"Food",
