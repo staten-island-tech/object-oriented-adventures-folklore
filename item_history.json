@@ -71,33 +71,52 @@
 },{
     "Item name": "Meat",
     "Item category":"Food",
-    "Description": "This item can be consumed. Restores HP for each piece of meat eaten (pork, steak, chicken, lamb)"
+    "Description": "This item can be consumed for hp.\nRestores HP for each piece of meat eaten (pork, steak, chicken, lamb)",
+    "Hp": 20
 },{
     "Item name": "Cake",
     "Item category":"Food",
-    "Description": "Can be consumed. Item is made using ingredients: flour, milk, egg, and sugar"
+    "Description": "Can be consumed for hp.\nItem is made using ingredients: flour, milk, egg, and sugar",
+    "Hp": 5 
 },{
     "Item name": "Apple",
     "Item category":"Food",
-    "Description": "Can be consumed. Picked from tree or found on ground."
+    "Description": "Can be consumed for hp.\nPicked from tree or found on ground.",
+    "Hp": 10
 },{
     "Item name": "Cabbage",
     "Item category":"Food",
-    "Description": "Can be consumed to restore HP. Yummyyyyy"
+    "Description": "Can be consumed to restore HP.\nYummyyyyy!",
+    "Hp": 15
 },{
     "Item name": "Gold",
     "Item category":"Currency",
-    "Description": "Used to buy items in the shop."
+    "Description": "Used to buy items in the shop.",
+    "Value": 15
 },{
     "Item name": "Silver",
     "Item category":"Currency",
-    "Description": "Used to buy items in to the shop."
+    "Description": "Used to buy items in to the shop.",
+    "Value": 10
 },{
     "Item name": "Bronze",
     "Item category":"Currency",
-    "Description": "Used to buy items in to the shop."
+    "Description": "Used to buy items in to the shop.",
+    "Value": 5
 },{
     "Item name": "Wood",
     "Item category":"Nature",
-    "Description": "This can be used to make weapons and houses"
+    "Description": "This can be used to make weapons and armor.\n Exchange with merchant for desired item."
+},{
+    "Item name": "Stone",
+    "Item category":"Nature",
+    "Description": "This can be used to make weapons.\n Exchange with merchant for desired item."
+},{
+    "Item name": "Iron",
+    "Item category":"Nature",
+    "Description": "This can be used to make weapons and armor.\n Exchange with merchant for desired item."
+},{
+    "Item name": "Leather",
+    "Item category":"Nature",
+    "Description": "This can be used to make armor.\n Exchange with merchant for desired item."
 }]
