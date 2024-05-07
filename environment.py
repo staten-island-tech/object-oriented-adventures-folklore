@@ -27,7 +27,7 @@ def environment():
             typingPrint("You have spawned in your last saved position.")
             time.sleep(3)
             os.system('cls')
-            typingPrint("You are forest right now. As a side note, this is a great place to obtain wood so that you can craft weapons")
+            typingPrint("You are in the forest right now. As a side note, this is a great place to obtain wood so that you can craft weapons")
             time.sleep(4)
             os.system('cls')
             direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
