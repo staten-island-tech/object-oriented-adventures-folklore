@@ -1,12 +1,40 @@
-class player:
-    def __init__(self, name: str, hp: int, strength: int, speed: int, inventory: str, damage: int):
+class player(object):
+    def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, KO):
         self.name = name
         self.hp = hp
+        self.max_hp = max_hp
         self.strength = strength
         self.speed = speed
         self.inventory = inventory 
         self.damage = damage
+        self.KO = KO
 
-    def __str__(self):
-        return f"{self.name}, {self.hp}, {self. strength}, {self.speed}, {self.inventory}, {self.damage}"
+    def ko(self):
+        self.KO = True
+        print(self.name + ", you have been killed.")
 
+    def take_damage(self, attack):
+        if attack > self.hp:
+            print(self.name + ", you have been killed and have 0 hp")
+            self.hp = 0
+            self.KO = True
+        else:
+            self.hp -= attack
+            print(self.name + "you have" + str(self.hp) + "hp")
+
+    def gain_hp(self, amount):
+        if amount > self.max_hp:
+            print("You have" + str(self.max_hp) + "hp")
+        else:
+            self.hp += amount
+            print("You have" + str(self.hp) + "hp")
+
+    def attack(self, enemy.hp):
+        a = "Y"
+        if a is True:
+            if self.hp > 0 and self.KO == False:
+                enemy.hp -= self.damage
+                if enemy.hp == 0:
+                    print("The" + enemy.name + "is dead.\n Congrats on not dying!")
+                else:
+                    print("The" + enemy.name + "has" + enemy.hp + "hp")
