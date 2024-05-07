@@ -25,9 +25,15 @@ class potion(Items):
         return f"{self.item},{self.description},{self.effect}"
     
 class food(Items):
-    def __init__(self, item: str, description: str, hp: int):
+    def __init__(self, item: str, description: str, add_hp: int):
         super().__init__(item, description)
-        self.hp = hp
+        self.add_hp = add_hp
     def __str__(self):
-        return f"{self.item},{self.description},{self.hp}"
+        return f"{self.item},{self.description},{self.add_hp}"
+
+class currency(Items):
+    def __init__(self, item: str, description: str, value: int):
+        super().__init__(item, description)
+        self.value = value
+    
     
