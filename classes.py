@@ -36,13 +36,6 @@ class boxes:
             res += format_line(l, max_length)
         res += horizontal
         return res.strip()
-    
-class player:
-    def __init__(self, name: str, hp: int):
-        self.name = name
-        self.hp = hp
-    def __str__(self):
-        return f"{self.name}"
 
 test = open("monster_data.json", encoding = "utf8")
 monster_data = json.load(test)
