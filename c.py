@@ -60,31 +60,12 @@ class monster_info:
             if h == x["Hp"]:
                 print(x['Name'])   
 
-class encounter:
-    def Maldachaunians():
-        m_hp = 100
-        print("OOOGA BOOGA!!")
-
-    def enco_monster():
-        while True:
-            choose = input("What would you like to do? A/B/C\n(Type: 'help' for explanation on encounters)\n").upper()
-            while choose == "HELP":
-                print("A - Attack")
-                print("B - Be a wuss (run away)")
-                print("C - Consume potion")
-                break
-            if choose == "A":
-                print("You have attacked!")
-                break
-            elif choose == "B":
-                print("You are a huge wuss! Congrats on running away, YOU COWARD!")
-                break
-            elif choose == "C":
-                print("Which potion would you like to drink\n")
-                break
-
 class start:
     def interface():
+        print("Welcome to the Folklore Game!")
+        name = input("What is your name?\n")
+        os.system('cls')
+
         print("1. Start Game")
         print("2. How to play")
         print("3. Exit Game")
