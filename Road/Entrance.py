@@ -42,13 +42,14 @@ class boxes:
         res += horizontal
         return res.strip()
 #########################################################################################################################################################
-execfile('Road')
 class going_into_tower:
     def asking_to_enter():
-        typingPrint("\x1B[3m You walked up to the steps of the dark tower, a breeze send shivers down your swine. You walk up to the huge gates of the tower.")
+        typingPrint("You walked up to the steps of the dark tower, a breeze send shivers down your swine. You walk up to the huge gates of the tower.")
         os.system('cls')
-        Enter_Tower = typingInput("\1B[3m Would you like to go up the tower?").upper()
+        Enter_Tower = typingInput("Would you like to go up the tower?").upper()
 
-        if Enter_Tower = "YES":
+        if Enter_Tower == "YES":
+            print("ya")
 
-        if Enter_Tower = "NO":
+        if Enter_Tower == "NO":
+            print("ya")
