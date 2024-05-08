@@ -9,7 +9,7 @@ from player import player
 class start:
     def interface():
         print("Welcome to the Folklore Game!")
-        player(name= input("What is your name?\n"))
+        player(name= input("What is your name?\n"), hp= 100, max_hp=100, strength=5, speed=10, inventory="", damage= 5, KO= "")
         os.system('cls')
 
         print("1. Start Game")
