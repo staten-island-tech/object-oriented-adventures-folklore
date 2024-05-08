@@ -1,69 +1,15 @@
-import json
 import os
 import time
 import sys
-from math import ceil, floor
-
-class typer():
-    global typingPrint
-    global typingInput
-    def typingPrint(text):
-        for character in text:
-            sys.stdout.write(character)
-            sys.stdout.flush()
-            time.sleep(0.01)
-    def typingInput(text):
-        for character in text:
-            sys.stdout.write(character)
-            sys.stdout.flush()
-            time.sleep(0.01)
-        value = input()  
-        return value  
-    
-class boxes:
-    global format_line
-    def format_line(line, max_length):
-        half_dif = (max_length - len(line)) / 2 # in Python 3.x float division
-        return '| ' + ' ' * ceil(half_dif) + line + ' ' * floor(half_dif) + ' |\n'
-   
-    global boxed_msg
-    def boxed_msg(msg):
-        lines = msg.split('\n')
-        max_length = max([len(line) for line in lines])
-        horizontal = '+' + '-' * (max_length + 2) + '+\n'
-        res = horizontal
-        for l in lines:
-            res += format_line(l, max_length)
-        res += horizontal
-        return res.strip()
-
-test = open("monster_data.json", encoding = "utf8")
-monster_data = json.load(test)
-
-class monster_info:
-    def search_name():
-        name = input("Which monster would you like to know about?\n").upper()
-        for i in monster_data:
-            if name in i['Name'].upper():
-                print(i['Name'])
-                print(i['Description'])
-                print(i['Loot'])
-                print(i['Hp'])
-    def search_loot():
-        loot = input("What monsters drop the loot:\n").upper()
-        for i in monster_data:
-            if loot in i['Loot'].upper():
-                print(i['Name'])
-    def search_hp(): 
-        h = int(input("What monsters have an hp of:\n(Reminder: Monsters only have hps of: 50, 100, 150, or 200)\n"))
-        for x in monster_data:
-            if h == x["Hp"]:
-                print(x['Name'])   
+from classes import boxed_msg
+from classes import typingPrint
+from classes import typingInput
+from player import player
 
 class start:
     def interface():
         print("Welcome to the Folklore Game!")
-        name = input("What is your name?\n")
+        player(name= input("What is your name?\n"))
         os.system('cls')
 
         print("1. Start Game")
