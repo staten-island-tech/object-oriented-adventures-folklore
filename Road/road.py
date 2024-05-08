@@ -1,9 +1,7 @@
 import os
 import time
 import sys
-
-import Tower
-
+from Entrance import going_into_tower
 
 #System Typing
 #########################################################################################################################################################
@@ -56,7 +54,7 @@ class Go_Where():
     global different_location
     def different_location():
         if Location == "A":
-            Tower.going_into_tower()
+            going_into_tower()
         if Location == "B":
             print("ya")
         if Location == "C":
