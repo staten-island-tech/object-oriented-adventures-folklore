@@ -1,5 +1,5 @@
 import json
-from classes import player
+from c import player
 
 class Monster:
     def __init__(self, name: str, hp: int, description: str, loot: str):
