@@ -2,6 +2,7 @@ import os
 import time
 import sys
 from Entrance import going_into_tower
+from Forest import forestman
 
 #System Typing
 #########################################################################################################################################################
@@ -49,7 +50,7 @@ class Go_Where():
         if Location == "A":
             going_into_tower.asking_to_enter()
         elif Location == "B":
-            print("ya")
+            forestman.forester()
         elif Location == "C":
             print("ya")
         elif Location == "D":
