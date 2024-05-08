@@ -31,5 +31,3 @@ class player(object):
         else:
             self.hp += amount
             print("You have" + str(self.hp) + "hp")
-
-maldachaunians()
