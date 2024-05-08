@@ -34,7 +34,7 @@ class forestman():
                 time.sleep(5)
                 os.system('cls')
                 direction = input("Left/Foward/Backward/Right").upper()
-                if direction == "Left":
+                if direction == "LEFT":
                     typingPrint("You have reached the Maldachaunian Camps. Once human beings who lived in the empire ruled by malevolent deities.")
                     time.sleep(3)
                     os.system('cls')
@@ -47,7 +47,7 @@ class forestman():
                     typingPrint("But nevermind that. This place is not used to earn more loot by defeating enemies. Think of it as a training ground for you to get stronger.")
                     time.sleep(4)
                     os.system('cls')
-                elif direction == "Foward":
+                elif direction == "FOWARD":
                     typingPrint("You have reached the lakes. If you walk in far enough you can reach either the village ports or water spirit Fjord. ")
                     time.sleep(4)
                     os.system('cls')
@@ -55,7 +55,7 @@ class forestman():
                     time.sleep(2)
                     os.system('cls')
                     direction = input("Left/Right").upper()
-                elif direction == "Backward":
+                elif direction == "BACKWORD":
                     typingPrint("You choose to go backward. This means that you will go back through the forest and arrive somewhere else")
                     time.sleep(4)
                     os.system('cls')
