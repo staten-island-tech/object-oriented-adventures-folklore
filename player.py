@@ -1,3 +1,6 @@
+from monster import Monster
+from monster import maldachaunians
+
 class player(object):
     def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, KO):
         self.name = name
@@ -29,12 +32,4 @@ class player(object):
             self.hp += amount
             print("You have" + str(self.hp) + "hp")
 
-    def attack(self, enemy.hp):
-        a = "Y"
-        if a is True:
-            if self.hp > 0 and self.KO == False:
-                enemy.hp -= self.damage
-                if enemy.hp == 0:
-                    print("The" + enemy.name + "is dead.\n Congrats on not dying!")
-                else:
-                    print("The" + enemy.name + "has" + enemy.hp + "hp")
+maldachaunians()
