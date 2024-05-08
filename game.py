@@ -1,6 +1,6 @@
 import json
 import os
-import classes
+from classes import start
 
 start.interface()
 
