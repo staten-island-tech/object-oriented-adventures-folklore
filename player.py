@@ -1,6 +1,3 @@
-from monster import Monster
-from monster import maldachaunians
-
 class player(object):
     def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, KO):
         self.name = name
