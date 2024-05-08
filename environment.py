@@ -65,8 +65,10 @@ def environment():
                 typingPrint("You have arrived at the Wimitescu Swampland. If you didn't know this is where sassy shrek lives. Try not to run into sassy shrek or things could get really bad for you.")
                 time.sleep(4)
                 os.system('cls')
+                typingPrint("A long time ago, when this world was first created, there was a mutation in some of the monsters causing them to act weirdly and grow to a huge size.")
+                time.sleep(4)
+                os.system('cls')
                 typingPrint("")
-
         else:
             print("....")
 environment()
