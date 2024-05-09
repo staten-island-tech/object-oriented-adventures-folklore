@@ -22,31 +22,44 @@ def typingInput(text):
 class forestman():
     def forester():
         while True:
-            player = input("ON/OFF: ").upper()
-            if player == 'ON':
-                typingPrint("You have spawned in your last saved position.")
-                time.sleep(2)
-                os.system('cls')
-                typingPrint("You are in the forest right now. As a side note, this is a great place to obtain wood so that you can craft weapons.")
-                time.sleep(3)
+            player = input("CONTINUE/OFF: ").upper()
+            if player == 'CONTINUE':
+                typingPrint("You have not reached the forest right now.\n As a side note, this is a great place to obtain wood so that you can craft weapons.")
+                time.sleep(4)
                 os.system('cls')
                 typingPrint("Let's continue walking up ahead. There is the Maldachaunians Camps(left), lakes(foward), and the Wimitescu Swampland(right). Which direction would you like to go?")
                 time.sleep(5)
                 os.system('cls')
-                direction = input("Left/Foward/Backward/Right").upper()
+                direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
                 if direction == "LEFT":
-                    typingPrint("You have reached the Maldachaunian Camps. Once human beings who lived in the empire ruled by malevolent deities.")
+                    typingPrint("You have reached the Maldachaunian Camps.\n Once human beings who lived in the empire ruled by malevolent deities.")
                     time.sleep(3)
                     os.system('cls')
-                    typingPrint("Under the tyrannical rule of these godly beings, humans were forced to work in underground mines. One of these mines was the Chasm of Carcassona. The people of this mine were directed to collect beryl crystals, terribly hard to acquire, with many casualties.")
+                    typingPrint("Under the tyrannical rule of these godly beings, humans were forced to work in underground mines.\n One of these mines was the Chasm of Carcassona.\nThe people of this mine were directed to collect beryl crystals, terribly hard to acquire, with many casualties.")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("A plot to escape was quickly formed. A false explosion created a perfect distraction for an escape. However, the plan failed and they were cursed to be made and violent creatures.")
+                    typingPrint("A plot to escape was quickly formed. A false explosion created a perfect distraction for an escape.\nHowever, the plan failed and they were cursed to be made and violent creatures.")
                     time.sleep(4)
                     os.system('cls')
-                    typingPrint("But nevermind that. This place is not used to earn more loot by defeating enemies. Think of it as a training ground for you to get stronger.")
+                    typingPrint("But nevermind that. This place is used to earn more loot by defeating enemies.\nThink of it as a training ground for you to get stronger.")
                     time.sleep(4)
                     os.system('cls')
+                    typingPrint("Watch out! You already entered their territory so you might get targeted! Look over there... somethings coming...")
+                    time.sleep(5)
+                    os.system('cls')
+                    typingPrint("You squint your eys. Something is franticaly runing towards you. Its a Maldachuanian!")
+                    time.sleep(5)
+                    os.system('cls')     
+                    typingPrint("OoooOO.. Look whos here. I delcious human waiting for me to gobble up!\nThat's what you get for being in our territory.")
+                    time.sleep(5)
+                    os.system('cls')              
+                    typingPrint("Huh?! Your gonna gobble me? Let's see about that!")
+                    time.sleep(5)
+                    os.system('cls')
+                    typingPrint("This is maldachuaian land.\nYOU ASKED FOR THIS?!")
+                    time.sleep(5)
+                    os.system('cls')
+                    typingPrint("You take out your weapon.\n You then attack the Maldachuian before it can even blink.")
                 elif direction == "FOWARD":
                     typingPrint("You have reached the lakes. If you walk in far enough you can reach either the village ports or water spirit Fjord. ")
                     time.sleep(4)
@@ -55,7 +68,7 @@ class forestman():
                     time.sleep(2)
                     os.system('cls')
                     direction = input("Left/Right").upper()
-                elif direction == "BACKWORD":
+                elif direction == "BACKWARD":
                     typingPrint("You choose to go backward. This means that you will go back through the forest and arrive somewhere else")
                     time.sleep(4)
                     os.system('cls')
@@ -71,3 +84,4 @@ class forestman():
                     typingPrint("")
             else:
                 print("....")
+
