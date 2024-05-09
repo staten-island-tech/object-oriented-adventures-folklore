@@ -1,7 +1,11 @@
 import os
 import time
 import sys
-
+from TowerFloor1 import FloorOne
+from TowerFloor2 import FloorTwo
+from TowerFloor3 import FloorThree
+from TowerFloor4 import FloorFour
+from TowerFloor5 import FloorFive
 #System Typing
 #########################################################################################################################################################
 class typer():
@@ -47,9 +51,25 @@ class going_into_tower:
         typingPrint("You walked up to the steps of the dark tower, a breeze send shivers down your swine. You walk up to the huge gates of the tower.")
         os.system('cls')
         Enter_Tower = typingInput("Would you like to go up the tower?").upper()
+        
+        def Picking_Floor():
+            if Enter_Tower == "YES":
+                Picking_Floor = typingInput("Which floor would you like too go to? (1,2,3,4,5, or leave)").upper
+                if Picking_Floor == "1":
+                    FloorOne.Floor1_Beginning()
+                elif Picking_Floor == "2":
+                    FloorTwo.Floor2_Beginning()
+                elif Picking_Floor == "2":
+                    FloorThree.Floor3_Beginning()
+                elif Picking_Floor == "2":
+                    FloorFour.Floor4_Beginning()
+                elif Picking_Floor == "2":
+                    FloorFive.Floor5_Beginning()
+                else:
+                    Picking_Floor()
+        Picking_Floor()
 
-        if Enter_Tower == "YES":
-            print("ya")
+            
 
         if Enter_Tower == "NO":
             print("ya")
