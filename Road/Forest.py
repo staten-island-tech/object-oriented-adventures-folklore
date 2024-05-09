@@ -19,12 +19,13 @@ def typingInput(text):
         time.sleep(typingspeed)
         value = input()  
         return value  
+
 class forestman():
     def forester():
         while True:
-            player = input("CONTINUE/OFF: ").upper()
+            player = input("CONTINUE/OFF").upper()
             if player == 'CONTINUE':
-                typingPrint("You have not reached the forest right now.\n As a side note, this is a great place to obtain wood so that you can craft weapons.")
+                typingPrint("You have reached the forest.\n As a side note, this is a great place to obtain wood so that you can craft weapons.")
                 time.sleep(4)
                 os.system('cls')
                 typingPrint("Let's continue walking up ahead. There is the Maldachaunians Camps(left), lakes(foward), and the Wimitescu Swampland(right). Which direction would you like to go?")
@@ -47,16 +48,16 @@ class forestman():
                     typingPrint("Watch out! You already entered their territory so you might get targeted! Look over there... somethings coming...")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("You squint your eys. Something is franticaly runing towards you. Its a Maldachuanian!")
+                    typingPrint("You squint your eys. Something is franticaly running towards you. Its a Maldachuanian!")
                     time.sleep(5)
                     os.system('cls')     
-                    typingPrint("OoooOO.. Look whos here. I delcious human waiting for me to gobble up!\nThat's what you get for being in our territory.")
+                    typingPrint("Maldachuanian: OoooOO.. Look whos here. I delcious human waiting for me to gobble up!\nThat's what you get for being in our territory.")
                     time.sleep(5)
                     os.system('cls')              
-                    typingPrint("Huh?! Your gonna gobble me? Let's see about that!")
+                    typingPrint("You: Huh?! Your gonna gobble me? Let's see about that!")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("This is maldachuaian land.\nYOU ASKED FOR THIS?!")
+                    typingPrint("Maldachuanian: This is maldachuaian land.\nYOU ASKED FOR THIS?!")
                     time.sleep(5)
                     os.system('cls')
                     typingPrint("You take out your weapon.\n You then attack the Maldachuian before it can even blink.")
@@ -83,5 +84,8 @@ class forestman():
                     os.system('cls')
                     typingPrint("")
             else:
-                print("....")
-
+                input("You choose off. This means you are quiting the game. Are you sure?")
+                if input == 'YES':
+                    print("Loading.... Game is turning off")
+                
+forestman.forester
