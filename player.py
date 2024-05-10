@@ -1,4 +1,6 @@
-class player(object):
+import monster
+
+class player():
     def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, KO):
         self.name = name
         self.hp = hp
@@ -28,3 +30,8 @@ class player(object):
         else:
             self.hp += amount
             print("You have" + str(self.hp) + "hp")
+    
+    def s_attack(self, Monster):
+        successful_attack = Monster(self.hp) - self.damage
+        return successful_attack
+    
