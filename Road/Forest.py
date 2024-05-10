@@ -48,7 +48,7 @@ class forestman():
                     typingPrint("Watch out! You already entered their territory so you might get targeted! Look over there... somethings coming...")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("You squint your eys. Something is franticaly running towards you. Its a Maldachuanian!")
+                    typingPrint("You squint your eys. Something is franticaly running towards you. \nIts a Maldachuanian!")
                     time.sleep(5)
                     os.system('cls')     
                     typingPrint("Maldachuanian: OoooOO.. Look whos here. I delcious human waiting for me to gobble up!\nThat's what you get for being in our territory.")
@@ -68,24 +68,40 @@ class forestman():
                     typingPrint("..*you walk for another 5 min*....")
                     time.sleep(2)
                     os.system('cls')
-                    direction = input("Left/Right").upper()
-                elif direction == "BACKWARD":
-                    typingPrint("You choose to go backward. This means that you will go back through the forest and arrive somewhere else")
+                    typingPrint("If you choose to go see the water spirit you can try defeatin it.\nLegend says that by defeating them, you can increase the amount of power you have by almost double.")
                     time.sleep(4)
                     os.system('cls')
-                    direction = input("Left/Foward/Backward/Right").upper()
-                    #right direction for else
-                else:
+                    typingPrint("On the other hand, if you go to the village ports, you can get a chance to gain new items.")
+                    time.sleep(4)
+                    os.system('cls')
+                    typingPrint("Which way would you like to go? Village Ports(Left) or to the water spirit(Right)?")
+                    direction = input("LEFT/RIGHT").upper()
+                    if direction == 'LEFT':
+                        print("")
+                elif direction == "RIGHT":
                     typingPrint("You have arrived at the Wimitescu Swampland. If you didn't know this is where sassy shrek lives. Try not to run into sassy shrek or things could get really bad for you.")
                     time.sleep(4)
                     os.system('cls')
-                    typingPrint("A long time ago, when this world was first created, there was a mutation in some of the monsters causing them to act weirdly and grow to a huge size.")
+                    typingPrint("A long time ago, there was a mutation in some of the monsters causing them to act weirdly and grow to a huge size.")
                     time.sleep(4)
                     os.system('cls')
-                    typingPrint("")
+                    typingPrint("No one has ever defeated Shrek before so nobody knows what happens if you do. \nMaybee.... ... ... ")
+                    time.sleep(4)
+                    os.system('cls')
+                    typingPrint("Maybe... you could be the first to meet him. And possibly defeat him???")
+                    time.sleep(4)
+                    os.system('cls')
+                #else is going backward: leaving the forest
+                else:
+                    typingPrint("You choose to go backward. This means that you will go back through the forest and arrive somewhere else")
+                    time.sleep(4)
+                    os.system('cls')
+                    direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
             else:
                 input("You choose off. This means you are quiting the game. Are you sure?")
                 if input == 'YES':
                     print("Loading.... Game is turning off")
+                else:
+                    return 
                 
 forestman.forester
