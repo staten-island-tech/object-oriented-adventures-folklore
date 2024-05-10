@@ -31,7 +31,3 @@ class player():
             self.hp += amount
             print("You have" + str(self.hp) + "hp")
     
-    def s_attack(self, Monster):
-        successful_attack = Monster(self.hp) - self.damage
-        return successful_attack
-    
