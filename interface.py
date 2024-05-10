@@ -8,6 +8,7 @@ from player import player
 
 class start:
     def interface():
+        os.system('cls')
         print("Welcome to the Folklore Game!")
         player(name= input("What is your name?\n"), hp= 100, max_hp=100, strength=5, speed=10, inventory="", damage= 5, KO= "")
         os.system('cls')
@@ -23,7 +24,7 @@ class start:
             time.sleep(3)
             os.system('cls')
             typingPrint("\x1B[3m You open your eyes to a pounding in your head.\n The surrounding is very different from where you were before.\n Your blurry vision starts to focus on a fork in the road...")
-            time.sleep(5)
+            time.sleep(6)
             os.system('cls')
             global pick_route
             pick_route = typingInput("\x1B[3m Would you like to move E(left), W(right), or V(straight ahead)?\n").upper()
@@ -109,19 +110,23 @@ class start:
             typingPrint(boxed_msg("Um, hi-"))
             time.sleep(1)
             os.system('cls')
-            typingPrint("\x1B[3mThe village speeds off away to before you can finish greeting them.\n You decided to try again adn approach a new villager.")
+            typingPrint("\x1B[3mThe villager speeds off away to before you can finish greeting them.\n You decided to try again and approach a new villager.")
             time.sleep(4)
             os.system('cls')
             print("\x1B[0mYou: ")
             typingPrint(boxed_msg("Hello, I-"))
             time.sleep(1)
             os.system('cls')
-            typingPrint("\x1B[3mAgain, the villager quickly walks away")
-            time.sleep(1)
+            typingPrint("\x1B[3mAgain, the villager quickly walks away.\n You keep trying but none of your attempts are sucessful.")
+            time.sleep(3)
+            os.system('cls')
+            typingPrint("\x1B[3mDetermined to figure out where you are, you decide to explore the village on your own.\n Eventually you find another fork in the road that seems promising.")
+            time.sleep(3)
+            os.system('cls')
+            global picking_friends
+            picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
             
-
-
-
 start.interface()
 start.left()
 start.right()
+start.straight_ahead()
