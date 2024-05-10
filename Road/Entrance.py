@@ -54,16 +54,16 @@ class going_into_tower:
         
         def Picking_Floor():
             if Enter_Tower == "YES":
-                Picking_Floor = typingInput("Which floor would you like too go to? (1,2,3,4,5, or leave)").upper
-                if Picking_Floor == "1":
+                Picking_Floor = typingInput("Which floor would you like to go to? (1,2,3,4,5, or leave)").upper
+                if Picking_Floor == 1:
                     FloorOne.Floor1_Beginning()
-                elif Picking_Floor == "2":
+                elif Picking_Floor == 2:
                     FloorTwo.Floor2_Beginning()
-                elif Picking_Floor == "2":
+                elif Picking_Floor == 3:
                     FloorThree.Floor3_Beginning()
-                elif Picking_Floor == "2":
+                elif Picking_Floor == 2:
                     FloorFour.Floor4_Beginning()
-                elif Picking_Floor == "2":
+                elif Picking_Floor == 2:
                     FloorFive.Floor5_Beginning()
                 else:
                     Picking_Floor()
@@ -73,3 +73,4 @@ class going_into_tower:
 
         if Enter_Tower == "NO":
             print("ya")
+going_into_tower.asking_to_enter()
