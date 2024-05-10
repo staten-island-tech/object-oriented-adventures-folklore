@@ -57,7 +57,7 @@ class forestman():
                     typingPrint("You: Huh?! Your gonna gobble me? Let's see about that!")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("Maldachuanian: This is maldachuaian land.\nYOU ASKED FOR THIS?!")
+                    typingPrint("Maldachuanian: This is maldachuaian land.\nYOU ASKED FOR THIS!")
                     time.sleep(5)
                     os.system('cls')
                     typingPrint("You take out your weapon.\n You then attack the Maldachuian before it can even blink.")
