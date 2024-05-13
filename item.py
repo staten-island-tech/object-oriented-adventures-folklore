@@ -1,39 +1,29 @@
 class Items():
-    def __init__(self, item:str, description:str):
+    def __init__(self, item:str):
         self.item = item
-        self.description = description
 
 class weapon(Items):
-    def __init__(self, item: str, description:str, damage:int):
+    def __init__(weapon, item: str, description:str, damage:int):
         super().__init__(item, description)
-        self.damage = damage
-    def __str__(self):
-        return f"{self.item},{self.description},{self.damage}"
+        weapon.damage = damage
 
 class armor(Items):
-    def __init__(self, item: str, description: str, protection:int):
+    def __init__(armor, item: str, description: str, protection:int):
         super().__init__(item, description)
-        self.protection = protection
-    def __str__(self):
-        return f"{self.item},{self.description},{self.protection}"
-    
+        armor.protection = protection
+
 class potion(Items):
-    def __init__(self, item: str, description: str, effect: str):
+    def __init__(potion, item: str, description: str, effect: str):
         super().__init__(item, description)
-        self.effect = effect
-    def __str__(self):
-        return f"{self.item},{self.description},{self.effect}"
+        potion.effect = effect
     
 class food(Items):
-    def __init__(self, item: str, description: str, add_hp: int):
+    def __init__(food, item: str, description: str, add_hp: int):
         super().__init__(item, description)
-        self.add_hp = add_hp
-    def __str__(self):
-        return f"{self.item},{self.description},{self.add_hp}"
+        food.add_hp = add_hp
 
 class currency(Items):
-    def __init__(self, item: str, description: str, value: int):
+    def __init__(currency, item: str, description: str, value: int):
         super().__init__(item, description)
-        self.value = value
-    
+        currency.value = value
     
