@@ -68,7 +68,7 @@ class forestman():
                     typingPrint("..*you walk for another 5 min*....")
                     time.sleep(2)
                     os.system('cls')
-                    typingPrint("If you choose to go see the water spirit you can try defeatin it.\nLegend says that by defeating them, you can increase the amount of power you have by almost double.")
+                    typingPrint("If you choose to go see the water spirit you can try defeat it.\nLegend says that by defeating them, you can increase the amount of power you have by almost double.")
                     time.sleep(4)
                     os.system('cls')
                     typingPrint("On the other hand, if you go to the village ports, you can get a chance to gain new items.")
@@ -89,7 +89,10 @@ class forestman():
                     time.sleep(4)
                     os.system('cls')
                     typingPrint("Maybe... you could be the first to meet him. And possibly defeat him???")
-                    time.sleep(4)
+                    time.sleep(3)
+                    os.system('cls')
+                    typingPrint("Just a side note however, the lakes here are posinous, so make sure you don't touch.")
+                    time.sleep(3)
                     os.system('cls')
                 #else is going backward: leaving the forest
                 else:
