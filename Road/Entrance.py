@@ -1,7 +1,7 @@
 import os
 import time
 import sys
-from TowerFloor1 import FloorOne
+import TowerFloor1
 from TowerFloor2 import FloorTwo
 from TowerFloor3 import FloorThree
 from TowerFloor4 import FloorFour
@@ -48,22 +48,25 @@ class boxes:
 #########################################################################################################################################################
 class going_into_tower:
     def asking_to_enter():
+        os.system('cls')
         typingPrint("You walked up to the steps of the dark tower, a breeze send shivers down your swine. You walk up to the huge gates of the tower.")
+        time.sleep(2)
         os.system('cls')
         Enter_Tower = typingInput("Would you like to go up the tower?").upper()
-        
+        os.system('cls')
+
         def Picking_Floor():
             if Enter_Tower == "YES":
                 Picking_Floor = typingInput("Which floor would you like to go to? (1,2,3,4,5, or leave)").upper
-                if Picking_Floor == 1:
-                    FloorOne.Floor1_Beginning()
-                elif Picking_Floor == 2:
+                if Picking_Floor == "1".upper:
+                    TowerFloor1.FloorOne.Floor1_Beginning()
+                elif Picking_Floor == "2".upper:
                     FloorTwo.Floor2_Beginning()
-                elif Picking_Floor == 3:
+                elif Picking_Floor == "3".upper:
                     FloorThree.Floor3_Beginning()
-                elif Picking_Floor == 2:
+                elif Picking_Floor == "4".upper:
                     FloorFour.Floor4_Beginning()
-                elif Picking_Floor == 2:
+                elif Picking_Floor == "5".upper:
                     FloorFive.Floor5_Beginning()
                 else:
                     Picking_Floor()
