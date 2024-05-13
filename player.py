@@ -1,7 +1,8 @@
 import monster
+import random
 
 class player():
-    def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, KO):
+    def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, crit: int):
         self.name = name
         self.hp = hp
         self.max_hp = max_hp
@@ -9,17 +10,12 @@ class player():
         self.speed = speed
         self.inventory = inventory 
         self.damage = damage
-        self.KO = KO
-
-    def ko(self):
-        self.KO = True
-        print(self.name + ", you have been killed.")
+        self.crit = crit
 
     def take_damage(self, attack):
         if attack > self.hp:
-            print(self.name + ", you have been killed and have 0 hp")
             self.hp = 0
-            self.KO = True
+            print(self.name + ", you have been killed and have 0 hp")
         else:
             self.hp -= attack
             print(self.name + "you have" + str(self.hp) + "hp")
@@ -30,4 +26,13 @@ class player():
         else:
             self.hp += amount
             print("You have" + str(self.hp) + "hp")
-    
+
+    def attack_enemy(self, monster):
+        d = random.randint(1,20)
+        if d < 20:
+            monster.hp -= self.damage
+
+        elif d == 20:
+            monster.hp -= self.crit
+            
+        return monster.hp
