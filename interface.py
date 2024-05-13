@@ -5,12 +5,15 @@ from classes import boxed_msg
 from classes import typingPrint
 from classes import typingInput
 from player import player
+from monster import maldachaunians
+from monster import elves
+from monster import element_spirits
 
 class start:
     def interface():
         os.system('cls')
         print("Welcome to the Folklore Game!")
-        player(name= input("What is your name?\n"), hp= 100, max_hp=100, strength=5, speed=10, inventory="", damage= 5, KO= "")
+        player(name= input("What is your name?\n"), hp= 50, max_hp=100, strength=5, speed=10, inventory="", damage= 5, crit=10)
         os.system('cls')
 
         print("1. Start Game")
@@ -37,6 +40,7 @@ class start:
 
     def left():
         if pick_route == "E":
+            elves(name="", hp= 20, loot="", damage= 5, crit= 10)
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -59,6 +63,7 @@ class start:
             typingPrint("\x1B[3mYou turn around and start running as fast as you can away from the elf.\nIt shoots an arrow at your head and it barely misses.")
             time.sleep(5)
             os.system('cls')
+            
 
     def right():
         if pick_route == "W":
