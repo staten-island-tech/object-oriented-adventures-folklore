@@ -80,6 +80,16 @@ class forestman():
                     typingPrint("Which way would you like to go? Village Ports(Left) or to the water spirit(Right)?")
                     direction = input("LEFT/RIGHT").upper()
                     if direction == 'LEFT':
+                        typingPrint("You have reached the Village Ports")
+                        time.sleep(1)
+                        os.system('cls')
+                        typingPrint("The people here are pretty nice so if you ask for food they will most likely give you some.")
+                        time.sleep(2)
+                        os.system('cls')
+                        typingPrint("")
+                        time.sleep(2)
+                        os.system('cls')
+                    else:
                         print("")
                 #RIGHT DIRECTION *WIMITESCU SWAMPLAND*
                 elif direction == "RIGHT":
