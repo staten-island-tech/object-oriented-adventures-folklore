@@ -43,6 +43,3 @@ class player():
             monster.hp -= self.crit
             print("You did" + self.crit + "to the" + monster.name)
         return monster.hp
-    
-    
-   
