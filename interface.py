@@ -67,7 +67,6 @@ class start:
             time.sleep(5)
             os.system('cls')
             player.attack_enemy(player, elves)
-            
 
     def right():
         if pick_route == "W":
