@@ -40,7 +40,7 @@ class start:
 
     def left():
         if pick_route == "E":
-            elves(name="", hp= 20, loot="", damage= 5, crit= 10)
+            elves("Angry elf", 20, "", 5, 10, "", "")
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -63,6 +63,7 @@ class start:
             typingPrint("\x1B[3mYou turn around and start running as fast as you can away from the elf.\nIt shoots an arrow at your head and it barely misses.")
             time.sleep(5)
             os.system('cls')
+            player.attack_enemy(player, elves)
             
 
     def right():
