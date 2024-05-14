@@ -12,23 +12,8 @@ class player():
         self.inventory = inventory 
         self.damage = damage
         self.crit = crit
-
-    def take_damage(self, attack):
-        if attack > self.hp:
-            self.hp = 0
-            print(self.name + ", you have been killed and have 0 hp")
-        else:
-            self.hp -= attack
-            print(self.name + "you have" + str(self.hp) + "hp")
-
-    def gain_hp(self, amount):
-        if amount > self.max_hp:
-            print("You have" + str(self.max_hp) + "hp")
-        else:
-            self.hp += amount
-            print("You have" + str(self.hp) + "hp")
     
-    def damage_w_weapon(self, weapon):
+    def add_weapon_damage(self, weapon):
         new_damage = self.damage + weapon.damage
         self.damage = new_damage
         return self.damage 
@@ -43,3 +28,19 @@ class player():
             monster.hp -= self.crit
             print("You did" + self.crit + "to the" + monster.name)
         return monster.hp
+    
+    def get_attacked(self, monster):
+        a = random.randint(1,20)
+        if a < 20: 
+            self.hp -= monster.damage
+            print("You were attacked! You took" + monster.damage + "and now have" + self.hp + "hp!")
+
+        elif a == 20:
+            self.hp -= monster.crit
+            print("You were attacked! It was a critical hit! You took" + monster.crit + "and now have" + self.hp + "hp!")
+    
+    def dead(self):
+        if self.hp == 0:
+            print(self.name + ", you have 0 hp left and have just died!")
+        else:
+            print(self.name + "you have" + str(self.hp) + "hp!")
