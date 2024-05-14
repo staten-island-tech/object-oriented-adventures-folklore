@@ -66,7 +66,7 @@ class forestman():
                 #FOWARD DIRECTION *LAKES*
                 elif direction == "FOWARD":
                     typingPrint("You have reached the lakes. If you walk in far enough you can reach either the village ports or water spirit Fjord. ")
-                    time.sleep(4)
+                    time.sleep(3)
                     os.system('cls')
                     typingPrint("..*you walk for another 5 min*....")
                     time.sleep(2)
@@ -90,7 +90,12 @@ class forestman():
                         time.sleep(2)
                         os.system('cls')
                     else:
-                        print("")
+                        typingPrint("You have reached the land where the Water Spirit is.")
+                        time.sleep(1)
+                        os.system('cls')
+                        typingPrint("If you would like to battle the Water Spirit press the up arrow, if not press the down arrow")
+                        time.sleep(2)
+                        os.system('cls')
                 #RIGHT DIRECTION *WIMITESCU SWAMPLAND*
                 elif direction == "RIGHT":
                     typingPrint("You have arrived at the Wimitescu Swampland. If you didn't know, this is where sassy shrek lives. Try not to run into sassy shrek or things could get really bad for you.")
