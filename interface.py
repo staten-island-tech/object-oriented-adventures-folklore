@@ -1,5 +1,6 @@
 import os
 import time
+import json
 import sys
 from classes import boxed_msg
 from classes import typingPrint
@@ -8,12 +9,14 @@ from player import player
 from monster import maldachaunians
 from monster import elves
 from monster import element_spirits
+test = open("monster_data.json", encoding="utf8")
+data = json.load(test)
 
 class start:
     def interface():
         os.system('cls')
         print("Welcome to the Folklore Game!")
-        player(name= input("What is your name?\n"), hp= 50, max_hp=100, strength=5, speed=10, inventory="", damage= 5, crit=10)
+        player(input("What is your name?\n"), 50, 100, 5, 10, "", 5, 10)
         os.system('cls')
 
         print("1. Start Game")
