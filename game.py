@@ -2,5 +2,5 @@ import json
 import os
 from interface import start
 
-start.interface()
+start.run_interface()
 
