@@ -13,10 +13,14 @@ test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
 class start:
+    global interface
+    global left
+    global right
+    global straight_ahead
     def interface():
         os.system('cls')
         print("Welcome to the Folklore Game!")
-        player(input("What is your name?\n"), 50, 100, 5, 10, "", 5, 10)
+        player(input("What is your name?\n"), 50, 100, 5, 10, [], 5, 10)
         os.system('cls')
 
         print("1. Start Game")
@@ -66,7 +70,7 @@ class start:
             typingPrint("\x1B[3mYou turn around and start running as fast as you can away from the elf.\nIt shoots an arrow at your head and it barely misses.")
             time.sleep(5)
             os.system('cls')
-            player.attack_enemy(player, elves)
+            player.attack_enemy(self= player, monster= elves)
 
     def right():
         if pick_route == "W":
@@ -133,8 +137,11 @@ class start:
             os.system('cls')
             global picking_friends
             picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
-            
-start.interface()
-start.left()
-start.right()
-start.straight_ahead()
+
+    def run_interface():
+        interface()
+        left()
+        right()
+        straight_ahead()
+
+start.run_interface()
