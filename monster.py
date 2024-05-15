@@ -11,13 +11,16 @@ class maldachaunians(Monster):
         super().__init__(name, hp, loot, damage, crit)
         monster.weapon = weapon
 
+    
+
 class elves(maldachaunians):
     def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):
         super().__init__(name, hp, loot, damage, crit, weapon)
         monster.power = powers 
-    
+
 class element_spirits(Monster): 
     def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, power:str):
         super().__init__(name, hp, loot, damage, crit)
         monster.power = power 
 
+elves("Starting elf", 20, "5 Silvwe", 5, 10, "Bow and Arrow", "Nothing")

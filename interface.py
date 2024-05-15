@@ -6,6 +6,7 @@ from classes import boxed_msg
 from classes import typingPrint
 from classes import typingInput
 from player import player
+from monster import Monster
 from monster import maldachaunians
 from monster import elves
 from monster import element_spirits
@@ -47,7 +48,6 @@ class start:
 
     def left():
         if pick_route == "E":
-            elves("Angry elf", 20, "", 5, 10, "", "")
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -70,7 +70,8 @@ class start:
             typingPrint("\x1B[3mYou turn around and start running as fast as you can away from the elf.\nIt shoots an arrow at your head and it barely misses.")
             time.sleep(5)
             os.system('cls')
-            player.attack_enemy(self= player, monster= elves)
+            elves("Starting elf", 20, "5 Silvwe", 5, 10, "Bow and Arrow", "Nothing")
+            player.attack_enemy(player, elves)
 
     def right():
         if pick_route == "W":
