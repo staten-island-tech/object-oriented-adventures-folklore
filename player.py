@@ -6,7 +6,7 @@ test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
 class player():
-    def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: str, damage: int, crit: int):
+    def __init__(self, name: str, hp: int, max_hp: int, strength: int, speed: int, inventory: list, damage: int, crit: int):
         self.name = name
         self.hp = hp
         self.max_hp = max_hp
@@ -24,11 +24,8 @@ class player():
     def attack_enemy(self, monster):
         d = random.randint(1,20)
         if d < 20:
-            for i in data:
-                x = monster.name
-                if x == i['name']:
-                    monster.hp -= self.damage
-                    print("You did" + self.damage + "to the" + monster.name)
+            monster.hp -= self.damage
+            print("You did" + self.damage + "to the" + monster.name)
 
         elif d == 20:
             monster.hp -= self.crit
