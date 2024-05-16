@@ -21,29 +21,34 @@ class player():
         self.damage = new_damage
         return self.damage 
 
-    def attack_enemy(self, monster):
+    def attack_enemy(a,b,c):
+        #a is the monter's hp, b is how much damage the player does, c is the player's crit attack amount
         d = random.randint(1,20)
         if d < 20:
-            monster.hp -= self.damage
-            print("You did" + self.damage + "to the" + monster.name)
+            a - b
+            print("You did " + str(a) + " damage!")
 
         elif d == 20:
-            monster.hp -= self.crit
-            print("You did" + self.crit + "to the" + monster.name)
-        return monster.hp
+            a - c
+            print("You did " + str(c) + " damage!")
+        return a
     
-    def get_attacked(self, monster):
-        a = random.randint(1,20)
-        if a < 20:   
-            self.hp -= monster.damage
-            print("You were attacked! You took" + monster.damage + "and now have" + self.hp + "hp!")
+    def get_attacked(a,b,c):
+        #a is player hp, b is how much damage the monster does, c is a critical hit
+        x = random.randint(1,20)
+        if x < 20:   
+            h = a - b
+            print("You were attacked! You took " + str(b) + " damage and now have " + str(h) + " hp!")
 
-        elif a == 20:
-            self.hp -= monster.crit
-            print("You were attacked! It was a critical hit! You took" + monster.crit + "and now have" + self.hp + "hp!")
+        elif x == 20:
+            h = a - c
+            print("You were attacked! It was a critical hit! You took " + str(c) + " and now have" + str(h) + " hp!")
+        return h
     
     def dead(self):
         if self.hp == 0:
             print(self.name + ", you have 0 hp left and have just died!")
         else:
             print(self.name + "you have" + str(self.hp) + "hp!")
+
+player.get_attacked(100,5,10)
