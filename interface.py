@@ -70,8 +70,9 @@ class start:
             typingPrint("\x1B[3mYou turn around and start running as fast as you can away from the elf.\nIt shoots an arrow at your head and it barely misses.")
             time.sleep(5)
             os.system('cls')
-            elves("Starting elf", 20, "5 Silvwe", 5, 10, "Bow and Arrow", "Nothing")
-            player.attack_enemy(player, elves)
+            typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
+            time.sleep(5)
+            os.system('cls')
 
     def right():
         if pick_route == "W":
