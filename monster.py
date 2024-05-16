@@ -22,5 +22,3 @@ class element_spirits(Monster):
     def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, power:str):
         super().__init__(name, hp, loot, damage, crit)
         monster.power = power 
-
-elves("Starting elf", 20, "5 Silvwe", 5, 10, "Bow and Arrow", "Nothing")
