@@ -16,10 +16,17 @@ class player():
         self.damage = damage
         self.crit = crit
     
-    def add_weapon_damage(self, weapon):
-        new_damage = self.damage + weapon.damage
-        self.damage = new_damage
-        return self.damage 
+    def add_weapon_damage(a,b):
+        #a is the player's original damage, b is the weapon amount
+        d = a + b
+        n = d
+        return n
+    
+    def add_weapon_to_crit(a,b):
+        #a is the player's crit, b is the weapon amount 
+        c = a + b
+        n = c
+        return n
 
     def attack_enemy(a,b,c):
         #a is the monter's hp, b is how much damage the player does, c is the player's crit attack amount
@@ -44,11 +51,3 @@ class player():
             h = a - c
             print("You were attacked! It was a critical hit! You took " + str(c) + " and now have" + str(h) + " hp!")
         return h
-    
-    def dead(self):
-        if self.hp == 0:
-            print(self.name + ", you have 0 hp left and have just died!")
-        else:
-            print(self.name + "you have" + str(self.hp) + "hp!")
-
-player.get_attacked(100,5,10)
