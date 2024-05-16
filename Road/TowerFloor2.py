@@ -43,6 +43,26 @@ class boxes:
         return res.strip()
 #########################################################################################################################################################
 
+#Pchvpxa  &  Anlliasio
 class FloorTwo:
     def Floor2_Beginning():
-        print("yall suck")
+        typingPrint("You have reached floor level two!\n Here, you will have to go against the ")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("These villians are called the Pchvpxa, are they wield weapons of great power. ")
+        time.sleep(1)
+        os.system('cls')
+        typingPrint("Some carry rifles/guns powered by the element they are trained for while others carry hammers.")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("The best way to defeat them is to crit shot a whole bunch of them at the same time.")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("All things aside, its time to fight.")
+        time.sleep(1)
+        os.system('cls')
+        input = ("START")
+
+    def Floor2_Battle():
+        print("")
+    def Floor2_Exit():

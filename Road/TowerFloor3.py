@@ -46,3 +46,7 @@ class boxes:
 class FloorThree:
     def Floor3_Beginning():
         print("yall suck")
+    def Floor3_Battle():
+        print("")
+    def Floor3_Exit():
+        print("")

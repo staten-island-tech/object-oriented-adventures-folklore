@@ -43,6 +43,7 @@ class boxes:
         return res.strip()
 #########################################################################################################################################################
 
+#Moonlight Monarch
 class FloorOne:
     def Floor1_Beginning():
         typingPrint("You entered the through the halls of a the dark skyscraper.")
@@ -89,5 +90,9 @@ class FloorOne:
         typingPrint("Signaling the start of Floor 1.")
         time.sleep(1)
         os.system('cls')
+    def Floor1_Battle():
+        print("")
+    def Floor1_Exit():
+        print("")
 
         
