@@ -97,13 +97,29 @@ class Betty:
                         typingPrint(boxed_msg("\x1B[0mWhat happened?"))
                         time.sleep(1)
                         os.system('cls')
-
-                        Betty.first_en_bet()
-                    yes_to_climb_poets_tower()
+                        yes_to_climb_poets_tower()
 
                 elif Climb_Poets_Tower == "NO":
                     os.system('cls')
                     not_climb_poet_tower()
+
+                    def continuing_to_otrtued_poets():
+                                os.system('cls')
+                                print("\x1B[0mStranger:")    
+                                Continue_to_climb_poet = typingInput(boxed_msg("Are you still going to climb the Tortured Poets Department?\n (yes/no)")).upper()
+                                time.sleep(2)
+                                os.system('cls')
+
+                                if Continue_to_climb_poet == "NO":
+                                    not_climb_poet_tower()
+                                elif Continue_to_climb_poet == "YES":
+                                    yes_to_climb_poets_tower()
+                                else:
+                                    os.system('cls')
+                                    typingPrint("\x1B[3m That isn't an option.")
+                                    time.sleep(5)
+                                    os.system('cls')
+                                    continuing_to_otrtued_poets()
                 else:
                     os.system('cls')
                     print("Betty:")
@@ -114,23 +130,7 @@ class Betty:
                     typingPrint(boxed_msg("It was said that this tower belong to a powerful witch. \nHowever she wasn't the one who built this tower. \nLegends said that this was a mental asylum. \nPeople who have gone in, never came back. \nOnly one person ever made it out alive, and he came out insane."))
                     continuing_to_otrtued_poets()
 
-                    def continuing_to_otrtued_poets():
-                        os.system('cls')
-                        print("\x1B[0mStranger:")    
-                        Continue_to_climb_poet = typingInput(boxed_msg("Are you still going to climb the Tortured Poets Department?\n (yes/no)")).upper()
-                        time.sleep(2)
-                        os.system('cls')
-
-                        if Continue_to_climb_poet == "NO":
-                            not_climb_poet_tower()
-                        elif Continue_to_climb_poet == "YES":
-                            yes_to_climb_poets_tower()
-                        else:
-                            os.system('cls')
-                            typingPrint("\x1B[3m That isn't an option.")
-                            time.sleep(5)
-                            os.system('cls')
-                            continuing_to_otrtued_poets()
+                    
 
 
                 def not_climb_poet_tower():
