@@ -46,3 +46,9 @@ class boxes:
 class FloorFour:
     def Floor4_Beginning():
         print("yall suck")
+    def Floor4_Battle():
+        print("")
+    def Floor4_Exit():
+        print("You are moving on to floor 5")
+        time.sleep(1)
+        os.system('cls')

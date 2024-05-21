@@ -46,3 +46,9 @@ class boxes:
 class FloorFive:
     def Floor5_Beginning():
         print("yall suck")
+    def Floor5_Battle():
+        typingPrint("")
+    def Floor5_Exit():
+        print("This is the last floor for the tower! Congratulations on completeing the game")
+        time.sleep(1)
+        os.system('cls')

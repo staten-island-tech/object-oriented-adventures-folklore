@@ -93,6 +93,9 @@ class FloorOne:
     def Floor1_Battle():
         print("")
     def Floor1_Exit():
-        print("")
+        print("You are moving on to floor 2")
+        time.sleep(1)
+        os.system('cls')
+
 
         

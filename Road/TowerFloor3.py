@@ -42,11 +42,30 @@ class boxes:
         res += horizontal
         return res.strip()
 #########################################################################################################################################################
-
+#Dueling twins Anlliasio &  Altosoei
 class FloorThree:
     def Floor3_Beginning():
-        print("yall suck")
+        typingPrint("You have no reached floor 3.\n This floor consists of the two the dueling twins called Anlliasio and Altosoei")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("They have no empathy for humans, and especially those that come from the oustide world \n")
+        typingPrint("Their ")
+        typingPrint("In order to defeat them, find a way to hit them at the same time")
+        time.sleep(1)
+        os.system('cls')
+        typingPrint("If you wait too long to hit one of them, they will start to regain health. \n There is also a 2:30 timer for you to complete the challenge.")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("* If you fail to complete the challenge you will have to restart *")
+        time.sleep(1)
+        os.system('cls')
+        typingPrint("")
+        typingPrint("")
+        time.sleep()
+        os.system('cls')
     def Floor3_Battle():
         print("")
     def Floor3_Exit():
-        print("")
+        print("You are moving on to floor 4")
+        time.sleep(1)
+        os.system('cls')
