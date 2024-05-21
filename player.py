@@ -28,26 +28,4 @@ class player():
         n = c
         return n
 
-    def attack_enemy(a,b,c):
-        #a is the monter's hp, b is how much damage the player does, c is the player's crit attack amount
-        d = random.randint(1,20)
-        if d < 20:
-            a - b
-            print("You did " + str(a) + " damage!")
 
-        elif d == 20:
-            a - c
-            print("You did " + str(c) + " damage!")
-        return a
-    
-    def get_attacked(a,b,c):
-        #a is player hp, b is how much damage the monster does, c is a critical hit
-        x = random.randint(1,20)
-        if x < 20:   
-            h = a - b
-            print("You were attacked! You took " + str(b) + " damage and now have " + str(h) + " hp!")
-
-        elif x == 20:
-            h = a - c
-            print("You were attacked! It was a critical hit! You took " + str(c) + " and now have" + str(h) + " hp!")
-        return h
