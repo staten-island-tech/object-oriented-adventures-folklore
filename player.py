@@ -16,16 +16,13 @@ class player():
         self.damage = damage
         self.crit = crit
     
-    def add_weapon_damage(a,b):
-        #a is the player's original damage, b is the weapon amount
-        d = a + b
-        n = d
-        return n
+    def add_weapon_damage(self, weapon):
+        new_self_damage = self.damage + weapon.damage 
+        self.damage = new_self_damage
+        return self.damage
     
-    def add_weapon_to_crit(a,b):
-        #a is the player's crit, b is the weapon amount 
-        c = a + b
-        n = c
-        return n
-
+    def add_weapon_to_crit(self, weapon):
+        new_self_damage = self.crit + weapon.damage
+        self.damage = new_self_damage
+        return self.damage
 
