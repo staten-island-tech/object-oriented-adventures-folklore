@@ -1,9 +1,9 @@
 import os
 import time
 import sys
-import betty
-import chu
-import james
+from betty import Betty
+from chu import MrsChu
+from james import James
 class typer():
     global typingPrint
     global typingInput
@@ -45,28 +45,13 @@ class boxes:
         res += horizontal
         return res.strip()
 
-class Global:
-    global picking_friend
+class picking_NPC:
     def picking_friend():
-        global picking_friends
-        picking_friends = typingInput("Would you like to go up, straight or down? \nA(Left) W(Straight Foward) S(Down)\n").upper()
-
-class Betty():
-    os.system('cls')
-    if picking_friends == "A":
-        #Going to Betty.
-        os.system('cls')
-        typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
-        time.sleep(5)
-        os.system('cls')
-        betty()
-
-class Chu():
-    os.system('cls')
-    if picking_friends == "W":
-        chu()
-
-class James():
-    os.system('cls')
-    if picking_friends == "S":
-        james()
+        picking_friends = typingInput("Would you like to go up, straight or down? \nA(Left) W(Straight Foward) S(Down)").upper()
+        if picking_friends == "A":
+            Betty.first_en_bet()
+        elif picking_friends == "W":
+            MrsChu.first_en_Chu()
+        elif picking_friends == "S":
+            James.first_en_Jame()
+picking_NPC.picking_friend()
