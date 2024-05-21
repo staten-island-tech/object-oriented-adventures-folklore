@@ -45,13 +45,15 @@ class boxes:
 #Dueling twins Anlliasio &  Altosoei
 class FloorThree:
     def Floor3_Beginning():
-        typingPrint("You have no reached floor 3.\n This floor consists of the two the dueling twins called Anlliasio and Altosoei")
+        typingPrint("You have now reached floor 3.\n This floor consists of the two dueling twins called Anlliasio and Altosoei")
         time.sleep(2)
         os.system('cls')
         typingPrint("They have no empathy for humans, and especially those that come from the oustide world \n")
-        typingPrint("Their ")
+        typingPrint("Anlliasio an Altosoei were created by the leader of the tower, who is over course still unknown.")
+        time.sleep(4)
+        os.system('cls')
         typingPrint("In order to defeat them, find a way to hit them at the same time")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("If you wait too long to hit one of them, they will start to regain health. \n There is also a 2:30 timer for you to complete the challenge.")
         time.sleep(2)
@@ -59,9 +61,8 @@ class FloorThree:
         typingPrint("* If you fail to complete the challenge you will have to restart *")
         time.sleep(1)
         os.system('cls')
-        typingPrint("")
-        typingPrint("")
-        time.sleep()
+        typingPrint("Signaling floor three to start*")
+        time.sleep(1)
         os.system('cls')
     def Floor3_Battle():
         print("")
