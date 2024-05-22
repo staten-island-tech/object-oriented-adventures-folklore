@@ -15,6 +15,7 @@ class battle_system:
     global crit_attack_maldachaunians
     global crit_attack_elves
     global crit_attack_element_spirits
+    global fight_monster
     def attack_maldachaunians(self, maldachaunians):
         new_monster_hp = maldachaunians.hp - self.damage
         maldachaunians.hp = new_monster_hp
@@ -51,7 +52,6 @@ class battle_system:
         typingPrint("3. Run away... (you wuss)\n")
         global choose
         choose = int(input("What would you like to do?\n"))
-        fight_monster = "MALDACHAUIANS"
         x = random.randint(1,100)
 
         if choose == 1:
@@ -71,4 +71,5 @@ class battle_system:
                 if x == 100:
                     crit_attack_element_spirits(player, element_spirits)
 
+fight_monster = "MALDACHAUIANS"
 battle_system.choose_to_attack()
