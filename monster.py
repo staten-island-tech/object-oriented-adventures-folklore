@@ -7,18 +7,16 @@ class Monster:
         monster.crit = crit
     
 class maldachaunians(Monster):
-    def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
+    def __init__(maldachaunians, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit)
-        monster.weapon = weapon
-
-    
+        maldachaunians.weapon = weapon
 
 class elves(maldachaunians):
-    def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):
+    def __init__(elves, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):
         super().__init__(name, hp, loot, damage, crit, weapon)
-        monster.power = powers 
+        elves.power = powers 
 
 class element_spirits(Monster): 
-    def __init__(monster, name:str, hp:int, loot:str, damage: int, crit: int, power:str):
+    def __init__(element_spirits, name:str, hp:int, loot:str, damage: int, crit: int, power:str):
         super().__init__(name, hp, loot, damage, crit)
-        monster.power = power 
+        element_spirits.power = power 
