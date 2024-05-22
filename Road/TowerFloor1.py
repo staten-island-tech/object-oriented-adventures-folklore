@@ -44,7 +44,7 @@ class boxes:
 #########################################################################################################################################################
 
 #Moonlight Monarch
-class FloorOne:
+    global Floor1_Beginning
     def Floor1_Beginning():
         typingPrint("You entered the through the halls of a the dark skyscraper.")
         time.sleep(1)
@@ -64,22 +64,22 @@ class FloorOne:
         time.sleep(1)
         os.system('cls')
         typingPrint("As you began to wake up, you realized you are surrounded by thounsands glowing creatures.")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("Suddenly, a magenta light shoot out of the chandelier, pierce through your skin.")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("Any armor you have on would have no effect on this floor.")
         time.sleep(1)
         os.system('cls')
         typingPrint("As you look up to see what stike you, thousands of butterfly flew across the room.")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("They illuminated the room with a eerie purple glow.")
         time.sleep(1)
         os.system('cls')
         typingPrint("These butterflies began to glow brighter and brighter, ready to attack.")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("A streeching sound filled the room.")
         time.sleep(1)
@@ -90,12 +90,7 @@ class FloorOne:
         typingPrint("Signaling the start of Floor 1.")
         time.sleep(1)
         os.system('cls')
-    def Floor1_Battle():
-        print("")
-    def Floor1_Exit():
-        print("You are moving on to floor 2")
-        time.sleep(1)
-        os.system('cls')
+        Floor2_BossBattle()
 
 
         
