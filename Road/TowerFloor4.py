@@ -45,7 +45,7 @@ class boxes:
 
 class FloorFour:
     def Floor4_Beginning():
-        print("yall suck")
+        print("You have reached floor floor. ")
     def Floor4_Battle():
         print("")
     def Floor4_Exit():
