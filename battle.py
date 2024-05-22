@@ -2,59 +2,73 @@ import random
 import time
 import os
 from classes import typingPrint
+from monster import Monster
+from monster import maldachaunians
+from monster import elves
+from monster import element_spirits
+from player import player 
+
 class battle_system:
-    def battle(a,b,c,d,e,f): 
-        os.system('cls')
-        typingPrint("Commence Battle!")
-        time.sleep(1)
-        os.system('cls')
-        global m 
-        global y
-        def attack_enemy(a,b,c):
-            #a is the monter's hp, b is how much damage the player does, c is the player's crit attack amount
-            d = random.randint(1,90)
-            if d < 90:
-                m = a - b
-                typingPrint("You did " + str(b) + " damage! It only has " + str(m) + " hp now!")
-                time.sleep(3)
-                os.system('cls')
-            elif d >= 90:
-                m = a - c
-                typingPrint("Your attack was a critical hit! You did " + str(c) + " damage! It only has " + str(m) + " hp now!")
-                time.sleep(3)
-                os.system('cls')
-            return m
-             
-        def get_attacked(d,e,f):
-            #d is player hp, e is how much damage the monster does, f is a critical hit
-            x = random.randint(1,100)
-            if x < 90:   
-                y = d - e
-                typingPrint("You were attacked! You took " + str(e) + " damage and now have " + str(y) + " hp!")
-                time.sleep(3)
-                os.system('cls')
-            elif x >= 90:
-                y = d - f 
-                typingPrint("You were attacked! It was a critical hit! You took " + str(f) + " and now have " + str(y) + " hp!")
-                time.sleep(3)
-                os.system('cls')
-            return y 
+    global attack_maldachaunians
+    global attack_elves
+    global attack_element_spirits
+    global crit_attack_maldachaunians
+    global crit_attack_elves
+    global crit_attack_element_spirits
+    def attack_maldachaunians(self, maldachaunians):
+        new_monster_hp = maldachaunians.hp - self.damage
+        maldachaunians.hp = new_monster_hp
+        return maldachaunians.hp 
     
-        m = attack_enemy(a,b,c)
-        y = get_attacked(d,e,f)
+    def attack_elves(self, elves):
+        new_elf_hp = elves.hp - self.damage
+        elves.hp = new_elf_hp
+        return elves.hp
+    
+    def attack_element_spirits(self, element_spirits):
+        new_spirit_hp = element_spirits.hp - self.damage
+        element_spirits.hp = new_spirit_hp
+        return element_spirits.hp 
+    
+    def crit_attack_maldachaunians(self, maldachaunians):
+        new_monster_hp = maldachaunians.hp - self.crit
+        maldachaunians.hp = new_monster_hp
+        return maldachaunians.hp
+    
+    def crit_attack_elves(self, elves):
+        new_elf_hp = elves.hp - self.crit
+        elves.hp = new_elf_hp
+        return elves.hp
+    
+    def crit_attack_element_spirits(self, element_spirits):
+        new_spirit_hp = element_spirits.hp - self.crit
+        element_spirits.hp = new_spirit_hp
+        return element_spirits.hp 
 
-        while m and y > 0: 
-            attack_enemy(a,b,c)
-            get_attacked(d,e,f)
-            return m and y 
-        
-        if m <= 0:
-            typingPrint("Congradulations! You won the batttle!")
-            time.sleep(2)
-            os.system('cls')
-        elif y <= 0:
-            typingPrint("It has killed you...\nYou are dead...")
-            time.sleep(2)
-            os.system('cls')
+    def choose_to_attack():
+        typingPrint("1. Attack!\n")
+        typingPrint("2. Go into inventory\n")
+        typingPrint("3. Run away... (you wuss)\n")
+        global choose
+        choose = int(input("What would you like to do?\n"))
+        fight_monster = "MALDACHAUIANS"
+        x = random.randint(1,100)
 
-battle_system.battle(50,5,10,50,5,10)
+        if choose == 1:
+            if fight_monster == "MALDACHAUIANS":
+                if x < 100:
+                    attack_maldachaunians(player, maldachaunians)
+                elif x == 100:
+                    crit_attack_maldachaunians(player, maldachaunians)
+            if fight_monster == "ELVES":
+                if x < 100:
+                    attack_elves(player, elves)
+                elif x == 100:
+                    crit_attack_elves(player, elves)
+            if fight_monster == "ELEMENT_SPIRIT":
+                if x < 100:
+                    attack_element_spirits(player, element_spirits)
+                if x == 100:
+                    crit_attack_element_spirits(player, element_spirits)
+
+battle_system.choose_to_attack()
