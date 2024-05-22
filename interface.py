@@ -42,7 +42,7 @@ class start:
             
             
         elif pick_option == "2":
-            instructions() 
+            print() 
         elif pick_option == "3":
             print("Bye bye!")
 
