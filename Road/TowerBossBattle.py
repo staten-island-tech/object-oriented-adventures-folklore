@@ -45,4 +45,14 @@ class boxes:
 
 class FinalBoss:
     def FinalBoss_Beginning():
-        print("yall suck")
+        typingPrint("You have reached the final boss. Congrats on being the first to reache this far.")
+        time.sleep(3)
+        os.system('cls')
+        typingPrint("Chu: Welcome welcome my partner! Surprised eh? I am the leader and rule of this tower and you didn't event notice.\n")
+        typingPrint("I am surprised you even it made it this far. Even then, you won't be able to defeat me\n")
+        typingPrint("Try all you can. Show me what you are made of.")
+        time.sleep(5)
+        os.system('cls')
+        typingPrint(" * intiating the final battle to begin * ")
+        time.sleep(1)
+        os.system('cls')
