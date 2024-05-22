@@ -45,6 +45,7 @@ class boxes:
 
 #Moonlight Monarch
     global Floor1_Beginning
+class Floor_1:
     def Floor1_Beginning():
         typingPrint("You entered the through the halls of a the dark skyscraper.")
         time.sleep(1)
@@ -90,7 +91,7 @@ class boxes:
         typingPrint("Signaling the start of Floor 1.")
         time.sleep(1)
         os.system('cls')
-        Floor2_BossBattle()
+Floor_1.Floor1_Beginning
 
 
         
