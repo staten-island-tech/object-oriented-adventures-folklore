@@ -1,7 +1,7 @@
 import os
 import time
 import sys
-from betty import Betty
+#from betty import Betty
 from chu import MrsChu
 from james import James
 class typer():
@@ -47,9 +47,10 @@ class boxes:
 
 class picking_NPC:
     def picking_friend():
-        picking_friends = typingInput("Would you like to go up, straight or down? \nA(Left) W(Straight Foward) S(Down)").upper()
+        os.system('cls')
+        picking_friends = typingInput("Would you like to go up, straight or down? \nA(Left) W(Straight Foward) S(Down)\n").upper()
         if picking_friends == "A":
-            Betty.first_en_bet()
+            print("Work in Progress")
         elif picking_friends == "W":
             MrsChu.first_en_Chu()
         elif picking_friends == "S":

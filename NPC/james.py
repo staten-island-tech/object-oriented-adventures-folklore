@@ -1,6 +1,7 @@
 import os
 import time
 import sys
+from Interface import start
 class typer():
     global typingPrint
     global typingInput
@@ -42,25 +43,8 @@ class boxes:
         res += horizontal
         return res.strip()
 
-class Global:
-    global picking_friend
-    def picking_friend():
-        global picking_friends        
-        picking_friends = typingInput("Would you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
-
-    global encountering_characters
-    def encountering_characters():
-        global Meeting_Another_Character
-        typingPrint("\x1B[3m You decided to back to the road.")
-        time.sleep(2)
-        os.system('cls')
-        James.first_en_Jame()
-
 class James:
     def first_en_Jame():
-
-        picking_friend()
-        if picking_friends == "S":
             os.system('cls')
             typingPrint("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to a old lady and sneakly take her purse from her pockets. \nYou followed him behind and noticed you.")
             print("\x1B[0mStranger:")
@@ -120,5 +104,13 @@ class James:
                 os.system('cls')
 
                 typingPrint("\x1B[3mJames murdered you.")
+                os.system('cls')
+                typingPrint("You slowly lose your vision.")
+                os.system('cls')
+                typingPrint("A clock appeared in front of your eyes as it started ticking backwards.")
+                os.system('cls')
+                typingPrint("A bright light consumed you, sending you back in time.")
+                os.system('cls')
+                start.run_interface()
 
-James.first_en_Jame()
+
