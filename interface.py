@@ -73,7 +73,6 @@ class start:
             typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
             time.sleep(5)
             os.system('cls')
-            player.battle("BEGINNING ELF")
 
     def right():
         if pick_route == "W":
