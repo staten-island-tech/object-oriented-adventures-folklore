@@ -35,5 +35,3 @@ class currency(Items):
     def __init__(self, item: str, description: str, value: int):
         super().__init__(item, description)
         self.value = value
-    
-    
