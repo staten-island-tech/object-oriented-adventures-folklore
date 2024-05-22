@@ -70,6 +70,3 @@ class battle_system:
                     attack_element_spirits(player, element_spirits)
                 if x == 100:
                     crit_attack_element_spirits(player, element_spirits)
-
-fight_monster = "MALDACHAUIANS"
-battle_system.choose_to_attack()
