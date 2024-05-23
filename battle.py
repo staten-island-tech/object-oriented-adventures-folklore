@@ -19,7 +19,6 @@ class battle_system:
     global crit_attack_elves
     global crit_attack_element_spirits
     global fight_monster
-    
     def attack_maldachaunians(self, maldachaunians):
         new_monster_hp = maldachaunians.hp - self.damage
         maldachaunians.hp = new_monster_hp
@@ -51,6 +50,8 @@ class battle_system:
         return element_spirits.hp 
 
     def choose_to_attack():
+        player("", 100, 100, 10, 10, [], 5, 10)
+        maldachaunians("", 20, "", 5, 10, "")
         print("1. Attack!")
         print("2. Go into inventory")
         print("3. Run away... (you wuss)")
