@@ -19,15 +19,6 @@ class battle_system:
     global crit_attack_elves
     global crit_attack_element_spirits
     global fight_monster
-    x = "Maldachaunians"
-    for i in data:
-        if x in i['Name']:
-            maldachaunians.name = i['Name']
-            maldachaunians.hp = i['Hp']
-            maldachaunians.loot = i['Loot']
-            maldachaunians.damage = i["Damage"]
-            maldachaunians.crit = i['Crit']
-            maldachaunians.weapon = i['Weapon']
     
     def attack_maldachaunians(self, maldachaunians):
         new_monster_hp = maldachaunians.hp - self.damage
@@ -60,9 +51,9 @@ class battle_system:
         return element_spirits.hp 
 
     def choose_to_attack():
-        typingPrint("1. Attack!\n")
-        typingPrint("2. Go into inventory\n")
-        typingPrint("3. Run away... (you wuss)\n")
+        print("1. Attack!")
+        print("2. Go into inventory")
+        print("3. Run away... (you wuss)")
         global choose
         choose = int(input("What would you like to do?\n"))
         x = random.randint(1,100)
@@ -83,5 +74,6 @@ class battle_system:
                     attack_element_spirits(player, element_spirits)
                 if x == 100:
                     crit_attack_element_spirits(player, element_spirits)
+
 fight_monster = "MALDACHAUIANS"
 battle_system.choose_to_attack()
