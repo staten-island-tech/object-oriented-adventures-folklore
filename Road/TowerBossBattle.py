@@ -56,3 +56,4 @@ class FinalBoss:
         typingPrint(" * intiating the final battle to begin * ")
         time.sleep(1)
         os.system('cls')
+        print("This is the last floor for the tower! Congratulations on completeing the game")

@@ -77,7 +77,7 @@ class FloorThree:
         typingPrint("The beacon glowed ever more brightly.")
         time.sleep(1)
         os.system('cls')
-        typingPrint("Being distracted by the light, the butterflies reappeared and strike through you.")
+        typingPrint("Being distracted by the light, the butterflies reappeared and striked through you.")
         time.sleep(1)
         os.system('cls')
         typingPrint("The pain caused you to fall in a deep sleep.")
