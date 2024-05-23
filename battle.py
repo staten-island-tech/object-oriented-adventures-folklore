@@ -1,12 +1,15 @@
 import random 
 import time
 import os
+import json
 from classes import typingPrint
 from monster import Monster
 from monster import maldachaunians
 from monster import elves
 from monster import element_spirits
 from player import player 
+test = open("monster_data.json", encoding="utf8")
+data = json.load(test)
 
 class battle_system:
     global attack_maldachaunians
@@ -16,6 +19,16 @@ class battle_system:
     global crit_attack_elves
     global crit_attack_element_spirits
     global fight_monster
+    x = "Maldachaunians"
+    for i in data:
+        if x in i['Name']:
+            maldachaunians.name = i['Name']
+            maldachaunians.hp = i['Hp']
+            maldachaunians.loot = i['Loot']
+            maldachaunians.damage = i["Damage"]
+            maldachaunians.crit = i['Crit']
+            maldachaunians.weapon = i['Weapon']
+    
     def attack_maldachaunians(self, maldachaunians):
         new_monster_hp = maldachaunians.hp - self.damage
         maldachaunians.hp = new_monster_hp
@@ -70,3 +83,5 @@ class battle_system:
                     attack_element_spirits(player, element_spirits)
                 if x == 100:
                     crit_attack_element_spirits(player, element_spirits)
+fight_monster = "MALDACHAUIANS"
+battle_system.choose_to_attack()
