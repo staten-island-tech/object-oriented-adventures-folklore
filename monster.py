@@ -1,3 +1,7 @@
+import json 
+test = open("monster_data.json", encoding="utf8")
+data = json.load(test)
+
 class Monster:
     def __init__(monster, name: str, hp: int, loot: str, damage: int, crit: int):
         monster.name = name
