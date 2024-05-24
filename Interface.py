@@ -21,7 +21,8 @@ class start:
     def interface():
         os.system('cls')
         print("Welcome to the Folklore Game!")
-        player(input("What is your name?\n"), 50, 100, 5, 10, [], 5, 10)
+        global main_character
+        main_character = player(name= input("What is your name?\n"), hp= 100, max_hp= 100, strength= 5, speed= 0, inventory= [], damage= 5, crit= 10)
         os.system('cls')
 
         print("1. Start Game")
@@ -39,7 +40,6 @@ class start:
             os.system('cls')
             global pick_route
             pick_route = typingInput("\x1B[3m Would you like to move E(left), W(right), or V(straight ahead)?\n").upper()
-            
             
         elif pick_option == "2":
             print() 
@@ -73,7 +73,8 @@ class start:
             typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
             time.sleep(5)
             os.system('cls')
-
+            beginning_elf = elves(name="", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+        
     def right():
         if pick_route == "W":
             os.system('cls')
