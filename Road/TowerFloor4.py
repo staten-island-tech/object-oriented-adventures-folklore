@@ -42,21 +42,21 @@ class boxes:
         res += horizontal
         return res.strip()
 #########################################################################################################################################################
-
+# Beaste
 class FloorFour:
     def Floor4_Beginning():
         print("You have reached the fourth floor. ")
-        time.sleep(1)
+        time.sleep(2)
         os.system('cls')
         typingPrint("For this floor, you will be battling Chikungunya, a giant beast that was quite literally named after a disease by the village people\n")
-        typingPrint("This is because of the large quantities of venom it produces every few seconds\n It leaves a trail whereever it goes, and if you aren't carefull you are going to slowly lose HP")
+        typingPrint("This is because of the large quantities of venom it produces every few seconds\n It leaves a trail whereever it goes, and if you aren't careful you are going to slowly lose HP")
         time.sleep(4)
         os.system('cls')
-        typingPrint("")
-        time.sleep()
+        typingPrint("By completing this floor, you will obtain the last and final stone needed, the 'gold light stone'")
+        time.sleep(2)
         os.system('cls')
         typingPrint("")
-        time.sleep()
+        time.sleep(2)
         os.system('cls')
         typingPrint("")
         time.sleep()
