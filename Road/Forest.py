@@ -1,7 +1,7 @@
 import time
 import sys
 import os
-
+from Fighting import Attacks
 global typingPrint
 global typingspeed
 typingspeed = 0.01
@@ -62,7 +62,9 @@ class forestman():
                     typingPrint("Maldachuanian: This is maldachuaian land.\nYOU ASKED FOR THIS!")
                     time.sleep(5)
                     os.system('cls')
-                    typingPrint("You take out your weapon.\n [ Quickly press the enter key to intiate a damage with your weapon ]")
+                    Attacks.Maldachaunians()
+
+                    #Might change:   typingPrint("You take out your weapon.\n [ Quickly press the enter key to intiate a damage with your weapon ]")
                 #FOWARD DIRECTION *LAKES*
                 elif direction == "FOWARD":
                     typingPrint("You have reached the lakes. If you walk in far enough you can reach either the village ports or water spirit Fjord. ")
@@ -113,6 +115,7 @@ class forestman():
                     typingPrint("But please keep in mind that the lakes here are pousinous, so make sure you don't touch.")
                     time.sleep(3)
                     os.system('cls')
+                    Attacks.Wimitescu()
                 #else is going backward: LEAVING THE FOREST
                 else:
                     typingPrint("You chose to go backward. This means that you will go back through the forest and arrive somewhere else")
