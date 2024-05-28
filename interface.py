@@ -20,7 +20,7 @@ class start:
     global straight_ahead
     def interface():
         os.system('cls')
-        print("Welcome to the Folklore Game!")
+        print("-‘๑’-Wҽʅƈσɱҽ ƚσ Fσʅƙʅσɾҽ Gαɱҽʂ-`‘๑’-")
         global main_character
         main_character = player(name= input("What is your name?\n"), hp= 100, max_hp= 100, strength= 5, speed= 0, inventory= [], damage= 5, crit= 10)
         os.system('cls')
@@ -45,6 +45,7 @@ class start:
             print() 
         elif pick_option == "3":
             print("Bye bye!")
+            sys.exit()
 
     def left():
         if pick_route == "E":
