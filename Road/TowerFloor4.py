@@ -55,12 +55,17 @@ class FloorFour:
         typingPrint("By completing this floor, you will obtain the last and final stone needed, the 'gold light stone'")
         time.sleep(2)
         os.system('cls')
+        typingPrint("But do not take this floor lightly, as it is only one level below the final boss  ")
+        time.sleep(2)
+        os.system('cls')
+        typingPrint("The final boss and Chikungunya have been together for thousands of years -- lots of taming, meals together, and friendly pets....")
+        time.sleep(2)
+        os.system('cls')
         typingPrint("Initiating the fourth floor to start")
         time.sleep(1)
         os.system('cls')
         typingPrint("Entering...")
         time.sleep(1)
-        os.system('cls')
     def Floor4_Battle():
         print("")
     def Floor4_Exit():
