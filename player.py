@@ -60,8 +60,15 @@ class player():
         elif choose == 2:
             print()
         elif choose == 3:
-            if "elf" in y:
-                typingPrint("The elf just shot you. You are now dead!")
+            if random <= 50:
+                if "elf" in y:
+                    typingPrint("The elf just shot you. You are now dead!")
+                if "maldachaunians" in y:
+                    typingPrint("The maldachaunians threw a dagger at you. It hits you right in the heart. You are now dead!")
+                if "Wimitescu" in y:
+                    typingPrint("The wimitescu smashed your head in with a mallot. You are now dead!")
+                if "spirit" in y: 
+                    typingPrint("The ")
             
 
 

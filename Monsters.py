@@ -87,7 +87,7 @@ class Elves():
 class Water_Spirits():
    def __init__(water_spirits, name:str, hp:int, gold: int, silver: int, damage: int):
        super().__init__(name, hp, gold, silver, damage)
-       water_spirits.name = "Maldachaunian"
+       water_spirits.name = "Water Spirit"
        water_spirits.hp = 150
        water_spirits.gold = random.randint(5,20)
        water_spirits.silver = random.randint(10,20)

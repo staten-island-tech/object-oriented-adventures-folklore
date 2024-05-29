@@ -74,7 +74,8 @@ class start:
             typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
             time.sleep(5)
             os.system('cls')
-            beginning_elf = elves(name="", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+            beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+
         
     def right():
         if pick_route == "W":

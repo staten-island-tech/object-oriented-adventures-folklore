@@ -21,9 +21,10 @@ class elves(maldachaunians):
         elves.power = powers 
 
 class element_spirits(Monster): 
-    def __init__(element_spirits, name:str, hp:int, loot:str, damage: int, crit: int, power:str):
+    def __init__(element_spirits, name:str, hp:int, loot:str, damage: int, crit: int, power:str, element: str):
         super().__init__(name, hp, loot, damage, crit)
         element_spirits.power = power 
+        element_spirits.element = element
 
 class Floor1_Moonlight_Monarch(Monster):
     def __init__(Floor1_Moonight_Monarch, name:str, hp: int, loot: str, damage: int, crit:int, power:str):
