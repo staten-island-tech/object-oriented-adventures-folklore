@@ -45,11 +45,11 @@ class boxes:
 #Dueling twins Anlliasio &  Altosoei
 class FloorThree:
     def Floor3_Beginning():
-        typingPrint("You have now reached floor 3.\n This floor consists of the two dueling twins called Anlliasio and Altosoei")
+        typingPrint("\x1B[3mYou have now reached floor 3.\n This floor consists of the two dueling twins called Anlliasio and Altosoei")
         time.sleep(2)
         os.system('cls')
-        typingPrint("They have no empathy for humans, and especially those that come from the oustide world \n")
-        typingPrint("Anlliasio an Altosoei were created by the leader of the tower, who is over course still unknown.")
+        typingPrint("\x1B[3mThey have no empathy for humans, and especially those that come from the oustide world \n")
+        typingPrint("\x1B[3mAnlliasio an Altosoei were created by the leader of the tower, who is over course still unknown.")
         time.sleep(5)
         os.system('cls')
         typingPrint("In order to defeat them, find a way to hit them at the same time")

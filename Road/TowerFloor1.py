@@ -47,12 +47,12 @@ class boxes:
     global Floor1_Beginning
 class Floor_1:
     def Floor1_Beginning():
-        typingPrint("Welcome to the tower! Here you will show that you are worthy of the skills you have gained along the way\n")
-        typingPrint("There are a total of five floors in this tower.\n Each floor you complete you gain a nessesary stone for the engraved rock from the final floor \n")
-        typingPrint("Using the stones you gained you will place them into the rock to indicate you have completed the tower")
+        typingPrint("\x1B[3mWelcome to the tower! Here you will show that you are worthy of the skills you have gained along the way\n")
+        typingPrint("\x1B[3mThere are a total of five floors in this tower.\n Each floor you complete you gain a nessesary stone for the engraved rock from the final floor \n")
+        typingPrint("\x1B[3mUsing the stones you gained you will place them into the rock to indicate you have completed the tower")
         time.sleep(8)
         os.system('cls')
-        typingPrint("After the rock is complete you will be given the choice to either stay in the village or return to the real world")
+        typingPrint("\x1B[3mAfter the rock is complete you will be given the choice to either stay in the village or return to the real world")
         time.sleep(2)
         os.system('cls')
         print("Now, let the games begin")
