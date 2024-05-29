@@ -63,6 +63,9 @@ class FloorTwo:
         os.system('cls')
         input = ("START")
         if input == "START":
+            typingPrint("Entering...")
+            time.sleep(1)
+            os.system('cls')
             print("The battle has begun.")
             time.sleep(1)
             os.system('cls')

@@ -64,6 +64,9 @@ class FloorThree:
         typingPrint("Signaling floor three to start*")
         time.sleep(1)
         os.system('cls')
+        typingPrint("Entering...")
+        time.sleep(1)
+        os.system('cls')
     def Floor3_Battle():
         print("")
     def Floor3_Exit():
