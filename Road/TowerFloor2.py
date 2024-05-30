@@ -46,16 +46,16 @@ class boxes:
 #Group of villains called 'Pchvpxa'
 class FloorTwo:
     def Floor2_Beginning():
-        typingPrint("You have reached floor level two!\n Here, you will have to go against the ")
+        typingPrint("\x1B[3You have reached floor level two!")
         time.sleep(2)
         os.system('cls')
-        typingPrint("The villains on this floor are called the Pchvpxa, are they wield weapons of great power. ")
+        typingPrint("\x1B[3The villains on this floor are called the Pchvpxa, are they wield weapons of great power. ")
         time.sleep(3)
         os.system('cls')
-        typingPrint("Some carry rifles/guns powered by the element they are trained for while others carry hammers.")
+        typingPrint("\x1B[3Some carry rifles/guns powered by the element they are trained for while others carry hammers.")
         time.sleep(2)
         os.system('cls')
-        typingPrint("The best way to defeat them is to crit shot a whole bunch of them at the same time.")
+        typingPrint("\x1B[3The best way to defeat them is to crit shot a whole bunch of them at the same time.")
         time.sleep(2)
         os.system('cls')
         typingPrint("All things aside, its time to battle.")

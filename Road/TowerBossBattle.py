@@ -45,10 +45,10 @@ class boxes:
 
 class FinalBoss:
     def FinalBoss_Beginning():
-        typingPrint("You have reached the final boss. Congrats on being the first to reach this far.")
+        typingPrint("\x1B[2mYou have reached the final boss. Congrats on being the first to reach this far.")
         time.sleep(3)
         os.system('cls')
-        typingPrint("Someone's approaching from the dark...")
+        typingPrint("\x1B[2mSomeone's approaching from the dark...")
         time.sleep(1)
         os.system('cls')
         typingPrint("Unknown: Welcome welcome my partner! I am the leader and rule of this tower and you didn't event notice.\n")
@@ -69,7 +69,7 @@ class FinalBoss:
         typingPrint("You: You underestimate me. You'll regret betraying me...")
         time.sleep(2)
         typingPrint(" * intiating the final battle to begin * \n")
-        typingPrint("Battle starting...")
+        typingPrint("\x1B[5mBattle starting...")
         time.sleep(3)
         os.system('cls')
 

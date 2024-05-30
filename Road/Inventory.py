@@ -11,8 +11,6 @@ class typer():
    global typingInput
 
 
-
-
    def typingPrint(text):
        for character in text:
            sys.stdout.write(character)
@@ -46,8 +44,6 @@ class boxes:
            res += format_line(l, max_length)
        res += horizontal
        return res.strip()
-
-
 
 
 
