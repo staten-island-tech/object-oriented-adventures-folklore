@@ -14,6 +14,11 @@ class maldachaunians(Monster):
     def __init__(maldachaunians, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit)
         maldachaunians.weapon = weapon
+
+class wimitescu(Monster):
+    def __init__(wimitescu, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
+        super().__init__(name, hp, loot, damage, crit)
+        wimitescu.weapon = weapon
     
 class elves(maldachaunians):
     def __init__(elves, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):

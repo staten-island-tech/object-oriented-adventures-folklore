@@ -75,6 +75,7 @@ class start:
             time.sleep(5)
             os.system('cls')
             beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+            player.battle(main_character,beginning_elf)
 
         
     def right():
