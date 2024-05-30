@@ -33,38 +33,20 @@ class player():
         enemy.hp -= self.damage
         enemy.hp = max(enemy.hp, 0)
         if enemy.hp <= 0:
-            print("You successfully attacked " + enemy.name + ". The " + enemy.name + " is dead!")
+            print("You successfully attacked the" + enemy.name + ". The " + enemy.name + " is dead!")
         elif enemy.hp > 0:
-            print("You successfully attacked " + enemy.name + ". The " + enemy.name + " has " + str(enemy.hp) + " hp now!")
+            print("You successfully attacked the" + enemy.name + ". The " + enemy.name + " has " + str(enemy.hp) + " hp now!")
             return enemy.hp 
 
     def attack_crit(self, enemy) -> None:
         enemy.hp -= self.crit
         enemy.hp = max(enemy.hp, 0)
         if enemy.hp <= 0:
-            print("You successfully attacked " + enemy.name + ". It was a critical hit! The " + enemy.name + " is dead!")
+            print("You successfully attacked the " + enemy.name + ". It was a critical hit! The " + enemy.name + " is dead!")
         elif enemy.hp > 0:
-            print("You successfully attacked " + enemy.name + ". It was a critical hit! The " + enemy.name + " has " + str(enemy.hp) + "hp now!")
+            print("You successfully attacked the " + enemy.name + ". It was a critical hit! The " + enemy.name + " has " + str(enemy.hp) + "hp now!")
             return enemy.hp 
         
-    def monster_attack(monster, player) -> None:
-        player.hp -= monster.damage
-        player.hp = max(player.hp, 0)
-        if player.hp <= 0:
-            print("The " + monster.name + " successfully attacked you. You are now dead!")
-        elif player.hp > 0:
-            print("The " + monster.name + " successfully attacked you. You have " + str(player.hp) + " hp now!")
-            return player.hp 
-        
-    def monster_attack_crit(monster, player) -> None:
-        player.hp -= monster.crit
-        player.hp = max(player.hp, 0)
-        if player.hp <= 0:
-            print("The " + monster.name + " successfully attacked you. It was a critical hit! You are now dead!")
-        elif player.hp > 0:
-            print("The " + monster.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
-            return player.hp 
-
     def battle(x, y):
         while x.hp and y.hp > 0:
             typingPrint("BATTLE!!!")
@@ -79,14 +61,8 @@ class player():
             if choose == 1:
                 if r <= 99:
                     x.attack(y)
-                    time.sleep(5)
-                    y.monster_attack(x)
-                    time.sleep(5)
                 elif r == 100:
                     x.attack_crit(y)
-                    time.sleep(5)
-                    y.monster_attack_crit(x)
-                    time.sleep(5)
             elif choose == 2:
                 print()
         if choose == 3:
@@ -116,9 +92,3 @@ class player():
                 if "spirit" in y: 
                     typingPrint("The " + y.element + " spirit threw " + y.power + " at you. The " + y.name + "missed! You successfully ran away (COWARD)!")
                     time.sleep(6)
-            
-
-            
-
-
-
