@@ -57,7 +57,8 @@ class Merchant:
             print("Old man: You insult my shop with your offer. Come again once you have enough gold to afford my wares.")
             print("  ")
             print("You exit his shop and make your way back to the town.")
-        elif buyer.potions[item] -= quantity or buyer.materials[item] -= quantity or buyer.foods[item] -= quantity:
+        else:
+            buyer.potions[item] -= quantity 
             #might change to self.currency
             Player.Players.currency["Gold"] -= self.potions[item] * quantity
             buyer.inventory.add_item(item, quantity)
