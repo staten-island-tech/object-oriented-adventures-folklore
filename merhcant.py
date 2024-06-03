@@ -1,7 +1,7 @@
 import time
 import sys
 import os
-import Player
+import player
 global typingPrint
 global typingspeed
 typingspeed = 0.01
@@ -21,7 +21,7 @@ def typingInput(text):
         return value  
     
 class Merchant:
-    Player.Players()
+    player.player()
     def __init__(self, name, age, potions, foods, materials):
         self.name = name
         self.age = age
