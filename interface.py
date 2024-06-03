@@ -75,9 +75,12 @@ class start:
             time.sleep(5)
             os.system('cls')
             beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
-            player.battle(main_character,beginning_elf)
+            typingPrint("BATTLE!!!")
+            time.sleep(2)
+            os.system('cls')
+            while main_character.hp > 0 and beginning_elf.hp > 0:
+                player.battle(main_character,beginning_elf)
 
-        
     def right():
         if pick_route == "W":
             os.system('cls')
