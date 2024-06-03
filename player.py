@@ -32,26 +32,13 @@ class player():
     def attack(self, enemy) -> None:
         enemy.hp -= self.damage
         enemy.hp = max(enemy.hp, 0)
-        if enemy.hp <= 0:
-            print("You successfully attacked the" + enemy.name + ". The " + enemy.name + " is dead!")
-        elif enemy.hp > 0:
-            print("You successfully attacked the" + enemy.name + ". The " + enemy.name + " has " + str(enemy.hp) + " hp now!")
-            return enemy.hp 
 
     def attack_crit(self, enemy) -> None:
         enemy.hp -= self.crit
-        enemy.hp = max(enemy.hp, 0)
-        if enemy.hp <= 0:
-            print("You successfully attacked the " + enemy.name + ". It was a critical hit! The " + enemy.name + " is dead!")
-        elif enemy.hp > 0:
-            print("You successfully attacked the " + enemy.name + ". It was a critical hit! The " + enemy.name + " has " + str(enemy.hp) + "hp now!")
-            return enemy.hp 
-        
+        enemy.hp = max(enemy.hp, 0) 
+    
     def battle(x, y):
         while x.hp and y.hp > 0:
-            typingPrint("BATTLE!!!")
-            time.sleep(2)
-            os.system('cls')
             print("1. Attack!")
             print("2. Go into inventory")
             print("3. Run away... (you wuss)")
@@ -61,10 +48,47 @@ class player():
             if choose == 1:
                 if r <= 99:
                     x.attack(y)
+                    if y.hp <= 0:
+                        print("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
+                    elif y.hp > 0:
+                        print("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
+                        if r <= 99:
+                            x.hp -= y.damage
+                            if x.hp <= 0: 
+                                print("The " + y.name + " successfully attacked you. You are now dead!")
+                            elif x.hp > 0:
+                                print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                        elif r == 100:
+                            x.hp -= y.crit
+                            if x.hp <= 0: 
+                                print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                            elif x.hp > 0:
+                                print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                            return x.hp
+                        return y.hp
                 elif r == 100:
                     x.attack_crit(y)
-            elif choose == 2:
-                print()
+                    if y.hp <= 0:
+                        print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
+                    elif y.hp > 0:
+                        print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
+                        if r <= 99:
+                            x.hp -= y.damage
+                            if x.hp <= 0: 
+                                print("The " + y.name + " successfully attacked you. You are now dead!")
+                            elif x.hp > 0:
+                                print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                        elif r == 100:
+                            x.hp -= y.crit
+                            if x.hp <= 0: 
+                                print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                            elif x.hp > 0:
+                                print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                            return x.hp
+                    return y.hp 
+                return x.hp and y.hp
+        if choose == 2:
+            print()
         if choose == 3:
             if r <= 50:
                 if "elf" in y:

@@ -3,33 +3,33 @@ test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
 class Monster:
-    def __init__(monster, name: str, hp: int, loot: str, damage: int, crit: int):
-        monster.name = name
-        monster.hp = hp
-        monster.loot = loot
-        monster.damage = damage
-        monster.crit = crit
+    def __init__(self, name: str, hp: int, loot: str, damage: int, crit: int):
+        self.name = name
+        self.hp = hp
+        self.loot = loot
+        self.damage = damage
+        self.crit = crit
     
 class maldachaunians(Monster):
-    def __init__(maldachaunians, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
+    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit)
-        maldachaunians.weapon = weapon
+        self.weapon = weapon
 
 class wimitescu(Monster):
-    def __init__(wimitescu, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
+    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit)
-        wimitescu.weapon = weapon
+        self.weapon = weapon
     
 class elves(maldachaunians):
-    def __init__(elves, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):
+    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, weapon:str, powers:str):
         super().__init__(name, hp, loot, damage, crit, weapon)
-        elves.power = powers 
+        self.power = powers 
 
 class element_spirits(Monster): 
-    def __init__(element_spirits, name:str, hp:int, loot:str, damage: int, crit: int, power:str, element: str):
+    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, power:str, element: str):
         super().__init__(name, hp, loot, damage, crit)
-        element_spirits.power = power 
-        element_spirits.element = element
+        self.power = power 
+        self.element = element
 
 class Floor1_Moonlight_Monarch(Monster):
     def __init__(Floor1_Moonight_Monarch, name:str, hp: int, loot: str, damage: int, crit:int, power:str):
