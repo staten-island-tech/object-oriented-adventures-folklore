@@ -24,7 +24,7 @@ class forestman():
     #CLASS/FUNCTIONS TO MOVE THROUGH AND NAVIGATE THROUGH THE FOREST
     def forester():
         while True:
-            player = input("CONTINUE/OFF").upper()
+            player = input("COUNTINE/STOP").upper()
             if player == 'CONTINUE':
                 typingPrint("\x1B[2mYou have reached the forest.\n *As a side note, this is a great place to obtain wood so that you can craft weapons*")
                 time.sleep(4)
@@ -73,7 +73,8 @@ class forestman():
                     typingPrint("..*you walk for another 5 min*....")
                     time.sleep(2)
                     os.system('cls')
-                    typingPrint("\x1B[2mIf you choose to go see the water spirit you can try defeat it.\nLegend says that by defeating it, you can increase the amount of power you have by almost double.")
+                    typingPrint("\x1B[2mIf you choose to go see the water spirit you can try defeat it.\n")
+                    typingPrint("\x1B[2mLegend says that by defeating it, you can increase the amount of power you have by almost double.")
                     time.sleep(4)
                     os.system('cls')
                     typingPrint("\x1B[2mOn the other hand, if you go to the village ports, you can get a chance to gain new items.")
@@ -97,7 +98,7 @@ class forestman():
                         typingPrint("\x1B[2mYou have reached the land where the Water Spirit is.\n")
                         typingPrint("\x1B[2mThere are two spirits in total the water spirit and the fire spirit.\n")
                         typingPrint("\x1B[2mThere is no specific territory for the fire spirit since it roams the forest freely\n")
-                        typingPrint("\x1B[2m")
+                        typingPrint("\x1B[2mBy defeating both of them, you will earn a reward bag with extra loot.")
                         time.sleep(8)
                         os.system('cls')
                         typingPrint("\x1B[2mIf you would like to battle the Water Spirit press the up arrow, if not press the down arrow")
@@ -110,9 +111,12 @@ class forestman():
                             os.system('cls')
                             typingPrint("\x1B[2mFight!!")
                         elif up_down == 'DOWN':
-                            print("")
+                            print("You choose not to fight, and walked back to the end of the forest")
+                            typingPrint("Which way would you like to go? Village Ports(Left) or to the water spirit(Right)?")
+                            direction = input("LEFT/RIGHT").upper()
                         else:
-                            print("Invalid Input\n Remember that you your chocies are UP or DOWN")                     
+                            print("Invalid Input\n Remember that you your chocies are UP or DOWN")
+                            direction = input("LEFT/RIGHT").upper()                     
                 #RIGHT DIRECTION *WIMITESCU SWAMPLAND*
                 elif direction == "RIGHT":
                     typingPrint("\x1B[2mYou have arrived at the Wimitescu Swampland. If you didn't know, this is where sassy shrek lives. Try not to run into sassy shrek or things could get really bad for you.")
@@ -137,9 +141,11 @@ class forestman():
                     time.sleep(4)
                     os.system('cls')
                     direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
+            
                 #else is ERROR MESSAGE or INVALID INPUT
                 else:
-                    input("")
+                    input("Invalid Input: Remember that your input should be either , LEFT/FOWARD/BACKWARD/RIGHT")
+                    direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
             else:
                 input("You choose off. This means you are quiting the game. Are you sure? YES/NO")
                 if input == 'YES':
@@ -151,4 +157,4 @@ class forestman():
                     os.system('cls')
                     direction = input("LEFT/FOWARD/BACKWARD/RIGHT").upper()
                     
-forestman.forester
+forestman.forester()

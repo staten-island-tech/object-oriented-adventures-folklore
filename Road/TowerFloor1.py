@@ -45,7 +45,7 @@ class boxes:
 
 #Moonlight Monarch
     global Floor1_Beginning
-class Floor_1:
+class FloorOne:
     def Floor1_Beginning():
         typingPrint("\x1B[2mWelcome to the tower! Here you will show that you are worthy of the skills you have gained along the way\n")
         typingPrint("\x1B[2mThere are a total of five floors in this tower.\n Each floor you complete you gain a nessesary stone for the engraved rock from the final floor \n")
@@ -103,7 +103,13 @@ class Floor_1:
         typingPrint("\x1B[3Signaling the start of Floor 1.")
         time.sleep(1)
         os.system('cls')
-Floor_1.Floor1_Beginning
+    def Floor1_Battle():
+        print("")
+    def Floor1_Exit():
+        print("You are now moving on to the second floor")
+        time.sleep(1)
+        os.system('cls')
+FloorOne.Floor1_Beginning
 
 
         

@@ -72,3 +72,4 @@ class FloorFour:
         print("You are moving on to the Boss Battle :>")
         time.sleep(1)
         os.system('cls')
+FloorFour.Floor4_Beginning

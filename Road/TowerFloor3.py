@@ -89,4 +89,4 @@ class FloorThree:
         typingPrint("\x1B[2mYou wake up at the entrance of the tower, once again.")
         time.sleep(1)
         os.system('cls')
-        going_into_tower.asking_to_enter()
+FloorThree.Floor3_Beginning

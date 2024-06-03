@@ -61,19 +61,11 @@ class FloorTwo:
         typingPrint("All things aside, its time to battle.")
         time.sleep(1)
         os.system('cls')
-        input = ("START")
-        if input == "START":
-            typingPrint("Entering...")
-            time.sleep(1)
-            os.system('cls')
-            print("The battle has begun.")
-            time.sleep(1)
-            os.system('cls')
-        else:
-            return
+        typingPrint("\x1B[5Entering Floor 2....")
     def Floor2_Battle():
         print("")
     def Floor2_Exit():
         print("You are now moving on to the thrid floor")
         time.sleep(1)
         os.system('cls')
+FloorTwo.Floor2_Beginning
