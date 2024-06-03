@@ -20,6 +20,10 @@ def typingInput(text):
         value = input()  
         return value  
 
+global left
+global right
+global straight_ahead
+
 class forestman():
     #CLASS/FUNCTIONS TO MOVE THROUGH AND NAVIGATE THROUGH THE FOREST
     def forester():
