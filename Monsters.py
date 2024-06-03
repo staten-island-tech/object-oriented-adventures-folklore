@@ -51,9 +51,6 @@ class boxes:
        res += horizontal
        return res.strip()
 
-
-
-
 class Maldachaunians():
    def __init__(maldachaunians, name:str, hp:int, gold: int, silver: int, damage: int):
        super().__init__(name, hp, gold, silver, damage)

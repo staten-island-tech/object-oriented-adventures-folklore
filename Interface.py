@@ -81,7 +81,6 @@ class start:
             while main_character.hp > 0 and beginning_elf.hp > 0:
                 player.battle(main_character,beginning_elf)
 
-        
     def right():
         if pick_route == "W":
             os.system('cls')
