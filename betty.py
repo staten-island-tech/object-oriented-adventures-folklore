@@ -45,7 +45,6 @@ class boxes:
 class Betty:
     os.system('cls')
     def first_en_bet():
-<<<<<<< Updated upstream
         os.system('cls')
         typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
         time.sleep(5)
@@ -58,22 +57,6 @@ class Betty:
             os.system('cls')
 
             if Climb_Poets_Tower == "YES":
-=======
-        
-                #After arriving in the village for the first time and you pick Betty as your friend.
-        picking_friend()
-        if picking_friends == "A":
-                    #Betty's Lines
-            os.system('cls')
-            typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
-            time.sleep(5)
-            os.system('cls')
-
-            def bet_Continue():
-                print("\x1B[0mStranger:")    
-                Climb_Poets_Tower = typingInput(boxed_msg("Are you here to climb the Tortured Poets Department?\n (yes/no)\n(You also have the option to ask for information about the tower.)")).upper()
-                time.sleep(2)
->>>>>>> Stashed changes
                 os.system('cls')
                 def yes_to_climb_poets_tower():
                     os.system('cls')
@@ -97,64 +80,10 @@ class Betty:
                     os.system('cls')
                     yes_to_climb_poets_tower()
 
-                elif Climb_Poets_Tower == "NO":
-                    os.system('cls')
-                    not_climb_poet_tower()
+            elif Climb_Poets_Tower == "NO":
+                os.system('cls')
+                not_climb_poet_tower()
 
-                    def continuing_to_otrtued_poets():
-                                os.system('cls')
-                                print("\x1B[0mStranger:")    
-                                Continue_to_climb_poet = typingInput(boxed_msg("Are you still going to climb the Tortured Poets Department?\n (yes/no)")).upper()
-                                time.sleep(2)
-                                os.system('cls')
-
-                                if Continue_to_climb_poet == "NO":
-                                    not_climb_poet_tower()
-                                elif Continue_to_climb_poet == "YES":
-                                    yes_to_climb_poets_tower()
-                                else:
-                                    os.system('cls')
-                                    typingPrint("\x1B[3m That isn't an option.")
-                                    time.sleep(5)
-                                    os.system('cls')
-                                    continuing_to_otrtued_poets()
-                else:
-                    os.system('cls')
-                    print("Betty:")
-                    typingPrint(boxed_msg(Climb_Poets_Tower))
-
-                    os.system('cls')
-                    print("Betty:")
-                    typingPrint(boxed_msg("It was said that this tower belong to a powerful witch. \nHowever she wasn't the one who built this tower. \nLegends said that this was a mental asylum. \nPeople who have gone in, never came back. \nOnly one person ever made it out alive, and he came out insane."))
-                    continuing_to_otrtued_poets()
-
-<<<<<<< Updated upstream
-                    
-
-=======
->>>>>>> Stashed changes
-
-                def not_climb_poet_tower():
-                    print("\x1B[0mTraveller:")
-                    typingPrint(boxed_msg("No, not really.\n I am new to this town."))
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("\x1B[0mBetty:")
-                    typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("\x1B[0mTraveller:")
-                    typingPrint(boxed_msg("Thank you."))
-                    time.sleep(5)
-                    os.system('cls')
-
-                    print("\x1B[0mBetty:")    
-                    typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
-                    time.sleep(5)
-                    os.system('cls')
-                    
                 def continuing_to_otrtued_poets():
                     os.system('cls')
                     print("\x1B[0mStranger:")    
@@ -172,6 +101,55 @@ class Betty:
                         time.sleep(5)
                         os.system('cls')
                         continuing_to_otrtued_poets()
+            else:
+                os.system('cls')
+                print("Betty:")
+                typingPrint(boxed_msg(Climb_Poets_Tower))
+
+                os.system('cls')
+                print("Betty:")
+                typingPrint(boxed_msg("It was said that this tower belong to a powerful witch. \nHowever she wasn't the one who built this tower. \nLegends said that this was a mental asylum. \nPeople who have gone in, never came back. \nOnly one person ever made it out alive, and he came out insane."))
+                continuing_to_otrtued_poets()
+
+
+            def not_climb_poet_tower():
+                print("\x1B[0mTraveller:")
+                typingPrint(boxed_msg("No, not really.\n I am new to this town."))
+                time.sleep(5)
+                os.system('cls')
+
+                print("\x1B[0mBetty:")
+                typingPrint(boxed_msg("Hi, I am Betty and I can show you around.\nThis village is known for its fishing ports and advancements in the water way.\nAt the center of the village, we have a huge water fountain, which is like healing sprinkler.\nOnce you get near it, it should heal you completely."))
+                time.sleep(5)
+                os.system('cls')
+
+                print("\x1B[0mTraveller:")
+                typingPrint(boxed_msg("Thank you."))
+                time.sleep(5)
+                os.system('cls')
+
+                print("\x1B[0mBetty:")    
+                typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
+                time.sleep(5)
+                os.system('cls')
+                    
+            def continuing_to_otrtued_poets():
+                os.system('cls')
+                print("\x1B[0mStranger:")    
+                Continue_to_climb_poet = typingInput(boxed_msg("Are you still going to climb the Tortured Poets Department?\n (yes/no)")).upper()
+                time.sleep(2)
+                os.system('cls')
+
+                if Continue_to_climb_poet == "NO":
+                    not_climb_poet_tower()
+                elif Continue_to_climb_poet == "YES":
+                    yes_to_climb_poets_tower()
+                else:
+                    os.system('cls')
+                    typingPrint("\x1B[3m That isn't an option.")
+                    time.sleep(5)
+                    os.system('cls')
+                    continuing_to_otrtued_poets()
 
 
             going_to_Betty = typingInput("\x1B[3m Would you like to approach her? (yes/no)").upper()
