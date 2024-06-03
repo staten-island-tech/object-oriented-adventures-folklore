@@ -105,3 +105,29 @@ class Inventory:
                self.potions[material] -= quantity
                print("\n")
                print(f"You have used this {material}.")
+
+class player_in():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.currency = {"Gold": 0, "Silver": 0, "Bronze": 0}
+        self.health = {"Health": 100}
+        self.sheild = {"Sheild" : 0}
+        self.location = [] #Fix this
+        self.inventory = Inventory()
+        self.potions = {"Health Potion": 0, "Speed Potion": 0, "Defense Potion": 0}
+        self.foods = {"Fowl": 0, "Cake": 0, "Apple": 0, "Cabbage": 0}
+        self.materials = {"Wood": 0, "Stone": 0, "Iron": 0, "Leather": 0}
+    def display_stats(self):
+        print("   ")
+        print("----Stats/Info----")
+        print("Name:", self.name)
+        print("Age:", self.age)
+    #Might add a magic system
+        print("Resources:")
+        for resource, value in self.currency.potions():
+           print(f" {resource.capitalize()}: {value}")
+        for resource, value in self.currency.foods():
+           print(f" {resource.capitalize()}: {value}")
+        for resource, value in self.currency.materials():
+           print(f" {resource.capitalize()}: {value}")
