@@ -32,6 +32,7 @@ class player():
     def attack(self, enemy) -> None:
         enemy.hp -= self.damage
         enemy.hp = max(enemy.hp, 0)
+    
 
     def attack_crit(self, enemy) -> None:
         enemy.hp -= self.crit
@@ -44,54 +45,92 @@ class player():
             print("3. Run away... (you wuss)")
             global choose
             choose = int(input("What would you like to do?\n"))
+            os.system('cls')
             r = random.randint(1,100)
             if choose == 1:
-                if r <= 99:
-                    x.attack(y)
-                    if y.hp <= 0:
-                        print("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
-                        time.sleep(5)
-                        os.system('cls')
-                        y.hp == 0 
-                    elif y.hp > 0:
-                        print("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
-                        time.sleep(5)
-                        os.system('cls')
-                        if r <= 99:
-                            x.hp -= y.damage
-                            if x.hp <= 0: 
-                                print("The " + y.name + " successfully attacked you. You are now dead!")
-                                time.sleep(5)
-                                os.system('cls')
-                                x.hp == 0 
-                            elif x.hp > 0:
-                                print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
-                                time.sleep(5)
-                                os.system('cls')
-                        elif r == 100:
-                            x.hp -= y.crit
-                            if x.hp <= 0: 
-                                print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
-                                time.sleep(5)
-                                os.system('cls')
-                                x.hp == 0 
-                            elif x.hp > 0:
-                                print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
-                                time.sleep(5)
-                                os.system('cls')
+                if r <= 75: 
+                    if r <= 99:
+                        x.attack(y)
+                        if y.hp <= 0:
+                            print("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
+                            time.sleep(4)
+                            os.system('cls')
+                            y.hp == 0 
+                        elif y.hp > 0:
+                            print("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
+                            time.sleep(5)
+                            os.system('cls')
+                            if r <= 75: 
+                                if r <= 99:
+                                    x.hp -= y.damage
+                                    if x.hp <= 0: 
+                                        print("The " + y.name + " successfully attacked you. You are now dead!")
+                                        time.sleep(3)
+                                        os.system('cls')
+                                        x.hp == 0 
+                                    elif x.hp > 0:
+                                        print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                                        time.sleep(4)
+                                        os.system('cls')
+                                elif r == 100:
+                                    x.hp -= y.crit
+                                    if x.hp <= 0: 
+                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                                        time.sleep(4)
+                                        os.system('cls')
+                                        x.hp == 0 
+                                    elif x.hp > 0:
+                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                                        time.sleep(5)
+                                        os.system('cls')
+                                    return x.hp
+                                return x.hp
+                            elif r > 75 and r <= 100:
+                                print("The " + y.name + "attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                                return x.hp
+                    elif r == 100:
+                        x.attack_crit(y)
+                        if y.hp <= 0:
+                            print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
+                            time.sleep(4)
+                            os.system('cls')
+                            y.hp == 0 
+                        elif y.hp > 0:
+                            print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
+                            time.sleep(5)
+                            os.system('cls')
+                        if r <= 75: 
+                            if r <= 99:
+                                x.hp -= y.damage
+                                if x.hp <= 0: 
+                                    print("The " + y.name + " successfully attacked you. You are now dead!")
+                                    time.sleep(3)
+                                    os.system('cls')
+                                    x.hp == 0 
+                                elif x.hp > 0:
+                                    print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                                    time.sleep(4)
+                                    os.system('cls')
+                            elif r == 100:
+                                x.hp -= y.crit
+                                if x.hp <= 0: 
+                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                                    time.sleep(4)
+                                    os.system('cls')
+                                    x.hp == 0 
+                                elif x.hp > 0:
+                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                                    time.sleep(5)
+                                    os.system('cls')
+                                return x.hp
+                        elif r > 75 and r <= 100:
+                            print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                             return x.hp
-                        return y.hp
-                elif r == 100:
-                    x.attack_crit(y)
-                    if y.hp <= 0:
-                        print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
-                        time.sleep(4)
-                        os.system('cls')
-                        y.hp == 0 
-                    elif y.hp > 0:
-                        print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
-                        time.sleep(5)
-                        os.system('cls')
+                elif r > 75 and r <= 100:
+                    print("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
+                    time.sleep(3)
+                    os.system('cls')
+                    if r <= 75: 
                         if r <= 99:
                             x.hp -= y.damage
                             if x.hp <= 0: 
@@ -104,18 +143,21 @@ class player():
                                 time.sleep(4)
                                 os.system('cls')
                         elif r == 100:
-                            x.hp -= y.crit
-                            if x.hp <= 0: 
-                                print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                            x.attack_crit(y)
+                            if y.hp <= 0:
+                                print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
                                 time.sleep(4)
                                 os.system('cls')
-                                x.hp == 0 
-                            elif x.hp > 0:
-                                print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                                y.hp == 0 
+                            elif y.hp > 0:
+                                print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                                 time.sleep(5)
                                 os.system('cls')
-                            return x.hp
-                    return y.hp 
+                                return x.hp
+                    elif r > 75 and r <= 100:
+                        print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                        return x.hp
+                    return x.hp and y.hp
                 return x.hp and y.hp
         if choose == 2:
             print()

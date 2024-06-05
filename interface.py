@@ -48,6 +48,7 @@ class start:
             sys.exit()
 
     def left():
+        global picking_friends
         if pick_route == "E":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
@@ -80,6 +81,11 @@ class start:
             os.system('cls')
             while main_character.hp > 0 and beginning_elf.hp > 0:
                 player.battle(main_character,beginning_elf)
+            if main_character.hp <= 0:
+                typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
+            elif beginning_elf <= 0: 
+                typingPrint("The " + beginning_elf.name + " is dead! Congradulations!")
+                picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
 
     def right():
         if pick_route == "W":
@@ -144,7 +150,6 @@ class start:
             typingPrint("\x1B[3mDetermined to figure out where you are, you decide to explore the village on your own.\n Eventually you find another fork in the road that seems promising.")
             time.sleep(3)
             os.system('cls')
-            global picking_friends
             picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
 
     def run_interface():
