@@ -6,6 +6,7 @@ from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
+import merhcant
 
 class James:
     def first_en_Jame():
@@ -59,7 +60,8 @@ class James:
                     typingPrint("\x1B[0mYou have escaped and you reached the merchant.")
                 if PunchingJames == "SLAUGHTER":
                     typingPrint("\x1B[0mYou murdered James, and you run to the river to clean yourself up. Then you ran towards the mercahnt to get other materials.")
-                os.system('cls')
+                    os.system('cls')
+                    merhcant.Merchant()
 
             if PunchJames == "NO":
                 print("\x1B[0mJames:")

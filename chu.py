@@ -5,6 +5,7 @@ from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
+import merhcant
 
 class MrsChu:
     def first_en_Chu():
@@ -196,4 +197,4 @@ class MrsChu:
                 print(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about your quest."))
                 time.sleep(5)
                 os.system('cls')
-                
+                merhcant.Merchant()
