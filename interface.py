@@ -170,3 +170,5 @@ class start:
     def instructions(): 
         os.system('cls')
         typingPrint("Instructions:")
+
+start.run_interface()
