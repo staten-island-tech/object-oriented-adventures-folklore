@@ -42,7 +42,7 @@ class player():
             os.system('cls')
             print("1. Attack!")
             print("2. Go into inventory")
-            print("3. View player stats")
+            # print("3. View player stats")
             global choose
             choose = int(input("What would you like to do?\n"))
             os.system('cls')
@@ -166,7 +166,7 @@ class player():
             if choose == 2:
                 print("You are poor right now! You have no money!")
                 time.sleep(3)
-                inventory.display_inventory(x)
-            if choose == 3:
-                player_in.display_stats(x)
+            #     inventory.display_inventory(x)
+            # if choose == 3:
+            #     player_in.display_stats(x)
             
