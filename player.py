@@ -46,10 +46,14 @@ class player():
             global choose
             choose = int(input("What would you like to do?\n"))
             os.system('cls')
-            r = random.randint(1,100)
+            player_attack = random.randint(1,100)
+            monster_attack = random.randint(1,100)
+            player_crit = random.randint(1,100)
+            monster_crit = random.randint(1,100)
+            run = random.randint(1,100)
             if choose == 1:
-                if r <= 75: 
-                    if r <= 99:
+                if player_attack <= 75: 
+                    if player_crit <= 99:
                         x.attack(y)
                         if y.hp <= 0:
                             print("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
@@ -60,8 +64,8 @@ class player():
                             print("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
                             time.sleep(5)
                             os.system('cls')
-                            if r <= 75: 
-                                if r <= 99:
+                            if monster_attack <= 75: 
+                                if monster_crit <= 99:
                                     x.hp -= y.damage
                                     if x.hp <= 0: 
                                         print("The " + y.name + " successfully attacked you. You are now dead!")
@@ -72,7 +76,7 @@ class player():
                                         print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                         time.sleep(4)
                                         os.system('cls')
-                                elif r == 100:
+                                elif monster_crit == 100:
                                     x.hp -= y.crit
                                     if x.hp <= 0: 
                                         print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
@@ -85,10 +89,10 @@ class player():
                                         os.system('cls')
                                     return x.hp
                                 return x.hp
-                            elif r > 75 and r <= 100:
+                            elif monster_attack > 75 and monster_attack <= 100:
                                 print("The " + y.name + "attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                                 return x.hp
-                    elif r == 100:
+                    elif player_crit == 100:
                         x.attack_crit(y)
                         if y.hp <= 0:
                             print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
@@ -99,8 +103,8 @@ class player():
                             print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                             time.sleep(5)
                             os.system('cls')
-                        if r <= 75: 
-                            if r <= 99:
+                        if monster_attack <= 75: 
+                            if monster_crit <= 99:
                                 x.hp -= y.damage
                                 if x.hp <= 0: 
                                     print("The " + y.name + " successfully attacked you. You are now dead!")
@@ -111,7 +115,7 @@ class player():
                                     print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                     time.sleep(4)
                                     os.system('cls')
-                            elif r == 100:
+                            elif monster_crit == 100:
                                 x.hp -= y.crit
                                 if x.hp <= 0: 
                                     print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
@@ -123,15 +127,15 @@ class player():
                                     time.sleep(5)
                                     os.system('cls')
                                 return x.hp
-                        elif r > 75 and r <= 100:
+                        elif monster_attack > 75 and monster_attack <= 100:
                             print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                             return x.hp
-                elif r > 75 and r <= 100:
+                elif player_attack > 75 and player_attack <= 100:
                     print("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
                     time.sleep(3)
                     os.system('cls')
-                    if r <= 75: 
-                        if r <= 99:
+                    if monster_attack <= 75: 
+                        if monster_crit <= 99:
                             x.hp -= y.damage
                             if x.hp <= 0: 
                                 print("The " + y.name + " successfully attacked you. You are now dead!")
@@ -142,7 +146,7 @@ class player():
                                 print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                 time.sleep(4)
                                 os.system('cls')
-                        elif r == 100:
+                        elif monster_crit == 100:
                             x.attack_crit(y)
                             if y.hp <= 0:
                                 print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
@@ -154,7 +158,7 @@ class player():
                                 time.sleep(5)
                                 os.system('cls')
                                 return x.hp
-                    elif r > 75 and r <= 100:
+                    elif monster_attack > 75 and monster_attack <= 100:
                         print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                         return x.hp
                     return x.hp and y.hp
@@ -162,7 +166,7 @@ class player():
         if choose == 2:
             print()
         if choose == 3:
-            if r <= 50:
+            if run <= 50:
                 if "elf" in y:
                     typingPrint("The elf just shot you. You are now dead!")
                     time.sleep(3)
@@ -175,7 +179,7 @@ class player():
                 if "spirit" in y: 
                     typingPrint("The " + y.element + " spirit threw " + y.power + " at you. You are now dead!")
                     time.sleep(4)
-            elif r > 50: 
+            elif run > 50: 
                 if "elf" in y:
                     typingPrint("The elf shot an arrow at you. It flys right past your head! You successfully ran away (COWARD)!")
                     time.sleep(5)
