@@ -90,7 +90,7 @@ class player():
                                     return x.hp
                                 return x.hp
                             elif monster_attack > 75 and monster_attack <= 100:
-                                print("The " + y.name + "attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                                print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                                 return x.hp
                     elif player_crit == 100:
                         x.attack_crit(y)
