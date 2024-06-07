@@ -5,8 +5,6 @@ import json
 import time
 import os
 from classes import typingPrint
-from Inventory import inventory
-from Inventory import player_in
 test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
