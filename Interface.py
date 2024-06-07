@@ -84,8 +84,7 @@ class start:
                 typingPrint("After winning the battle against " + beginning_elf.name + " , you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
                 time.sleep(5)
                 os.system('cls')
-                picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
-
+                
     def right():
         if pick_route == "W":
             global picking_friends
@@ -135,7 +134,6 @@ class start:
                 typingPrint("After winning the battle against " + beginning_water_spirit.name + " , you decide to try and return back to the village.\n On you way, you end up encountering another fork.")
                 time.sleep(5)
                 os.system('cls')
-                picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
             
     def straight_ahead():
         global picking_friends
@@ -172,5 +170,3 @@ class start:
     def instructions(): 
         os.system('cls')
         typingPrint("Instructions:")
-
-start.run_interface()
