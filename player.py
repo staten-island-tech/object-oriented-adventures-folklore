@@ -82,7 +82,7 @@ class player():
                                         os.system('cls')
                                         x.hp == 0 
                                     elif x.hp > 0:
-                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                         time.sleep(2)
                                         os.system('cls')
                                     return x.hp
@@ -121,7 +121,7 @@ class player():
                                     os.system('cls')
                                     x.hp == 0 
                                 elif x.hp > 0:
-                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(player.hp) + " hp now!")
+                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                     time.sleep(2)
                                     os.system('cls')
                                 return x.hp
