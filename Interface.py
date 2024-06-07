@@ -18,7 +18,7 @@ class start:
         os.system('cls')
         print("-‘๑’-Wҽʅƈσɱҽ ƚσ Fσʅƙʅσɾҽ Gαɱҽʂ-`‘๑’-")
         global main_character
-        main_character = player(name= input("What is your name?\n"), hp= 100, max_hp= 100, strength= 5, speed= 0, inventory= [], damage= 5, crit= 10)
+        main_character = player(name= input("What is your name?\n"), hp= 100, max_hp= 100, inventory= [], damage= 5, crit= 10)
         os.system('cls')
 
         print("1. Start Game")
