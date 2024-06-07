@@ -70,7 +70,7 @@ class start:
             typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
             time.sleep(5)
             os.system('cls')
-            beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+            beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, gold= 10, silver= 5, weapon= "bow and arrow", powers="N/A")
             typingPrint("BATTLE!!!")
             time.sleep(2)
             os.system('cls')
@@ -127,7 +127,7 @@ class start:
             typingPrint(boxed_msg("Poor little humannnn...\n It seems that its time for you to dieeee..."))
             time.sleep(3)
             os.system('cls')
-            beginning_water_spirit = element_spirits(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, power= "Water Blast", element= "Water")
+            beginning_water_spirit = element_spirits(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, gold= 5, silver= 10, power= "Water Blast", element= "Water")
             while main_character.hp > 0 and beginning_water_spirit.hp > 0:
                 player.battle(main_character,beginning_water_spirit)
             if main_character.hp <= 0:

@@ -54,11 +54,6 @@
     "Description": "Effect of potions depends on the potion type.\nMutiple health potions can be consumed.",
     "Effect": "+10 hp"
 },{
-    "Item name": "Speed Potion",
-    "Item category": "Potion",
-    "Description": "Effect of potions depends on the potion type.\nEffects will wear off once the battle is over.\nOnly one speed potion can be consumed during batle.",
-    "Effect": "2x speed during the battle that you are in."
-},{
     "Item name": "Strength Potion",
     "Item category": "Potion",
     "Description": "Effect of potions depends on the potion type.\nEffects will wear off once the battle is over.\nOnly one strength potion can be consumed during batle.",

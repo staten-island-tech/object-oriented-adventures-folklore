@@ -72,7 +72,7 @@ class Merchant:
             print(f"The old man holds one hand out expecting gold holding the {item} in the other. As you drop the gold into his hand he gives you, your material. You walk out the door and back towards the town, satisfied with your purchase.")
 
     # create a new instance of the Merchant class with some items for sale
-        merchant = Merchant("Roaches and Things", {"Speed Potion": 25, "Defense Potion": 50, "Fowl": 10, "Cake": 10, "Apple": 10, "Cabbage": 10,"Wood": 20, "Stone": 20, "Iron": 20, "Leather": 20})
+        merchant = Merchant("Roaches and Things", {"Defense Potion": 50, "Fowl": 10, "Cake": 10, "Apple": 10, "Cabbage": 10,"Wood": 20, "Stone": 20, "Iron": 20, "Leather": 20})
         merchant.display_items()
         print("  ")
         choice = input("Looking for anything in particular?: ").upper()
