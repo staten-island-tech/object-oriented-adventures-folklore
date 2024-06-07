@@ -6,12 +6,8 @@ from classes import boxed_msg
 from classes import typingPrint
 from classes import typingInput
 from player import player
-from monster import Monster
-from monster import maldachaunians
 from monster import elves
 from monster import element_spirits
-test = open("monster_data.json", encoding="utf8")
-data = json.load(test)
 
 class start:
     global interface
