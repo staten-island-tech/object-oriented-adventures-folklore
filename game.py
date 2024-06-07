@@ -1,5 +1,5 @@
 from interface import start
-from NPC import NPC
+from NPC import picking_NPC
 
 start.run_interface()
-NPC.picking_NPC.picking_friend()
+picking_NPC.picking_friend()
