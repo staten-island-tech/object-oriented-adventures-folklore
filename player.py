@@ -166,43 +166,43 @@ class player():
                 print()
             if choose == 3:
                 if run <= 50:
-                    if "elf" in y:
+                    if "elf" in y.name:
                         typingPrint("The elf just shot you. You are now dead!")
                         time.sleep(3)
                         os.system('cls')
                         return x.hp == 0
-                    if "maldachaunians" in y:
+                    if "maldachaunians" in y.name:
                         typingPrint("The maldachaunians threw a dagger at you. It hits you right in the heart. You are now dead!")
                         time.sleep(5)
                         os.system('cls')
                         return x.hp == 0
-                    if "wimitescu" in y:
+                    if "wimitescu" in y.name:
                         typingPrint("The wimitescu smashed your head in with a " + y.weapon + ". You are now dead!")
                         time.sleep(4)
                         os.system('cls')
                         return x.hp == 0
-                    if "spirit" in y: 
+                    if "spirit" in y.name: 
                         typingPrint("The " + y.element + " spirit threw " + y.power + " at you. You are now dead!")
                         time.sleep(4)
                         os.system('cls')
                         return x.hp == 0
                 elif run > 50: 
-                    if "elf" in y:
+                    if "elf" in y.name:
                         typingPrint("The elf shot an arrow at you. It flys right past your head! You successfully ran away (COWARD)!")
                         time.sleep(5)
                         os.system('cls')
                         return y.hp == 0
-                    if "maldachaunians" in y:
+                    if "maldachaunians" in y.name:
                         typingPrint("The maldachaunians threw " + y.weapon + " at you. It missed! You successfully ran away (COWARD)! ")
                         time.sleep(5)
                         os.system('cls')
                         return y.hp == 0
-                    if "wimitescu" in y:
+                    if "wimitescu" in y.name:
                         typingPrint("The wimitescu tries to attack you with a " + y.weapon + " but hits the ground instead. You successfully ran away (COWARD)!")
                         time.sleep(6)
                         os.system('cls')
                         return y.hp == 0
-                    if "spirit" in y: 
+                    if "spirit" in y.name: 
                         typingPrint("The " + y.element + " spirit threw " + y.power + " at you. The " + y.name + "missed! You successfully ran away (COWARD)!")
                         time.sleep(6)
                         os.system('cls')
