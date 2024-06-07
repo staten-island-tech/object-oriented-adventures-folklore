@@ -84,14 +84,11 @@ class start:
             if main_character.hp <= 0:
                 typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
             elif beginning_elf <= 0: 
-                typingPrint("After winning the battle against " + beginning_elf.name + " , you decide to try and return back to the village.\n On you way, you end up encountering another fork.")
-                time.sleep(5)
-                os.system('cls')
+                typingPrint("The " + beginning_elf.name + " is dead! Congradulations!")
                 picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
-    
+
     def right():
         if pick_route == "W":
-            global picking_friends
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn right.\n As you continue walking, you start to hear running water.")
             time.sleep(3)
@@ -129,19 +126,8 @@ class start:
             typingPrint(boxed_msg("Poor little humannnn...\n It seems that its time for you to dieeee..."))
             time.sleep(3)
             os.system('cls')
-            beginning_water_spirit = element_spirits(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, power= "Water Blast", element= "Water")
-            while main_character.hp > 0 and beginning_water_spirit.hp > 0:
-                player.battle(main_character,beginning_water_spirit)
-            if main_character.hp <= 0:
-                typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
-            elif beginning_water_spirit <= 0: 
-                typingPrint("After winning the battle against " + beginning_water_spirit.name + " , you decide to try and return back to the village.\n On you way, you end up encountering another fork.")
-                time.sleep(5)
-                os.system('cls')
-                picking_friends = typingInput("\x1B[3mWould you like to go up, straight or down? A(Left) W(Straight Foward) S(Down)\n").upper()
     
     def straight_ahead():
-        global picking_friends
         if pick_route == "V":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to keep walking straight.\n Soon you find yourself in a bustling village.\n You decided to try and ask someone where you are.")
