@@ -1,7 +1,7 @@
 import os
 import time
 import sys
-from Interface import start
+from interface import start
 class typer():
     global typingPrint
     global typingInput
