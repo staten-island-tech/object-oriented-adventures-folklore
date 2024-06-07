@@ -13,7 +13,7 @@ from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 
-class Inventory:
+class inventory:
        #The amount of items in the player's inventory
        def __init__(self):
            self.potions = {"Health Potion": 0, "Speed Potion": 0, "Defense Potion": 0}
@@ -74,7 +74,7 @@ class player_in():
         self.health = {"Health": 100}
         self.sheild = {"Sheild" : 0}
         self.location = [] #Fix this
-        self.inventory = Inventory()
+        self.inventory = inventory()
         self.potions = {"Health Potion": 0, "Speed Potion": 0, "Defense Potion": 0}
         self.foods = {"Fowl": 0, "Cake": 0, "Apple": 0, "Cabbage": 0}
         self.materials = {"Wood": 0, "Stone": 0, "Iron": 0, "Leather": 0}

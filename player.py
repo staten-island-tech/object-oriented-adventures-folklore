@@ -5,6 +5,8 @@ import json
 import time
 import os
 from classes import typingPrint
+from Inventory import inventory
+from Inventory import player_in
 test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
@@ -162,4 +164,5 @@ class player():
             if choose == 2:
                 print("You are poor right now! You have no money!")
                 time.sleep(3)
+                inventory.display_inventory()
             
