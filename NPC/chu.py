@@ -5,7 +5,6 @@ class typer():
     global typingPrint
     global typingInput
 
-
     def typingPrint(text):
         for character in text:
             sys.stdout.write(character)
