@@ -39,6 +39,7 @@ class player():
     
     def battle(x, y):
         while x.hp and y.hp > 0:
+            os.system('cls')
             print("1. Attack!")
             print("2. Go into inventory")
             global choose
