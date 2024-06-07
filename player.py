@@ -161,4 +161,5 @@ class player():
                 return x.hp and y.hp
             if choose == 2:
                 print("You are poor right now! You have no money!")
+                time.sleep(3)
             
