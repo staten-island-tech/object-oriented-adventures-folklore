@@ -7,7 +7,7 @@ import time
 import json
 import sys
 from math import ceil, floor
-import Monsters
+import monster
 from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
