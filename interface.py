@@ -83,6 +83,10 @@ class start:
                 typingPrint("After winning the battle against the " + beginning_elf.name + " , you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
                 time.sleep(5)
                 os.system('cls')
+            elif beginning_elf.hp == 1:
+                typingPrint("After running away (WUSS!), you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
+                time.sleep(5)
+                os.system('cls')
                 
     def right():
         if pick_route == "W":
@@ -130,6 +134,10 @@ class start:
                 typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
             elif beginning_water_spirit.hp <= 0: 
                 typingPrint("After winning the battle against the " + beginning_water_spirit.name + " , you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
+                time.sleep(5)
+                os.system('cls')
+            elif beginning_water_spirit.hp == 1:
+                typingPrint("After running away (WUSS!), you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
                 time.sleep(5)
                 os.system('cls')
             
