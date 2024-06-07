@@ -22,9 +22,8 @@ class start:
         os.system('cls')
 
         print("1. Start Game")
-        print("2. How to play")
-        print("3. Exit Game")
-        pick_option = input("What would you like to do? (ex: 1, 2, or 3): \n")
+        print("2. Exit Game")
+        pick_option = input("What would you like to do? (ex: 1 or 2): \n")
         os.system('cls')
 
         if pick_option == "1":
@@ -38,8 +37,6 @@ class start:
             pick_route = typingInput("\x1B[3m Would you like to move E(left), W(right), or V(straight ahead)?\n").upper()
             
         elif pick_option == "2":
-            print() 
-        elif pick_option == "3":
             print("Bye bye!")
             sys.exit()
 
