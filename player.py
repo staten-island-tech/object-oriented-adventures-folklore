@@ -162,8 +162,8 @@ class player():
                         return x.hp
                     return x.hp and y.hp
                 return x.hp and y.hp
-        if choose == 2:
-            print()
+            if choose == 2:
+                print()
         if choose == 3:
             if run <= 50:
                 if "elf" in y:
