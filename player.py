@@ -32,7 +32,6 @@ class player():
     def attack(self, enemy) -> None:
         enemy.hp -= self.damage
         enemy.hp = max(enemy.hp, 0)
-    
 
     def attack_crit(self, enemy) -> None:
         enemy.hp -= self.crit
