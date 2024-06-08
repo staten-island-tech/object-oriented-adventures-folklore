@@ -86,9 +86,6 @@ class Betty:
             os.system('cls')
             merhcant.Merchant()
 
-        
-
-
 ####################################################
         os.system('cls')
         typingPrint("\x1B[3mYou decide to turn left. \n As you walk, you eventually end up in a city.\n Exploring the city, you find a towering structure in the center of the city.")
