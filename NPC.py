@@ -1,6 +1,3 @@
-import os
-import time
-import sys
 from betty import Betty
 from chu import MrsChu
 from james import James
