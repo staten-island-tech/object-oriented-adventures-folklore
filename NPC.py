@@ -4,10 +4,7 @@ import sys
 from betty import Betty
 from chu import MrsChu
 from james import James
-from classes import format_line
-from classes import boxed_msg
 from classes import typingInput
-from classes import typingPrint
 
 class picking_NPC:
     def picking_friend():
