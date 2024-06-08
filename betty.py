@@ -13,13 +13,13 @@ class Betty:
         global Choosing_Going_to_Betty
         def Choosing_Going_to_Betty():
             global Going_to_Betty
-            Going_to_Betty = typingInput("Would you like to appoarch her?\n (Yes/No)").upper()
+            Going_to_Betty = typingInput("Would you like to appoarch her? Y/N\n ").upper()
             Try_Again_Choosing_Going_to_Betty()
         global Try_Again_Choosing_Going_to_Betty
         def Try_Again_Choosing_Going_to_Betty():
-            if Going_to_Betty == "YES":
+            if Going_to_Betty == "Y":
                 Yes_Going_to_Betty()
-            if Going_to_Betty == "NO":
+            if Going_to_Betty == "N":
                 Yes_Going_to_Betty()
             else:
                 typingPrint("Are you stupid?")
@@ -65,6 +65,7 @@ class Betty:
             time.sleep(1)
             os.system('cls')
             Choosing_Going_to_Betty()
+            
         def not_climb_poet_tower():
             print("\x1B[0mTraveller:")
             typingPrint(boxed_msg("No, not really.\n I am new to this town."))

@@ -34,15 +34,19 @@ class start:
             typingPrint("\x1B[3m You open your eyes to a pounding in your head.\n The surrounding is very different from where you were before.\n Your blurry vision starts to focus on a fork in the road...")
             time.sleep(6)
             os.system('cls')
-            global route
             route = typingInput("\x1B[3m Would you like to move E(left), S(right), or V(straight ahead)?\n").upper()
+            if route == "E":
+                left()
+            if route == "S":
+                right()
+            if route == "V":
+                straight_ahead()
             
         elif pick_option == "2":
             print("Bye bye!")
             sys.exit()
 
     def left():
-        if route == "E":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -75,7 +79,11 @@ class start:
             while main_character.hp > 0 and beginning_elf.hp > 0:
                 player.battle(main_character,beginning_elf)
             if main_character.hp <= 0:
-                typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
+                d = typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
+                if d == "Y":
+                    interface()
+                elif d == "N":
+                    sys.exit()
             elif beginning_elf.hp <= 0: 
                 os.system('cls')
                 typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork in the road.")
@@ -83,7 +91,6 @@ class start:
                 os.system('cls')
                 
     def right():
-        if route == "S":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn right.\n As you continue walking, you start to hear running water.")
             time.sleep(3)
@@ -125,14 +132,17 @@ class start:
             while main_character.hp > 0 and beginning_water_spirit.hp > 0:
                 player.battle(main_character,beginning_water_spirit)
             if main_character.hp <= 0:
-                typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
+                d = typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
+                if d == "Y":
+                    interface()
+                elif d == "N":
+                    sys.exit()
             elif beginning_water_spirit.hp <= 0: 
                 typingPrint("After winning the battle against the " + beginning_water_spirit.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
             
     def straight_ahead():
-        if route == "V":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to keep walking straight.\n Soon you find yourself in a bustling village.\n You decided to try and ask someone where you are.")
             time.sleep(5)
@@ -154,15 +164,14 @@ class start:
             typingPrint("\x1B[3mDetermined to figure out where you are, you decide to explore the village on your own.\n Eventually you find another fork in the road that seems promising.")
             time.sleep(3)
             os.system('cls')
+    
+    def instructions(): 
+        os.system('cls')
+        print("Introduction:")
+        print("This game is an adventure game!\n Choose different paths to get different storylines!\n Encounter monsters and engage in battle in order to obtain materials!\n Fight the final boss to win the game!\n")
+        print("How to play:")
 
     def run_interface():
         interface()
-        left()
-        right()
-        straight_ahead()
-
-    def instructions(): 
-        os.system('cls')
-        typingPrint("Instructions:")
 
 start.run_interface()
