@@ -1,14 +1,12 @@
 import os
 import time
-import sys
 import merhcant
-from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 
 class Betty:
-    os.system('cls')
+    global first_en_bet
     def first_en_bet():
         global Choosing_Going_to_Betty
         def Choosing_Going_to_Betty():
@@ -100,8 +98,3 @@ class Betty:
         time.sleep(5)
         os.system('cls')
         Choosing_Going_to_Betty()
-
-            
-
-
-Betty.first_en_bet()

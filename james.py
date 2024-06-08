@@ -9,6 +9,7 @@ from classes import typingPrint
 import merhcant
 
 class James:
+    global first_en_Jame
     def first_en_Jame():
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn right.\n As you walk, you find yourself in a town.\n Looking around at the people you notice something.")

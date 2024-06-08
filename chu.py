@@ -9,6 +9,7 @@ import merhcant
 from interface import main_character
 
 class MrsChu:
+    global first_en_Chu
     def first_en_Chu():  
             os.system('cls')
 

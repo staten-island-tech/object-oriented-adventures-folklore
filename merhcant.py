@@ -1,10 +1,6 @@
 import time
-import sys
 import os
 import Inventory
-from classes import format_line
-from classes import boxed_msg
-from classes import typingInput
 from classes import typingPrint
 from Inventory import player_in
 from interface import main_character
