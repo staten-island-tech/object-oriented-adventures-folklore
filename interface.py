@@ -173,3 +173,5 @@ class start:
 
     def run_interface():
         interface()
+
+start.run_interface()
