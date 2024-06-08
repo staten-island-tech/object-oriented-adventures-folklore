@@ -1,4 +1,5 @@
 import json 
+import random
 test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
@@ -13,25 +14,39 @@ class Monster:
         self.silver = silver
     
 class maldachaunians(Monster):
-    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str):
+    def __init__(maldachaunians, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit, gold, silver)
-        self.weapon = weapon
+        maldachaunians.gold = random.randint(2,5)
+        maldachaunians.silver = random.randint(3,10)
+        maldachaunians.weapon = weapon
 
 class wimitescu(Monster):
-    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str):
+    def __init__(wimitescu, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str):
         super().__init__(name, hp, loot, damage, crit, gold, silver)
-        self.weapon = weapon
+        wimitescu.gold = random.randint(3,8)
+        wimitescu.silver = random.randint(8,15)
+        wimitescu.weapon = weapon
     
 class elves(maldachaunians):
-    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str, powers:str):
+    def __init__(elves, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, weapon:str, powers:str):
         super().__init__(name, hp, loot, damage, crit, gold, silver, weapon)
-        self.power = powers 
+        elves.gold = random.randint(5,15)
+        elves.silver = random.randint(10,20)
+        elves.power = powers 
 
-class element_spirits(Monster): 
-    def __init__(self, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, power:str, element: str):
+class water_spirit(Monster): 
+    def __init__(water_spirit, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, power:str):
         super().__init__(name, hp, loot, damage, crit, gold, silver)
-        self.power = power 
-        self.element = element
+        water_spirit.gold = random.randint(5,20)
+        water_spirit.silver = random.randint(10,20)
+        water_spirit.power = power 
+
+class fire_spirit(Monster): 
+    def __init__(fire_spirit, name:str, hp:int, loot:str, damage: int, crit: int, gold: int, silver: int, power:str):
+        super().__init__(name, hp, loot, damage, crit, gold, silver)
+        fire_spirit.gold = random.randint(5,20)
+        fire_spirit.silver = random.randint(10,20)
+        fire_spirit.power = power 
 
 class Floor1_Moonlight_Monarch(Monster):
     def __init__(Floor1_Moonight_Monarch, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):

@@ -92,7 +92,10 @@ class Betty:
 
 ####################################################
         os.system('cls')
-        typingPrint("\x1B[3m You find yourself drawn to the towering structure in the center of the city.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
+        typingPrint("\x1B[3mYou decide to turn left. \n As you walk, you eventually end up in a city.\n Exploring the city, you find a towering structure in the center of the city.")
+        time.sleep(5)
+        os.system('cls')
+        typingPrint("\x1B[3mYou find yourself drawn to the towering structure.\n Its spire reaches up to the sky, beckoning you to come closer.\n As you approach the base of the tower, you notice a young woman sitting on the steps.")
         time.sleep(5)
         os.system('cls')
         Choosing_Going_to_Betty()

@@ -11,7 +11,14 @@ import merhcant
 class James:
     def first_en_Jame():
             os.system('cls')
-            typingPrint("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to a old lady and sneakly take her purse from her pockets. \nYou followed him behind and noticed you.")
+            typingPrint("\x1B[3mYou decide to turn right.\n As you walk, you find yourself in a town.\n Looking around at the people you notice something.")
+            time.sleep(3)
+            os.system('cls')
+
+            typingPrint("\x1B[3mYou saw a guy with a shady hood over his head.\nHe was walking up to an old lady and sneakly take her purse from her pockets. \nYou followed him behind and he notices you.")
+            time.sleep(5)
+            os.system('cls')
+
             print("\x1B[0mStranger:")
             typingPrint(boxed_msg("You are not being sneaky following me like that."))
             time.sleep(3)
@@ -19,17 +26,17 @@ class James:
 
             print("\x1B[0mTraveller:")
             typingPrint(boxed_msg("..."))
-            time.sleep(2)
+            time.sleep(1)
             os.system('cls')
 
             print("\x1B[0mStranger:")
             typingPrint(boxed_msg("How come I never seen you around here?"))
-            time.sleep(3)
+            time.sleep(2)
             os.system('cls')
 
             print("\x1B[0mTraveller:")
             typingPrint(boxed_msg("I am new to this town."))
-            time.sleep(3)
+            time.sleep(2)
             os.system('cls')
 
             print("\x1B[0mStranger:")
@@ -39,7 +46,7 @@ class James:
 
             print("\x1B[0mTraveller:")
             typingPrint(boxed_msg("I guess I would join you."))
-            time.sleep(3)
+            time.sleep(2)
             os.system('cls')
 
             print("\x1B[0mStranger:")

@@ -9,17 +9,22 @@ import merhcant
 from interface import main_character
 
 class MrsChu:
-    def first_en_Chu():
+    def first_en_Chu():  
             os.system('cls')
-            typingPrint("\x1B[3m You walked to the center of the charming village, nestled in a lush valley.\n")
-            typingPrint("Thatched cottages with blooming gardens lined the cobblestone streets.\n")
-            typingPrint("The air was filled with the sweet scent of flowers and freshly baked bread.\n")
+
+            typingPrint("\x1B[3mYou decided to walk straight ahead.\n As you walk, you find yourself in a village.")
+            time.sleep(3)
+            os.system('cls')
+
+            typingPrint("\x1B[3mYou walked to the center of the charming village, nestled in a lush valley.\n")
+            typingPrint("\x1B[3mThatched cottages with blooming gardens lined the cobblestone streets.\n")
+            typingPrint("\x1B[3mThe air was filled with the sweet scent of flowers and freshly baked bread.\n")
             time.sleep(10)
             os.system('cls')
 
-            typingPrint("You stumbled towards a fountain in the center of the village, its waters shimmering with a soft, golden glow.\n")
-            typingPrint("As I cupped my hands and drank, a soothing warmth spread through me, easing the fatigue and confusuion.\n")
-            typingPrint("You turn around a saw a fimaliar figure sitting by a lake reading a book.\n")
+            typingPrint("\x1B[3mYou stumbled towards a fountain in the center of the village, its waters shimmering with a soft, golden glow.\n")
+            typingPrint("\x1B[3mAs I cupped my hands and drank, a soothing warmth spread through me, easing the fatigue and confusuion.\n")
+            typingPrint("\x1B[3mYou turn around a saw a fimaliar figure sitting by a lake reading a book.\n")
             time.sleep(10)
             os.system('cls')
 
