@@ -5,12 +5,12 @@ from classes import typingInput
 
 class picking_NPC:
     def picking_friend():
-        picking_friends = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
-        if picking_friends == "A":
+        picking_friends = typingInput("\x1B[3mWould you like to move B(left), C(right), or J(straight ahead)?\n").upper()
+        if picking_friends == "B":
             Betty.first_en_bet()
-        elif picking_friends == "W":
+        elif picking_friends == "C":
             MrsChu.first_en_Chu()
-        elif picking_friends == "D":
+        elif picking_friends == "J":
             James.first_en_Jame()
 
 picking_NPC.picking_friend()

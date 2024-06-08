@@ -34,15 +34,15 @@ class start:
             typingPrint("\x1B[3m You open your eyes to a pounding in your head.\n The surrounding is very different from where you were before.\n Your blurry vision starts to focus on a fork in the road...")
             time.sleep(6)
             os.system('cls')
-            global pick_route
-            pick_route = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
+            global route
+            route = typingInput("\x1B[3m Would you like to move E(left), S(right), or V(straight ahead)?\n").upper()
             
         elif pick_option == "2":
             print("Bye bye!")
             sys.exit()
 
     def left():
-        if pick_route == "A":
+        if route == "E":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -83,7 +83,7 @@ class start:
                 os.system('cls')
                 
     def right():
-        if pick_route == "D":
+        if route == "S":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn right.\n As you continue walking, you start to hear running water.")
             time.sleep(3)
@@ -132,7 +132,7 @@ class start:
                 os.system('cls')
             
     def straight_ahead():
-        if pick_route == "W":
+        if route == "V":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to keep walking straight.\n Soon you find yourself in a bustling village.\n You decided to try and ask someone where you are.")
             time.sleep(5)

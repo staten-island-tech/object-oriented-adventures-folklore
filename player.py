@@ -48,120 +48,121 @@ class player():
             player_crit = random.randint(1,100)
             monster_crit = random.randint(1,100)
             run = random.randint(1,100)
+            text_duration = 3
             if choose == 1:
                 if player_attack <= 75: 
                     if player_crit <= 99:
                         x.attack(y)
                         if y.hp <= 0:
                             typingPrint("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
-                            time.sleep(2)
+                            time.sleep(text_duration)
                             os.system('cls')
                             y.hp == 0 
                         elif y.hp > 0:
                             typingPrint("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
-                            time.sleep(2)
+                            time.sleep(text_duration)
                             os.system('cls')
                             if monster_attack <= 75: 
                                 if monster_crit <= 99:
                                     x.hp -= y.damage
                                     if x.hp <= 0: 
                                         typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
-                                        time.sleep(2)
+                                        time.sleep(text_duration)
                                         os.system('cls')
                                         x.hp == 0 
                                     elif x.hp > 0:
                                         typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
-                                        time.sleep(2)
+                                        time.sleep(text_duration)
                                         os.system('cls')
                                 elif monster_crit == 100:
                                     x.hp -= y.crit
                                     if x.hp <= 0: 
                                         typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
-                                        time.sleep(2)
+                                        time.sleep(text_duration)
                                         os.system('cls')
                                         x.hp == 0 
                                     elif x.hp > 0:
                                         typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
-                                        time.sleep(2)
+                                        time.sleep(text_duration)
                                         os.system('cls')
                                     return x.hp
                                 return x.hp
                             elif monster_attack > 75 and monster_attack <= 100:
                                 typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
-                                time.sleep(2)
+                                time.sleep(text_duration)
                                 os.system('cls')
                                 return x.hp
                     elif player_crit == 100:
                         x.attack_crit(y)
                         if y.hp <= 0:
                             typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
-                            time.sleep(2)
+                            time.sleep(text_duration)
                             os.system('cls')
                             y.hp == 0 
                         elif y.hp > 0:
                             typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
-                            time.sleep(2)
+                            time.sleep(text_duration)
                             os.system('cls')
                         if monster_attack <= 75: 
                             if monster_crit <= 99:
                                 x.hp -= y.damage
                                 if x.hp <= 0: 
                                     typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
-                                    time.sleep(2)
+                                    time.sleep(text_duration)
                                     os.system('cls')
                                     x.hp == 0 
                                 elif x.hp > 0:
                                     typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
-                                    time.sleep(2)
+                                    time.sleep(text_duration)
                                     os.system('cls')
                             elif monster_crit == 100:
                                 x.hp -= y.crit
                                 if x.hp <= 0: 
                                     typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
-                                    time.sleep(2)
+                                    time.sleep(text_duration)
                                     os.system('cls')
                                     x.hp == 0 
                                 elif x.hp > 0:
                                     typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
-                                    time.sleep(2)
+                                    time.sleep(text_duration)
                                     os.system('cls')
                                 return x.hp
                         elif monster_attack > 75 and monster_attack <= 100:
                             typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
-                            time.sleep(2)
+                            time.sleep(text_duration)
                             os.system('cls')
                             return x.hp
                 elif player_attack > 75 and player_attack <= 100:
                     typingPrint("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
-                    time.sleep(2)
+                    time.sleep(text_duration)
                     os.system('cls')
                     if monster_attack <= 75: 
                         if monster_crit <= 99:
                             x.hp -= y.damage
                             if x.hp <= 0: 
                                 typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
-                                time.sleep(2)
+                                time.sleep(text_duration)
                                 os.system('cls')
                                 x.hp == 0 
                             elif x.hp > 0:
                                 typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
-                                time.sleep(2)
+                                time.sleep(text_duration)
                                 os.system('cls')
                         elif monster_crit == 100:
                             x.attack_crit(y)
                             if y.hp <= 0:
                                 typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
-                                time.sleep(2)
+                                time.sleep(text_duration)
                                 os.system('cls')
                                 y.hp == 0 
                             elif y.hp > 0:
                                 typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
-                                time.sleep(2)
+                                time.sleep(text_duration)
                                 os.system('cls')
                                 return x.hp
                     elif monster_attack > 75 and monster_attack <= 100:
                         typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
-                        time.sleep(2)
+                        time.sleep(text_duration)
                         os.system('cls')
                         return x.hp
                     return x.hp and y.hp
