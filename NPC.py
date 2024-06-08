@@ -1,11 +1,12 @@
 from betty import Betty
 from chu import MrsChu
 from james import James
-from classes import typingInput
+from classes import typingPrint
 
 class picking_NPC:
     def picking_friend():
-        picking_friends = typingInput("\x1B[3mWould you like to move B(left), C(right), or J(straight ahead)?\n").upper()
+        typingPrint("\x1B[3mWould you like to move B(left), C(right), or J(straight ahead)?\n").upper()
+        picking_friends = input().upper()
         if picking_friends == "B":
             Betty.first_en_bet()
         elif picking_friends == "C":
