@@ -8,6 +8,7 @@ from classes import typingInput
 from player import player
 from monster import elves
 from monster import water_spirit
+import random
 
 class start:
     global interface
@@ -34,14 +35,14 @@ class start:
             time.sleep(6)
             os.system('cls')
             global pick_route
-            pick_route = typingInput("\x1B[3m Would you like to move E(left), W(right), or V(straight ahead)?\n").upper()
+            pick_route = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
             
         elif pick_option == "2":
             print("Bye bye!")
             sys.exit()
 
     def left():
-        if pick_route == "E":
+        if pick_route == "A":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn left.\n You look around and notice that you are in a forest.\n As you go deeper into the forest, you hear a noise coming from the trees...")
             time.sleep(5)
@@ -67,7 +68,7 @@ class start:
             typingPrint("\x1B[3mYou can feel the elf getting closer and closer with each shot it takes.\nWhen you feel it right behind you, you turn around and punch it!")
             time.sleep(5)
             os.system('cls')
-            beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, weapon= "bow and arrow", powers="N/A")
+            beginning_elf = elves(name="Elf", hp= 20, loot="", damage= 5, crit= 10, gold= random.randint(5,15), silver= random.randint(10,20), weapon= "bow and arrow", powers="N/A")
             typingPrint("BATTLE!!!")
             time.sleep(2)
             os.system('cls')
@@ -82,7 +83,7 @@ class start:
                 os.system('cls')
                 
     def right():
-        if pick_route == "W":
+        if pick_route == "D":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to turn right.\n As you continue walking, you start to hear running water.")
             time.sleep(3)
@@ -120,7 +121,7 @@ class start:
             typingPrint(boxed_msg("Poor little humannnn...\n It seems that its time for you to dieeee..."))
             time.sleep(3)
             os.system('cls')
-            beginning_water_spirit = water_spirit(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, power= "Water Blast")
+            beginning_water_spirit = water_spirit(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, gold = random.randint(5,20), silver= random.randint(5,20), power= "Water Blast")
             while main_character.hp > 0 and beginning_water_spirit.hp > 0:
                 player.battle(main_character,beginning_water_spirit)
             if main_character.hp <= 0:
@@ -131,7 +132,7 @@ class start:
                 os.system('cls')
             
     def straight_ahead():
-        if pick_route == "V":
+        if pick_route == "W":
             os.system('cls')
             typingPrint("\x1B[3mYou decide to keep walking straight.\n Soon you find yourself in a bustling village.\n You decided to try and ask someone where you are.")
             time.sleep(5)

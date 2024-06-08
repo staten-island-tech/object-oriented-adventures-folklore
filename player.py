@@ -53,121 +53,121 @@ class player():
                     if player_crit <= 99:
                         x.attack(y)
                         if y.hp <= 0:
-                            print("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
+                            typingPrint("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
                             time.sleep(2)
                             os.system('cls')
                             y.hp == 0 
                         elif y.hp > 0:
-                            print("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
+                            typingPrint("You successfully attacked the " + y.name + ". The " + y.name + " has " + str(y.hp) + " hp now!")
                             time.sleep(2)
                             os.system('cls')
                             if monster_attack <= 75: 
                                 if monster_crit <= 99:
                                     x.hp -= y.damage
                                     if x.hp <= 0: 
-                                        print("The " + y.name + " successfully attacked you. You are now dead!")
+                                        typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                         time.sleep(2)
                                         os.system('cls')
                                         x.hp == 0 
                                     elif x.hp > 0:
-                                        print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                                        typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                         time.sleep(2)
                                         os.system('cls')
                                 elif monster_crit == 100:
                                     x.hp -= y.crit
                                     if x.hp <= 0: 
-                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                                        typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
                                         time.sleep(2)
                                         os.system('cls')
                                         x.hp == 0 
                                     elif x.hp > 0:
-                                        print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
+                                        typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                         time.sleep(2)
                                         os.system('cls')
                                     return x.hp
                                 return x.hp
                             elif monster_attack > 75 and monster_attack <= 100:
-                                print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                                typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                                 time.sleep(2)
                                 os.system('cls')
                                 return x.hp
                     elif player_crit == 100:
                         x.attack_crit(y)
                         if y.hp <= 0:
-                            print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
+                            typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
                             time.sleep(2)
                             os.system('cls')
                             y.hp == 0 
                         elif y.hp > 0:
-                            print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
+                            typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                             time.sleep(2)
                             os.system('cls')
                         if monster_attack <= 75: 
                             if monster_crit <= 99:
                                 x.hp -= y.damage
                                 if x.hp <= 0: 
-                                    print("The " + y.name + " successfully attacked you. You are now dead!")
+                                    typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                     time.sleep(2)
                                     os.system('cls')
                                     x.hp == 0 
                                 elif x.hp > 0:
-                                    print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                                    typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                     time.sleep(2)
                                     os.system('cls')
                             elif monster_crit == 100:
                                 x.hp -= y.crit
                                 if x.hp <= 0: 
-                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
+                                    typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
                                     time.sleep(2)
                                     os.system('cls')
                                     x.hp == 0 
                                 elif x.hp > 0:
-                                    print("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
+                                    typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                     time.sleep(2)
                                     os.system('cls')
                                 return x.hp
                         elif monster_attack > 75 and monster_attack <= 100:
-                            print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                            typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                             time.sleep(2)
                             os.system('cls')
                             return x.hp
                 elif player_attack > 75 and player_attack <= 100:
-                    print("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
+                    typingPrint("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
                     time.sleep(2)
                     os.system('cls')
                     if monster_attack <= 75: 
                         if monster_crit <= 99:
                             x.hp -= y.damage
                             if x.hp <= 0: 
-                                print("The " + y.name + " successfully attacked you. You are now dead!")
+                                typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                 time.sleep(2)
                                 os.system('cls')
                                 x.hp == 0 
                             elif x.hp > 0:
-                                print("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
+                                typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                 time.sleep(2)
                                 os.system('cls')
                         elif monster_crit == 100:
                             x.attack_crit(y)
                             if y.hp <= 0:
-                                print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
+                                typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
                                 time.sleep(2)
                                 os.system('cls')
                                 y.hp == 0 
                             elif y.hp > 0:
-                                print("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
+                                typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                                 time.sleep(2)
                                 os.system('cls')
                                 return x.hp
                     elif monster_attack > 75 and monster_attack <= 100:
-                        print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                        typingPrint("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
                         time.sleep(2)
                         os.system('cls')
                         return x.hp
                     return x.hp and y.hp
                 return x.hp and y.hp
             if choose == 2:
-                print("You are poor right now! You have no money!")
+                typingPrint("You are poor right now! You have no money!")
                 time.sleep(3)
             """     inventory.display_inventory(x)
             if choose == 3:
