@@ -7,9 +7,10 @@ from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 from Inventory import player_in
+from interface import main_character
 
 class Merchant:
-    Inventory.player_in()
+    Inventory.player_in(main_character)
     def __init__(self, name, age, potions, foods, materials):
         self.name = name
         self.age = age

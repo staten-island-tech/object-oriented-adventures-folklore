@@ -18,7 +18,7 @@ class start:
         os.system('cls')
         print("-‘๑’-Wҽʅƈσɱҽ ƚσ Fσʅƙʅσɾҽ Gαɱҽʂ-`‘๑’-")
         global main_character
-        main_character = player(name= input("What is your name?\n"), hp= 100, max_hp= 100, inventory= [], damage= 5, crit= 10)
+        main_character = player(name= input("What is your name?\n"), hp= 100, damage= 5, crit= 10)
         os.system('cls')
 
         print("1. Start Game")
@@ -77,7 +77,7 @@ class start:
                 typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
             elif beginning_elf.hp <= 0: 
                 os.system('cls')
-                typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
+                typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
                 
@@ -126,7 +126,7 @@ class start:
             if main_character.hp <= 0:
                 typingInput("You are now dead! Would you like to restart? Y/N\n").upper()
             elif beginning_water_spirit.hp <= 0: 
-                typingPrint("After winning the battle against the " + beginning_water_spirit.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork.")
+                typingPrint("After winning the battle against the " + beginning_water_spirit.name + ", you decide to try and return back to the village.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
             

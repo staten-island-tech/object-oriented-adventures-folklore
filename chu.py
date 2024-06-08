@@ -6,6 +6,7 @@ from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 import merhcant
+from interface import main_character
 
 class MrsChu:
     def first_en_Chu():
@@ -13,6 +14,9 @@ class MrsChu:
             typingPrint("\x1B[3m You walked to the center of the charming village, nestled in a lush valley.\n")
             typingPrint("Thatched cottages with blooming gardens lined the cobblestone streets.\n")
             typingPrint("The air was filled with the sweet scent of flowers and freshly baked bread.\n")
+            time.sleep(10)
+            os.system('cls')
+
             typingPrint("You stumbled towards a fountain in the center of the village, its waters shimmering with a soft, golden glow.\n")
             typingPrint("As I cupped my hands and drank, a soothing warmth spread through me, easing the fatigue and confusuion.\n")
             typingPrint("You turn around a saw a fimaliar figure sitting by a lake reading a book.\n")
@@ -34,7 +38,7 @@ class MrsChu:
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                print(boxed_msg("Oh my gosh, is that you?\nI suddently woke up in this world a month ago."))
+                print(boxed_msg("Oh my gosh, is that you, " + main_character.name + "!\nI suddently woke up in this world a month ago."))
                 time.sleep(5)
                 os.system('cls')
 

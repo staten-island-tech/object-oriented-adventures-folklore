@@ -9,11 +9,9 @@ test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
 class player():
-    def __init__(self, name: str, hp: int, max_hp: int, inventory: list, damage: int, crit: int):
+    def __init__(self, name: str, hp: int, damage: int, crit: int):
         self.name = name
         self.hp = hp
-        self.max_hp = max_hp
-        self.inventory = inventory 
         self.damage = damage
         self.crit = crit
     
@@ -40,7 +38,8 @@ class player():
             os.system('cls')
             print("1. Attack!")
             print("2. Go into inventory")
-            # print("3. View player stats")
+            """ print("3. View player stats")
+            print("4. Run away") """
             global choose
             choose = int(input("What would you like to do?\n"))
             os.system('cls')
@@ -89,6 +88,8 @@ class player():
                                 return x.hp
                             elif monster_attack > 75 and monster_attack <= 100:
                                 print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                                time.sleep(2)
+                                os.system('cls')
                                 return x.hp
                     elif player_crit == 100:
                         x.attack_crit(y)
@@ -127,6 +128,8 @@ class player():
                                 return x.hp
                         elif monster_attack > 75 and monster_attack <= 100:
                             print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                            time.sleep(2)
+                            os.system('cls')
                             return x.hp
                 elif player_attack > 75 and player_attack <= 100:
                     print("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
@@ -158,13 +161,74 @@ class player():
                                 return x.hp
                     elif monster_attack > 75 and monster_attack <= 100:
                         print("The " + y.name + " attacked you unsuccessfully. You still have " + str(x.hp) + " hp!") 
+                        time.sleep(2)
+                        os.system('cls')
                         return x.hp
                     return x.hp and y.hp
                 return x.hp and y.hp
             if choose == 2:
                 print("You are poor right now! You have no money!")
                 time.sleep(3)
-            #     inventory.display_inventory(x)
-            # if choose == 3:
-            #     player_in.display_stats(x)
+            """     inventory.display_inventory(x)
+            if choose == 3:
+                player_in.display_stats(x) """
+            """ if choose == 4:
+                if run <= 50:
+                    if "elf" in y.name:
+                        os.system('cls')
+                        typingPrint("The elf just shot you. You are now dead!")
+                        time.sleep(3)
+                        os.system('cls')
+                        x.hp == 0 
+                        return x.hp
+                    if "maldachaunians" in y.name:
+                        os.system('cls')
+                        typingPrint("The maldachaunians threw a dagger at you. It hits you right in the heart. You are now dead!")
+                        time.sleep(5)
+                        os.system('cls')
+                        x.hp == 0
+                        return x.hp
+                    if "wimitescu" in y.name:
+                        os.system('cls')
+                        typingPrint("The wimitescu smashed your head in with a " + y.weapon + ". You are now dead!")
+                        time.sleep(4)
+                        os.system('cls')
+                        x.hp == 0
+                        return x.hp 
+                    if "spirit" in y.name: 
+                        os.system('cls')
+                        typingPrint("The " + y.element + " spirit threw " + y.power + " at you. You are now dead!")
+                        time.sleep(4)
+                        os.system('cls')
+                        x.hp == 0
+                        return x.hp
+                elif run > 50 and run <= 100: 
+                    if "elf" in y.name:
+                        os.system('cls')
+                        typingPrint("The elf shot an arrow at you. It flys right past your head! You successfully ran away (COWARD)!")
+                        time.sleep(5)
+                        os.system('cls')
+                        y.hp == 1
+                        return y.hp 
+                    if "maldachaunians" in y.name:
+                        os.system('cls')
+                        typingPrint("The maldachaunians threw " + y.weapon + " at you. It missed! You successfully ran away (COWARD)! ")
+                        time.sleep(5)
+                        os.system('cls')
+                        y.hp == 1
+                        return y.hp 
+                    if "wimitescu" in y.name:
+                        os.system('cls')
+                        typingPrint("The wimitescu tries to attack you with a " + y.weapon + " but hits the ground instead. You successfully ran away (COWARD)!")
+                        time.sleep(6)
+                        os.system('cls')
+                        y.hp == 1
+                        return y.hp
+                    if "spirit" in y.name: 
+                        os.system('cls')
+                        typingPrint("The " + y.element + " spirit threw " + y.power + " at you. The " + y.name + "missed! You successfully ran away (COWARD)!")
+                        time.sleep(6)
+                        os.system('cls')
+                        y.hp == 1
+                        return y.hp """
             

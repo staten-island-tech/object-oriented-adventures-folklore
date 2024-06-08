@@ -66,12 +66,11 @@ class inventory:
                print("\n")
                print(f"You have used this {material}.")
 
-class player_in():
-    def __init__(self, name, age):
+class player_in:
+    def __init__(self, name):
         self.name = name
-        self.age = age
         self.currency = {"Gold": 0, "Silver": 0, "Bronze": 0}
-        self.health = {"Health": 100}
+        self.hp = {"Health": 100}
         self.sheild = {"Sheild" : 0}
         self.location = [] #Fix this
         self.inventory = inventory()
