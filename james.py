@@ -79,10 +79,39 @@ class James:
                     time.sleep(2)
                     os.system('cls')
 
+                    typingPrint("You have reached the end of your free trial for the Folklore game!\n In order to unlock the rest of the game, you will have to pay $4.99!")
+                    time.sleep(4)
+                    os.system('cls')
+                
+                    pay = typingInput("Would you like to pay? YES/NO\n").upper()
+                    if pay == "YES":
+                        print("Just kidding!\n The developers have no clue on what to do next in order to complete the game.\n We thank you for playing! The end.")
+                        time.sleep(5)
+                        sys.exit()
+                    if pay == "NO": 
+                        print("Thanks for trying out our game! The end.")
+                        time.sleep(3)
+                        sys.exit()
+
+
                 elif PunchingJames == "SLAUGHTER":
                     typingPrint("\x1B[3mYou murdered James, and you run to the river to clean yourself up.\n After cleaning you body of James' blood, you run out of the alley and make your way towards the mercahnt to get some materials.")
                     time.sleep(6)
                     os.system('cls')
+
+                    typingPrint("You have reached the end of your free trial for the Folklore game!\n In order to unlock the rest of the game, you will have to pay $4.99!")
+                    time.sleep(4)
+                    os.system('cls')
+                
+                    pay = typingInput("Would you like to pay? YES/NO\n").upper()
+                    if pay == "YES":
+                        print("Just kidding!\n The developers have no clue on what to do next in order to complete the game.\n We thank you for playing! The end.")
+                        time.sleep(5)
+                        sys.exit()
+                    if pay == "NO": 
+                        print("Thanks for trying out our game! The end.")
+                        time.sleep(3)
+                        sys.exit()
 
             if PunchJames == "NO":
                 typingPrint("\x1B[3mAs you contemplate, James turns around and looks at you with a malicious glint in his eyes.")

@@ -1,6 +1,6 @@
 import os
 import time
-import merhcant
+import sys
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
@@ -78,8 +78,22 @@ class Betty:
 
             print("\x1B[0mBetty:")    
             typingPrint(boxed_msg("Follow me, I can show you where you can get materials and supplies.\nThe merchant is very nice and the stuff is pretty cheap."))
-            time.sleep(5)
+            time.sleep(4)
             os.system('cls')
+
+            typingPrint("You have reached the end of your free trial for the Folklore game!\n In order to unlock the rest of the game, you will have to pay $4.99!")
+            time.sleep(4)
+            os.system('cls')
+                
+            pay = typingInput("Would you like to pay? YES/NO\n").upper()
+            if pay == "YES":
+                print("Just kidding!\n The developers have no clue on what to do next in order to complete the game.\n We thank you for playing! The end.")
+                time.sleep(5)
+                sys.exit()
+            if pay == "NO": 
+                print("Thanks for trying out our game! The end.")
+                time.sleep(3)
+                sys.exit()
 
 ####################################################
         os.system('cls')

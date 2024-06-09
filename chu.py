@@ -1,11 +1,9 @@
 import os
 import time
 import sys
-from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
-import merhcant
 from interface import main_character
 
 class MrsChu:
@@ -135,6 +133,20 @@ class MrsChu:
                 time.sleep(5)
                 os.system('cls')
 
+                typingPrint("You have reached the end of your free trial for the Folklore game!\n In order to unlock the rest of the game, you will have to pay $4.99!")
+                time.sleep(4)
+                os.system('cls')
+                
+                pay = typingInput("Would you like to pay? YES/NO\n").upper()
+                if pay == "YES":
+                    print("Just kidding!\n The developers have no clue on what to do next in order to complete the game.\n We thank you for playing! The end.")
+                    time.sleep(5)
+                    sys.exit()
+                if pay == "NO": 
+                    print("Thanks for trying out our game! The end.")
+                    time.sleep(3)
+                    sys.exit()
+
             elif Approaching_Chu == "YES":
                 typingPrint("\x1B[3mShe was dressed in elegant, flowing robes adorned with intricate patterns that seemed to shift and change with the light.\n")
                 typingPrint("\x1B[3mHer demeanor seemed to be softened by an aura of calming authority, yet there was something in her eyes that you couldn't quite place.\n")
@@ -226,5 +238,19 @@ class MrsChu:
 
                 print("\x1B[0mMrs.Chu:")
                 typingPrint(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about why you are here."))
-                time.sleep(5)
+                time.sleep(4)
                 os.system('cls')
+
+                typingPrint("You have reached the end of your free trial for the Folklore game!\n In order to unlock the rest of the game, you will have to pay $4.99!")
+                time.sleep(4)
+                os.system('cls')
+                
+                pay = typingInput("Would you like to pay? YES/NO\n").upper()
+                if pay == "YES":
+                    print("Just kidding!\n The developers have no clue on what to do next in order to complete the game.\n We thank you for playing! The end.")
+                    time.sleep(5)
+                    sys.exit()
+                if pay == "NO": 
+                    print("Thanks for trying out our game! The end.")
+                    time.sleep(3)
+                    sys.exit()
