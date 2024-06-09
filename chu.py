@@ -133,12 +133,12 @@ class MrsChu:
                 os.system('cls')
 
                 print("\x1B[0mYou:")
-                typingPrint(boxed_msg("Oh my gosh, is that you, " + main_character.name + "!\nWhat are you doing here?."))
+                typingPrint(boxed_msg("Oh my gosh, is that you?\nWhat are you doing here?."))
                 time.sleep(3)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Oh my gosh, is that you?\nI suddently woke up in this world a month ago."))
+                typingPrint(boxed_msg("Oh my gosh, is that you, " + main_character.name + "?\nI suddently woke up in this world a month ago."))
                 time.sleep(5)
                 os.system('cls')
 
