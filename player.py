@@ -9,11 +9,13 @@ test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
 class player():
-    def __init__(self, name: str, hp: int, damage: int, crit: int):
+    def __init__(self, name: str, hp: int, damage: int, crit: int, gold: int, silver: int):
         self.name = name
         self.hp = hp
         self.damage = damage
         self.crit = crit
+        self.gold = gold
+        self.silver = silver
     
     def add_weapon_damage(self, weapon):
         new_self_damage = self.damage + weapon.damage 
@@ -168,8 +170,12 @@ class player():
                     return x.hp and y.hp
                 return x.hp and y.hp
             if choose == 2:
-                typingPrint("You are poor right now! You have no money!")
-                time.sleep(3)
+                if x.gold == 0 and x.silver == 0:
+                    typingPrint("You are poor right now! You have no money or items!")
+                    time.sleep(3)
+                else: 
+                    print()
+                    #daniel has to figure out inventory system
             """     inventory.display_inventory(x)
             if choose == 3:
                 player_in.display_stats(x) """

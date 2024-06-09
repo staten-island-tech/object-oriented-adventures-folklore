@@ -19,7 +19,7 @@ class start:
         os.system('cls')
         print("-‘๑’-Wҽʅƈσɱҽ ƚσ Fσʅƙʅσɾҽ Gαɱҽʂ-`‘๑’-")
         global main_character
-        main_character = player(name= input("What is your name?\n"), hp= 100, damage= 5, crit= 10)
+        main_character = player(name= input("What is your name?\n"), hp= 100, damage= 5, crit= 10, gold= 0, silver= 0)
         os.system('cls')
 
         print("1. Start Game")
@@ -35,12 +35,12 @@ class start:
             typingPrint("\x1B[3m You open your eyes to a pounding in your head.\n The surrounding is very different from where you were before.\n Your blurry vision starts to focus on a fork in the road...")
             time.sleep(6)
             os.system('cls')
-            route = typingInput("\x1B[3m Would you like to move E(left), S(right), or V(straight ahead)?\n").upper()
-            if route == "E":
+            route = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
+            if route == "A":
                 left()
-            if route == "S":
+            if route == "D":
                 right()
-            if route == "V":
+            if route == "W":
                 straight_ahead()
             
         elif pick_option == "2":
@@ -94,7 +94,14 @@ class start:
                 elif d == "NO":
                     sys.exit()
             elif beginning_elf.hp <= 0: 
+                main_character.gold += beginning_elf.gold
+                main_character.silver += beginning_elf.silver 
+
                 os.system('cls')
+                typingPrint("The " + beginning_elf.name + " dropped " + str(beginning_elf.gold) + " gold and " + str(beginning_elf.silver) + " silver.\n You decide to collect your winnings.")
+                time.sleep(5)
+                os.system('cls')
+                
                 typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
@@ -157,6 +164,14 @@ class start:
                 elif d == "NO":
                     sys.exit()
             elif beginning_water_spirit.hp <= 0: 
+                main_character.gold += beginning_water_spirit.gold
+                main_character.silver += beginning_water_spirit.silver 
+
+                os.system('cls')
+                typingPrint("The " + beginning_water_spirit.name + " dropped " + str(beginning_water_spirit.gold) + " gold and " + str(beginning_water_spirit.silver) + " silver.\n You decide to collect your winnings.")
+                time.sleep(5)
+                os.system('cls')
+
                 typingPrint("After winning the battle against the " + beginning_water_spirit.name + ", you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
