@@ -1,6 +1,4 @@
-from monster import Monster
 import random
-import item
 import json
 import time
 import os
@@ -36,12 +34,12 @@ class player():
         enemy.hp = max(enemy.hp, 0) 
     
     def battle(x, y):
-        while x.hp and y.hp > 0:
+        while x.hp > 0 and y.hp > 1:
             os.system('cls')
             print("1. Attack!")
             print("2. Go into inventory")
-            """ print("3. View player stats")
-            print("4. Run away") """
+            """ print("3. View player stats") """
+            print("3. Run away") #should actually be option 4
             global choose
             choose = int(input("What would you like to do?\n"))
             os.system('cls')
@@ -179,63 +177,63 @@ class player():
             """     inventory.display_inventory(x)
             if choose == 3:
                 player_in.display_stats(x) """
-            """ if choose == 4:
+            if choose == 3:
                 if run <= 50:
-                    if "elf" in y.name:
+                    if "Elf" in y.name:
                         os.system('cls')
-                        typingPrint("The elf just shot you. You are now dead!")
+                        typingPrint("The " + y.name + " just shot you. You are now dead!")
                         time.sleep(3)
                         os.system('cls')
-                        x.hp == 0 
+                        x.hp = 0 
                         return x.hp
-                    if "maldachaunians" in y.name:
+                    if "Maldachaunians" in y.name:
                         os.system('cls')
-                        typingPrint("The maldachaunians threw a dagger at you. It hits you right in the heart. You are now dead!")
+                        typingPrint("The " + y.name + " threw a dagger at you. It hits you right in the heart. You are now dead!")
                         time.sleep(5)
                         os.system('cls')
-                        x.hp == 0
+                        x.hp = 0
                         return x.hp
-                    if "wimitescu" in y.name:
+                    if "Wimitescu" in y.name:
                         os.system('cls')
-                        typingPrint("The wimitescu smashed your head in with a " + y.weapon + ". You are now dead!")
+                        typingPrint("The " + y.name + " smashed your head in with a " + y.weapon + ". You are now dead!")
                         time.sleep(4)
                         os.system('cls')
-                        x.hp == 0
+                        x.hp = 0
                         return x.hp 
-                    if "spirit" in y.name: 
+                    if "Spirit" in y.name: 
                         os.system('cls')
-                        typingPrint("The " + y.element + " spirit threw " + y.power + " at you. You are now dead!")
+                        typingPrint("The " + y.name + " threw " + y.power + " at you. You are now dead!")
                         time.sleep(4)
                         os.system('cls')
-                        x.hp == 0
+                        x.hp = 0
                         return x.hp
                 elif run > 50 and run <= 100: 
-                    if "elf" in y.name:
+                    if "Elf" in y.name:
                         os.system('cls')
-                        typingPrint("The elf shot an arrow at you. It flys right past your head! You successfully ran away (COWARD)!")
+                        typingPrint("The " + y.name + " shot an arrow at you. It flys right past your head! You successfully ran away (COWARD)!")
                         time.sleep(5)
                         os.system('cls')
-                        y.hp == 1
+                        y.hp = 1
                         return y.hp 
-                    if "maldachaunians" in y.name:
+                    if "Maldachaunians" in y.name:
                         os.system('cls')
-                        typingPrint("The maldachaunians threw " + y.weapon + " at you. It missed! You successfully ran away (COWARD)! ")
+                        typingPrint("The " + y.name + " threw " + y.weapon + " at you. It missed! You successfully ran away (COWARD)! ")
                         time.sleep(5)
                         os.system('cls')
-                        y.hp == 1
+                        y.hp = 1
                         return y.hp 
-                    if "wimitescu" in y.name:
+                    if "Wimitescu" in y.name:
                         os.system('cls')
-                        typingPrint("The wimitescu tries to attack you with a " + y.weapon + " but hits the ground instead. You successfully ran away (COWARD)!")
+                        typingPrint("The " + y.name + " tries to attack you with a " + y.weapon + " but hits the ground instead. You successfully ran away (COWARD)!")
                         time.sleep(6)
                         os.system('cls')
-                        y.hp == 1
+                        y.hp = 1
                         return y.hp
-                    if "spirit" in y.name: 
+                    if "Spirit" in y.name: 
                         os.system('cls')
-                        typingPrint("The " + y.element + " spirit threw " + y.power + " at you. The " + y.name + "missed! You successfully ran away (COWARD)!")
+                        typingPrint("The " + y.name + " threw " + y.power + " at you. The " + y.name + " missed! You successfully ran away (COWARD)!")
                         time.sleep(6)
                         os.system('cls')
-                        y.hp == 1
-                        return y.hp """
+                        y.hp = 1
+                        return y.hp
             

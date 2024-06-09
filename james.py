@@ -64,7 +64,7 @@ class James:
             time.sleep(5)
             os.system('cls')
 
-            typingPrint("\x1B[3mRealizing how bad this is, you come up with the option to either punch him while he was distracted or just wait and see what happends...")
+            typingPrint("\x1B[3mRealizing how bad this is, you come up with the option to either punch him while he was distracted or just wait and see what happends...\n")
             PunchJames = typingInput("Would you like to punch james? YES/NO\n").upper()
             os.system('cls')
             
