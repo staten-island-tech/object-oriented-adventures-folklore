@@ -24,48 +24,48 @@ class MrsChu:
             os.system('cls')
 
             typingPrint("\x1B[3mYou stumbled towards a fountain in the center of the village, its waters shimmering with a soft, golden glow.\n")
-            typingPrint("\x1B[3mAs I cupped my hands and drank, a soothing warmth spread through me, easing the fatigue and confusuion.\n")
-            typingPrint("\x1B[3mYou turn around a saw a fimaliar figure sitting by a lake reading a book.\n")
+            typingPrint("\x1B[3mAs you cup your hands and drank, a soothing warmth spreads through you, easing the fatigue and confusuion.\n")
+            typingPrint("\x1B[3mYou turn around to see a fimaliar figure sitting by a lake reading a book.\n")
             time.sleep(10)
             os.system('cls')
 
 
-            Approaching_Chu = typingInput("Would you like to approach her? Y/N\n").upper()
-            if Approaching_Chu == "N":
+            Approaching_Chu = typingInput("Would you like to approach her? YES/NO\n").upper()
+            if Approaching_Chu == "NO":
                 os.system('cls')
                 typingPrint("\x1B[3mShe was dressed in elegant, flowing robes adorned with intricate patterns that seemed to shift and change with the light.\n")
-                typingPrint("\x1B[3mHer usual stern demeanor was softened by an aura of calming authority, yet there was something in her eyes that I couldn't quite place.\n")
+                typingPrint("\x1B[3mHer demeanor seem to be softened by an aura of calming authority, yet there was something in her eyes that you couldn't quite place.\n")
                 typingPrint("\x1B[3mIn her hands there was a book, called A Court of Attor and Feyre: A Love Story.\n")
-                time.sleep(10)
+                time.sleep(15)
                 os.system('cls')
 
                 typingPrint("\x1B[3mSuddenly, the stranger walked up to you...\n")
-                time.sleep(10)
-                os.system('cls')
-
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Oh my gosh, is that you, " + main_character.name + "!\nI suddently woke up in this world a month ago."))
-                time.sleep(5)
-                os.system('cls')
-
-                print("\x1B[0mYou:")
-                typingPrint(boxed_msg(" Mrs.Chu?!?\nIs that you? \nWhat are you doing here?"))
                 time.sleep(3)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Oh my gosh, is that you?\nI suddently woke up in this world a month ago."))
+                typingPrint(boxed_msg("Oh my gosh, is that you, " + main_character.name + "!?"))
+                time.sleep(3)
+                os.system('cls')
+
+                print("\x1B[0mYou:")
+                typingPrint(boxed_msg("Mrs.Chu?!?\nIs that you?\n What are you doing here?"))
+                time.sleep(2)
+                os.system('cls')
+
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("I could ask the same for you!\n I suddently woke up in this world a month ago."))
                 time.sleep(5)
                 os.system('cls')
 
                 print("\x1B[0mYou:")
-                typingPrint(boxed_msg("I woke up and found myself in the road near the forest.\nNo wonder you were in school for the last month."))
+                typingPrint(boxed_msg("Same!\n I woke up and found myself in the road near the forest.\n No wonder you haven't been in school for the last month."))
                 time.sleep(5)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Come on let me show you around, it is hard to survive here.\nAs you witness just now, this fountain was a structure that contain a huge healing stone.\n This heals you as you get sprinkled by the water.\nYou clothes would still get wet though."))
-                time.sleep(8)
+                typingPrint(boxed_msg("Come on let me show you around. It's hard to survive here."))
+                time.sleep(3)
                 os.system('cls')
 
                 print("\x1B[0mYou:")
@@ -73,45 +73,55 @@ class MrsChu:
                 time.sleep(3)
                 os.system('cls')
 
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("This place is called Alcina Dimitrescu. \nIt was named after the swamp monsters, which you would find more information on later on."))
-                time.sleep(3)
-                os.system('cls')
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("This fountain is called the Heart of Dimitrescu."))
+                typingPrint("\x1B[3mIgnoring your question, Mrs.Chu continues to talk about the village.")
                 time.sleep(2)
-                os.system('cls')
+                os.system("cls")
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Its waters can heal and rejuvenate."))
-                time.sleep(2)
-                os.system('cls')
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("The villagers here are mostly artisans and merchants, and they play a crucial role in maintaining the balance of magic."))
+                typingPrint(boxed_msg("This place is called Alcina Dimitrescu. \nIt was named after the swamp monsters.\n You'll probably find more information on them later."))
                 time.sleep(5)
                 os.system('cls')
 
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("This fountain is called the Heart of Dimitrescu.\n It contains a huge healing stone."))
+                time.sleep(3)
+                os.system('cls')
+
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("As you've just seen, its waters can heal and rejuvenate.\n However, your clothes will still get wet though."))
+                time.sleep(3)
+                os.system('cls')
+
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("The villagers here are mostly artisans and merchants.\n They play a crucial role in maintaining the balance of magic."))
+                time.sleep(4)
+                os.system('cls')
+
                 print("\x1B[0mYou:")
-                typingPrint(boxed_msg("This place is incredible. \nIt feels so alive."))
+                typingPrint(boxed_msg("This place is incredible.\n It feels so alive."))
                 time.sleep(2)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("However this balance is distrubed."))
+                typingPrint(boxed_msg("However, the balance is in discord at the moment."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
                 typingPrint(boxed_msg("The balance of magic and reality is tipping dangerously."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("If it continues, both Dimitrescu and our wrold will suffer catastrophic consequences."))
+                typingPrint(boxed_msg("If it continues, both Dimitrescu and our world will suffer catastrophic consequences."))
                 time.sleep(3)
                 os.system('cls')
 
                 typingPrint("\x1B[3mShe grestured towards a massive tree with luminous leaves stood. \nBeneath it, villagers gathered, their faces etched with worry and hope.\n The tree's glow seemed to dim and brighten, as if breathing.")
                 time.sleep(5)
                 os.system('cls')
-                typingPrint("\x1B[3mThere was a hint of steel in her voice now, a reminder of the gravity of our mission.\n Yet, the way she spoke of forces seeking to tip the balance made me wonder if she knew more about these threats than she was leeting on.")
+
+                typingPrint("\x1B[3mThere was a hint of steel in her voice now, a reminder of the gravity of the situation.\n Yet, the way she spoke of forces seeking to tip the balance made you wonder if she knew more about these threats than she was letting on.")
                 time.sleep(5)
                 os.system('cls')
 
@@ -119,21 +129,21 @@ class MrsChu:
                 typingPrint(boxed_msg("Come, there is someone you need to meet."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about your quest."))
+                typingPrint(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about why you are here."))
                 time.sleep(5)
                 os.system('cls')
 
-
-            elif Approaching_Chu == "Y":
-                typingPrint("\x1B[3m She was dressed in elegant, flowing robes adorned with intricate patterns that seemed to shift and change with the light.\n")
-                typingPrint("\x1B[3mHer usual stern demeanor was softened by an aura of calming authority, yet there was something in her eyes that I couldn't quite place.\n")
+            elif Approaching_Chu == "YES":
+                typingPrint("\x1B[3mShe was dressed in elegant, flowing robes adorned with intricate patterns that seemed to shift and change with the light.\n")
+                typingPrint("\x1B[3mHer demeanor seemed to be softened by an aura of calming authority, yet there was something in her eyes that you couldn't quite place.\n")
                 typingPrint("\x1B[3mIn her hands there was a book, called A Court of Attor and Feyre: A Love Story.\n")
-                time.sleep(10)
+                time.sleep(15)
                 os.system('cls')
 
                 print("\x1B[0mYou:")
-                typingPrint(boxed_msg("Oh my gosh, is that you?\nWhat are you doing here?."))
+                typingPrint(boxed_msg("Oh my gosh, is that you, Mrs.Chu?\nWhat are you doing here?."))
                 time.sleep(3)
                 os.system('cls')
 
@@ -143,34 +153,41 @@ class MrsChu:
                 os.system('cls')
 
                 print("\x1B[0mYou:")
-                typingPrint(boxed_msg("I woke up and found myself in the road near the forest.\nNo wonder you were in school for the last month."))
+                typingPrint(boxed_msg("I woke up and found myself in the road near the forest.\nNo wonder you weren't in school for the last month."))
                 time.sleep(5)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Come on let me show you around, it is hard to survive here.\nAs you witness just now, this fountain was a structure that contain a huge healing stone.\n This heals you as you get sprinkled by the water.\nYou clothes would still get wet though."))
-                time.sleep(8)
+                typingPrint(boxed_msg("Come on, let me show you around.\nIt's hard to survive here."))
+                time.sleep(3)
                 os.system('cls')
 
                 print("\x1B[0mYou:")
                 typingPrint(boxed_msg("Do you know how I can get back?"))
+                time.sleep(2)
+                os.system('cls')
+
+                typingPrint("\x1B[3mIgnoring your question, Mrs.Chu continues to talk about the village.")
+                time.sleep(2)
+                os.system("cls")
+
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("This place is called Alcina Dimitrescu. \nIt was named after the swamp monsters.\n You'll probably find more information on them later."))
                 time.sleep(3)
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("This place is called Alcina Dimitrescu. \nIt was named after the swamp monsters, which you would find more information on later on."))
+                typingPrint(boxed_msg("This fountain is called the Heart of Dimitrescu.\n It contains a huge healing stone."))
+                time.sleep(2)
+                os.system('cls')
+
+                print("\x1B[0mMrs.Chu:")
+                typingPrint(boxed_msg("As you've just seen, its waters can heal and rejuvenate.\n However, your clothes will still get wet though."))
                 time.sleep(3)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("This fountain is called the Heart of Dimitrescu."))
-                time.sleep(2)
-                os.system('cls')
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("Its waters can heal and rejuvenate."))
-                time.sleep(2)
-                os.system('cls')
-                print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("The villagers here are mostly artisans and merchants, and they play a crucial role in maintaining the balance of magic."))
+                typingPrint(boxed_msg("The villagers here are mostly artisans and merchants.\n They play a crucial role in maintaining the balance of magic."))
                 time.sleep(5)
                 os.system('cls')
 
@@ -180,22 +197,25 @@ class MrsChu:
                 os.system('cls')
 
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("However this balance is distrubed."))
+                typingPrint(boxed_msg("However, the balance is in discord at the moment."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
                 typingPrint(boxed_msg("The balance of magic and reality is tipping dangerously."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("If it continues, both Dimitrescu and our wrold will suffer catastrophic consequences."))
+                typingPrint(boxed_msg("If it continues, both Dimitrescu and our world will suffer catastrophic consequences."))
                 time.sleep(3)
                 os.system('cls')
 
                 typingPrint("\x1B[3mShe grestured towards a massive tree with luminous leaves stood. \nBeneath it, villagers gathered, their faces etched with worry and hope.\n The tree's glow seemed to dim and brighten, as if breathing.")
                 time.sleep(5)
                 os.system('cls')
-                typingPrint("\x1B[3mThere was a hint of steel in her voice now, a reminder of the gravity of our mission.\n Yet, the way she spoke of forces seeking to tip the balance made me wonder if she knew more about these threats than she was leeting on.")
+
+                typingPrint("\x1B[3mThere was a hint of steel in her voice now, a reminder of the gravity of the situation.\n Yet, the way she spoke of forces seeking to tip the balance made you wonder if she knew more about these threats than she was letting on.")
                 time.sleep(5)
                 os.system('cls')
 
@@ -203,8 +223,8 @@ class MrsChu:
                 typingPrint(boxed_msg("Come, there is someone you need to meet."))
                 time.sleep(2)
                 os.system('cls')
+
                 print("\x1B[0mMrs.Chu:")
-                typingPrint(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about your quest."))
+                typingPrint(boxed_msg("A merchant named Alaric. He can provide us with supplies and perhaps more informaion about why you are here."))
                 time.sleep(5)
                 os.system('cls')
-                merhcant.Merchant()

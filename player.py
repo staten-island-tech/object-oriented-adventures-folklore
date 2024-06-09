@@ -50,8 +50,8 @@ class player():
             run = random.randint(1,100)
             text_duration = 3
             if choose == 1:
-                if player_attack <= 75: #chances of sucessful player attack
-                    if player_crit <= 99: #chance of normal player attack
+                if player_attack <= 80: #chances of sucessful player attack
+                    if player_crit <= 90: #chance of normal player attack
                         x.attack(y)
                         if y.hp <= 0:
                             typingPrint("You successfully attacked the " + y.name + ". The " + y.name + " is dead!")
@@ -63,7 +63,7 @@ class player():
                             time.sleep(text_duration)
                             os.system('cls')
                             if monster_attack <= 75: #chance of successful monster attack
-                                if monster_crit <= 99: #chance of normal monster attack
+                                if monster_crit <= 95: #chance of normal monster attack
                                     x.hp -= y.damage
                                     if x.hp <= 0: 
                                         typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
@@ -74,7 +74,7 @@ class player():
                                         typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                         time.sleep(text_duration)
                                         os.system('cls')
-                                elif monster_crit == 100: #chance of crit monster attack
+                                elif monster_crit > 95 and monster_crit <= 100: #chance of crit monster attack
                                     x.hp -= y.crit
                                     if x.hp <= 0: 
                                         typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
@@ -92,7 +92,7 @@ class player():
                                 time.sleep(text_duration)
                                 os.system('cls')
                                 return x.hp
-                    elif player_crit == 100: #chance of player crit attack
+                    elif player_crit > 90 and player_crit <= 100: #chance of player crit attack
                         x.attack_crit(y)
                         if y.hp <= 0:
                             typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
@@ -104,7 +104,7 @@ class player():
                             time.sleep(text_duration)
                             os.system('cls')
                         if monster_attack <= 75: #chance of sucessful monster attack
-                            if monster_crit <= 99: #chance of monster normal attack 
+                            if monster_crit <= 95: #chance of monster normal attack 
                                 x.hp -= y.damage
                                 if x.hp <= 0: 
                                     typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
@@ -115,7 +115,7 @@ class player():
                                     typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                     time.sleep(text_duration)
                                     os.system('cls')
-                            elif monster_crit == 100: #chance of monster crit attack 
+                            elif monster_crit > 95 and monster_crit <= 100: #chance of monster crit attack 
                                 x.hp -= y.crit
                                 if x.hp <= 0: 
                                     typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
@@ -132,12 +132,12 @@ class player():
                             time.sleep(text_duration)
                             os.system('cls')
                             return x.hp
-                elif player_attack > 75 and player_attack <= 100: #chance of unsuccessful player attack 
+                elif player_attack > 80 and player_attack <= 100: #chance of unsuccessful player attack 
                     typingPrint("Your attack was unsucessful! The " + y.name + " still has " + str(y.hp) + " hp!")
                     time.sleep(text_duration)
                     os.system('cls')
                     if monster_attack <= 75: #chance of successful monster attack 
-                        if monster_crit <= 99: #chance of normal monster attack
+                        if monster_crit <= 95: #chance of normal monster attack
                             x.hp -= y.damage
                             if x.hp <= 0: 
                                 typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
@@ -148,7 +148,7 @@ class player():
                                 typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                 time.sleep(text_duration)
                                 os.system('cls')
-                        elif monster_crit == 100: #chance of monster crit attack 
+                        elif monster_crit > 95 and monster_crit <= 100: #chance of monster crit attack 
                             x.attack_crit(y)
                             if y.hp <= 0:
                                 typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
