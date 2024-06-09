@@ -7,53 +7,13 @@ import time
 import json
 import sys
 from math import ceil, floor
-import Monsters
-class typer():
-   global typingPrint
-   global typingInput
+import monster
+from classes import format_line
+from classes import boxed_msg
+from classes import typingInput
+from classes import typingPrint
 
-
-
-
-   def typingPrint(text):
-       for character in text:
-           sys.stdout.write(character)
-           sys.stdout.flush()
-           time.sleep(0.01)
-  
-   def typingInput(text):
-       for character in text:
-           sys.stdout.write(character)
-           sys.stdout.flush()
-           time.sleep(0.01)
-       value = input() 
-       return value 
-#\x1B[3m Italic
-#\x1B[0m Normal Text
-
-
-class boxes:
-   global format_line
-   def format_line(line, max_length):
-       half_dif = (max_length - len(line)) / 2 # in Python 3.x float division
-       return '| ' + ' ' * ceil(half_dif) + line + ' ' * floor(half_dif) + ' |\n'
-  
-   global boxed_msg
-   def boxed_msg(msg):
-       lines = msg.split('\n')
-       max_length = max([len(line) for line in lines])
-       horizontal = '+' + '-' * (max_length + 2) + '+\n'
-       res = horizontal
-       for l in lines:
-           res += format_line(l, max_length)
-       res += horizontal
-       return res.strip()
-
-
-
-
-
-class Inventory:
+class inventory:
        #The amount of items in the player's inventory
        def __init__(self):
            self.potions = {"Health Potion": 0, "Speed Potion": 0, "Defense Potion": 0}
@@ -106,15 +66,14 @@ class Inventory:
                print("\n")
                print(f"You have used this {material}.")
 
-class player_in():
-    def __init__(self, name, age):
+class player_in:
+    def __init__(self, name):
         self.name = name
-        self.age = age
         self.currency = {"Gold": 0, "Silver": 0, "Bronze": 0}
-        self.health = {"Health": 100}
+        self.hp = {"Health": 100}
         self.sheild = {"Sheild" : 0}
         self.location = [] #Fix this
-        self.inventory = Inventory()
+        self.inventory = inventory()
         self.potions = {"Health Potion": 0, "Speed Potion": 0, "Defense Potion": 0}
         self.foods = {"Fowl": 0, "Cake": 0, "Apple": 0, "Cabbage": 0}
         self.materials = {"Wood": 0, "Stone": 0, "Iron": 0, "Leather": 0}

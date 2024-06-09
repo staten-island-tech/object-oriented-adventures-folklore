@@ -1,27 +1,12 @@
 import time
-import sys
 import os
 import Inventory
-global typingPrint
-global typingspeed
-typingspeed = 0.01
-global typingInput
-def typingPrint(text):
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(typingspeed)
+from classes import typingPrint
+from Inventory import player_in
+from interface import main_character
 
-def typingInput(text):
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(typingspeed)
-        value = input()  
-        return value  
-    
 class Merchant:
-    Inventory.player_in()
+    Inventory.player_in(main_character)
     def __init__(self, name, age, potions, foods, materials):
         self.name = name
         self.age = age
@@ -60,7 +45,7 @@ class Merchant:
             print("You exit his shop and make your way back to the town.")
         elif buyer.potions[item] - quantity:
             #might change to self.currency
-            Player.Players.currency["Gold"] -= self.potions[item] * quantity
+            player_in.Players.currency["Gold"] -= self.potions[item] * quantity
             buyer.inventory.add_item(item, quantity)
             print("  ")
             print(f"Old man: Ahh, exelent choice. Here is your {item} that will be {self.potions[item] * quantity} gold.")
@@ -68,7 +53,7 @@ class Merchant:
             print(f"The old man holds one hand out expecting gold holding the {item} in the other. As you drop the gold into his hand he gives you, your potion. You walk out the door and back towards the town, satisfied with your purchase.")
         elif buyer.foods[item] - quantity:
             #might change to self.currency
-            Player.Players.currency["Gold"] -= self.foods[item] * quantity
+            player_in.Players.currency["Gold"] -= self.foods[item] * quantity
             buyer.inventory.add_item(item, quantity)
             print("  ")
             print(f"Old man: Ahh, exelent choice. Here is your {item} that will be {self.foods[item] * quantity} gold.")
@@ -76,7 +61,7 @@ class Merchant:
             print(f"The old man holds one hand out expecting gold holding the {item} in the other. As you drop the gold into his hand he gives you, your food. You walk out the door and back towards the town, satisfied with your purchase.")
         elif buyer.materials[item] - quantity:
             #might change to self.currency
-            Player.Players.currency["Gold"] -= self.materials[item] * quantity
+            player_in.Players.currency["Gold"] -= self.materials[item] * quantity
             buyer.inventory.add_item(item, quantity)
             print("  ")
             print(f"Old man: Ahh, exelent choice. Here is your {item} that will be {self.materials[item] * quantity} gold.")
@@ -84,7 +69,7 @@ class Merchant:
             print(f"The old man holds one hand out expecting gold holding the {item} in the other. As you drop the gold into his hand he gives you, your material. You walk out the door and back towards the town, satisfied with your purchase.")
 
     # create a new instance of the Merchant class with some items for sale
-        merchant = Merchant("Roaches and Things", {"Speed Potion": 25, "Defense Potion": 50, "Fowl": 10, "Cake": 10, "Apple": 10, "Cabbage": 10,"Wood": 20, "Stone": 20, "Iron": 20, "Leather": 20})
+        merchant = Merchant("Roaches and Things", {"Defense Potion": 50, "Fowl": 10, "Cake": 10, "Apple": 10, "Cabbage": 10,"Wood": 20, "Stone": 20, "Iron": 20, "Leather": 20})
         merchant.display_items()
         print("  ")
         choice = input("Looking for anything in particular?: ").upper()
@@ -95,25 +80,25 @@ class Merchant:
         # sell an item to the player
         #might change to self.currency
         if choice == "SPEED POTION": 
-            merchant.sell_item("Speed Potion", 1, Player.Players)
+            merchant.sell_item("Speed Potion", 1, player_in.Players)
         elif choice == "DEFENSE POTION": 
-            merchant.sell_item("Defense Potion", 1, Player.Players)
+            merchant.sell_item("Defense Potion", 1, player_in.Players)
         elif choice == "FOWL": 
-            merchant.sell_item("Fowl", 1, Player.Players)
+            merchant.sell_item("Fowl", 1, player_in.Players)
         elif choice == "CAKE": 
-            merchant.sell_item("Cake", 1, Player.Players)
+            merchant.sell_item("Cake", 1, player_in.Players)
         elif choice == "APPLE": 
-            merchant.sell_item("Apple", 1, Player.Players)
+            merchant.sell_item("Apple", 1, player_in.Players)
         elif choice == "CABBAGE": 
-            merchant.sell_item("Cabbage", 1, Player.Players)
+            merchant.sell_item("Cabbage", 1, player_in.Players)
         elif choice == "WOOD": 
-            merchant.sell_item("Wood", 1, Player.Players)
+            merchant.sell_item("Wood", 1, player_in.Players)
         elif choice == "STONE": 
-            merchant.sell_item("Stone", 1, Player.Players)
+            merchant.sell_item("Stone", 1, player_in.Players)
         elif choice == "IRON": 
-            merchant.sell_item("Iron", 1, Player.Players)
+            merchant.sell_item("Iron", 1, player_in.Players)
         elif choice == "LEATHER": 
-            merchant.sell_item("Leather", 1, Player.Players)    
+            merchant.sell_item("Leather", 1, player_in.Players)    
         else:
             print("  ") 
             print("My appologies traveler, we do not currently have that item. However we do get new shipments weekly so check back soon!")
