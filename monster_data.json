@@ -20,35 +20,17 @@
     "Weapon": "Bow and arrow",
     "Powers": "Shapeshift"
 },{
-    "Name": "Element Spirits",
-    "Description": "",
-    "Loot": "",
-    "Hp": 150,
-    "Powers": "Water, Earth, Fire, and Air"
-},{
     "Name": "Water Spirits",
     "Description": "",
     "Loot": "",
     "Hp": 100,
-    "Powers": "Water"
-},{
-    "Name": "Earth Spirits",
-    "Description": "",
-    "Loot": "",
-    "Hp": 100,
-    "Powers": "Earth"
+    "Powers": "Water Blast"
 },{
     "Name": "Fire Spirits",
     "Description": "",
     "Loot": "",
     "Hp": 100,
-    "Powers": "Fire"
-},{
-    "Name": "Air Spirits",
-    "Description": "",
-    "Loot": "",
-    "Hp": 100,
-    "Powers": "Air"
+    "Powers": "Fire Ball"
 },{
     "Name": "Moonlight Monarch",
     "Description": "[unknown]",
