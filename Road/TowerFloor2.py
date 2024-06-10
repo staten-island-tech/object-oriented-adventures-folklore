@@ -30,22 +30,22 @@ class FloorTwo:
         os.system('cls')
         typingPrint("\x1B[5Entering Floor 2....")
     def Floor2_Battle():
-        first_t_battle = Floor2_Pchvpxa(name= "Pchvpxa", hp= 150, damage= 15, crit= 20, power= "Gunner")
-        while main_character > 0 and first_t_battle > 1:
-            player.battle(main_character, first_t_battle)
+        second_t_battle = Floor2_Pchvpxa(name= "Pchvpxa", hp= 150, damage= 15, crit= 20, power= "Gunner")
+        while main_character > 0 and second_t_battle> 1:
+            player.battle(main_character, second_t_battle)
         if main_character.hp <= 0:
                 d = typingInput("Would you like to restart? YES/NO\n").upper()
                 if d == "YES":
                     interface()
                 elif d == "NO":
                     sys.exit()
-        elif first_t_battle.hp <=0: 
-            typingPrint("You defeated the " + first_t_battle.name + "")
+        elif second_t_battle.hp <=0: 
+            typingPrint("You defeated the " + second_t_battle.name + "")
             time.sleep(2)
             os.system('cls')
-            Floor1_Exit()
+            Floor2_Exit()
 
-        elif first_t_battle == 1:
+        elif second_t_battle == 1:
             typingPrint("You ran out of the tower, you COWARD! Waiting for you outside was a shadow monster that killed you!")
             time.sleep(3)
             os.system('cls')
@@ -55,7 +55,7 @@ class FloorTwo:
                 interface()
             elif d == "NO":
                 sys.exit()
-        
+    global Floor2_Exit
     def Floor2_Exit():
         print("You are now moving on to the thrid floor")
         time.sleep(1)
