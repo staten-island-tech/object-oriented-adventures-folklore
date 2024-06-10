@@ -71,7 +71,6 @@ class going_into_tower:
                 else:
                     Picking_Floor()
         Picking_Floor()
-
             
 
         if Enter_Tower == "NO":
