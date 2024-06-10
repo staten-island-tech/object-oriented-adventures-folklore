@@ -38,9 +38,9 @@ class start:
             route = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
             if route == "A":
                 left()
-            if route == "D":
+            elif route == "D":
                 right()
-            if route == "W":
+            elif route == "W":
                 straight_ahead()
             
         elif pick_option == "2":
@@ -85,14 +85,15 @@ class start:
             time.sleep(2)
             os.system('cls')
 
-            while main_character.hp > 0 and beginning_elf.hp > 0:
+            while main_character.hp > 0 and beginning_elf.hp > 1:
                 player.battle(main_character,beginning_elf)
             if main_character.hp <= 0:
-                d = typingInput("You are now dead! Would you like to restart? YES/NO\n").upper()
+                d = typingInput("Would you like to restart? YES/NO\n").upper()
                 if d == "YES":
                     interface()
                 elif d == "NO":
                     sys.exit()
+
             elif beginning_elf.hp <= 0: 
                 main_character.gold += beginning_elf.gold
                 main_character.silver += beginning_elf.silver 
@@ -103,6 +104,12 @@ class start:
                 os.system('cls')
                 
                 typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
+                time.sleep(5)
+                os.system('cls')
+
+            elif beginning_elf.hp == 1:
+                os.system('cls')
+                typingPrint("After running away from the " + beginning_elf.name +  " like a complete wuss, you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
                 
@@ -155,14 +162,15 @@ class start:
             os.system('cls')
 
             beginning_water_spirit = water_spirit(name= "Water Spirit", hp= 20, loot= "", damage= 5, crit= 10, gold = random.randint(5,20), silver= random.randint(5,20), power= "Water Blast")
-            while main_character.hp > 0 and beginning_water_spirit.hp > 0:
+            while main_character.hp > 0 and beginning_water_spirit.hp > 1:
                 player.battle(main_character,beginning_water_spirit)
             if main_character.hp <= 0:
-                d = typingInput("You are now dead! Would you like to restart? YES/NO\n").upper()
+                d = typingInput("Would you like to restart? YES/NO\n").upper()
                 if d == "YES":
                     interface()
                 elif d == "NO":
                     sys.exit()
+
             elif beginning_water_spirit.hp <= 0: 
                 main_character.gold += beginning_water_spirit.gold
                 main_character.silver += beginning_water_spirit.silver 
@@ -173,6 +181,12 @@ class start:
                 os.system('cls')
 
                 typingPrint("After winning the battle against the " + beginning_water_spirit.name + ", you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
+                time.sleep(5)
+                os.system('cls')
+
+            elif beginning_water_spirit.hp == 1:
+                os.system('cls')
+                typingPrint("After running away from the " + beginning_water_spirit.name +  " like a complete wuss, you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
                 os.system('cls')
             
@@ -203,12 +217,6 @@ class start:
             typingPrint("\x1B[3mDetermined to figure out where you are, you decide to explore the village on your own.\n Eventually you find another fork in the road that seems promising.")
             time.sleep(3)
             os.system('cls')
-    
-    def instructions(): 
-        os.system('cls')
-        print("Introduction:")
-        print("This game is an adventure game!\n Choose different paths to get different storylines!\n Encounter monsters and engage in battle in order to obtain materials!\n Fight the final boss to win the game!\n")
-        print("How to play:")
 
     def run_interface():
         interface()
