@@ -91,7 +91,7 @@ class Betty:
                 time.sleep(5)
                 sys.exit()
             if pay == "NO": 
-                print("Thanks for trying out our game! The end.")
+                print("Even if you paid, we have no idea what to do next! Thanks for trying out our game! The end.")
                 time.sleep(3)
                 sys.exit()
 
