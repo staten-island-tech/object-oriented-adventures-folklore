@@ -5,7 +5,9 @@ from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
-
+from monster import Floor4_Chikungunya
+from interface import main_character, interface
+from player import player
 # Beaste
 class FloorFour:
     def Floor4_Beginning():
@@ -31,7 +33,33 @@ class FloorFour:
         typingPrint("\x1B[5mEntering...")
         time.sleep(1)
     def Floor4_Battle():
-        print("")
+        fourth_t_battle = Floor4_Chikungunya(name= "Chikungunya", hp= 250, damage= 25, crit= 45, power= "Drop of Death")
+        while main_character > 0 and fourth_t_battle > 1:
+            player.battle(main_character, fourth_t_battle)
+        if main_character.hp <= 0:
+                d = typingInput("Would you like to restart? YES/NO\n").upper()
+                if d == "YES":
+                    interface()
+                elif d == "NO":
+                    sys.exit()
+        elif fourth_t_battle.hp <=0: 
+            typingPrint("You defeated the " + fourth_t_battle.name + "")
+            time.sleep(2)
+            os.system('cls')
+            Floor4_Exit()
+
+        elif fourth_t_battle == 1:
+            typingPrint("You ran out of the tower, you COWARD! Waiting for you outside was a shadow monster that killed you!")
+            time.sleep(3)
+            os.system('cls')
+
+            d = typingInput("Would you like to restart? YES/NO\n").upper()
+            if d == "YES":
+                interface()
+            elif d == "NO":
+                sys.exit()
+                
+    global Floor4_Exit
     def Floor4_Exit():
         print("You are moving on to the Boss Battle :>")
         time.sleep(1)

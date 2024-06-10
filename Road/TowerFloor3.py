@@ -35,7 +35,7 @@ class FloorThree:
         time.sleep(1)
         os.system('cls')
     def Floor3_Battle():
-        third_t_battle = Floor3_Anlliasio_Altosoei(name= "Altosoei", hp= 200, damage= 20, crit= 40, power= "Tornado")
+        third_t_battle = Floor3_Anlliasio_Altosoei(name= "Altosoei", hp= 200, damage= 20, crit= 40, power= "Duplication_Blast")
         while main_character > 0 and third_t_battle > 1:
             player.battle(main_character, third_t_battle)
         if main_character.hp <= 0:
