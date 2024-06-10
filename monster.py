@@ -49,28 +49,28 @@ class fire_spirit(Monster):
         fire_spirit.power = power 
 
 class Floor1_Moonlight_Monarch(Monster):
-    def __init__(Floor1_Moonight_Monarch, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):
-        super().__init__(name, hp, loot, damage, crit, gold, silver)
+    def __init__(Floor1_Moonight_Monarch, name:str, hp: int, damage: int, crit:int, power:str):
+        super().__init__(name, hp, damage, crit) 
         Floor1_Moonight_Monarch.power = power
-
+        
 class Floor2_Pchvpxa(Monster):
-    def __init__(Floor2_Pchvpxa, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):
-        super().__init__(name, hp, loot, damage, crit, gold, silver)
+    def __init__(Floor2_Pchvpxa, name:str, hp: int, damage: int, crit:int, power:str):
+        super().__init__(name, hp, damage, crit)
         Floor2_Pchvpxa.power = power
 
 class Floor3_Anlliasio_Altosoei(Monster):
-    def __init__(Floor3_Annlliasio_Altosoei, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):
-        super().__init__(name, hp, loot, damage, crit, gold, silver)
+    def __init__(Floor3_Annlliasio_Altosoei, name:str, hp: int, damage: int, crit:int, power:str):
+        super().__init__(name, hp, damage, crit)
         Floor3_Annlliasio_Altosoei.power = power
 
 class Floor4_Chikungunya(Monster):
-    def __init__(Floor4_Chikungunya, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):
-        super().__init__(name, hp, loot, damage, crit, gold, silver)
+    def __init__(Floor4_Chikungunya, name:str, hp: int, damage: int, crit:int, power:str):
+        super().__init__(name, hp, damage, crit)
         Floor4_Chikungunya.power = power
 
 class Pikachu(Monster):
-    def __init__(floor, name:str, hp: int, loot: str, damage: int, crit:int, gold: int, silver: int, power:str):
-        super().__init__(name, hp, loot, damage, crit, gold, silver)
-        Pikachu.power = power 
+    def __init__(pikachu, name:str, hp: int, damage: int, crit:int, power:str):
+        super().__init__(name, hp, damage, crit)
+        pikachu.power = power 
 
 
