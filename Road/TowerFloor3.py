@@ -22,7 +22,7 @@ class FloorThree:
         typingPrint("\x1B[2mIn order to defeat them, find a way to hit them at the same time")
         time.sleep(2)
         os.system('cls')
-        typingPrint("\x1B[2mIf you wait too long to hit one of them, they will start to regain health. \n There is also a 2:30 timer for you to complete the challenge.")
+        typingPrint("\x1B[2mIf you wait too long to hit one of them, they will start to regain health. \n")
         time.sleep(3)
         os.system('cls')
         typingPrint("* If you fail to complete the challenge you will have to restart *")
