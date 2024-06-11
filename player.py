@@ -3,6 +3,7 @@ import json
 import time
 import os
 from classes import typingPrint
+from Inventory import inventory, player_in
 test = open("monster_data.json", encoding="utf8")
 data = json.load(test)
 
@@ -168,15 +169,16 @@ class player():
                     return x.hp and y.hp
                 return x.hp and y.hp
             if choose == 2:
-                if x.gold == 0 and x.silver == 0:
+                inventory.display_inventory(x)
+                """if x.gold == 0 and x.silver == 0:
                     typingPrint("You are poor right now! You have no money or items!")
                     time.sleep(3)
                 else: 
-                    print()
+                    print()"""
                     #daniel has to figure out inventory system
-            """     inventory.display_inventory(x)
+                
             if choose == 3:
-                player_in.display_stats(x) """
+                player_in.display_stats(x)
             if choose == 3:
                 if run <= 50:
                     if "Elf" in y.name:
