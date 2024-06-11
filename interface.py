@@ -8,6 +8,8 @@ from classes import typingInput
 from player import player
 from monster import elves
 from monster import water_spirit
+from Inventory import inventory
+from Inventory import player_in
 import random
 
 class start:
@@ -93,15 +95,14 @@ class start:
                     interface()
                 elif d == "NO":
                     sys.exit()
-
+# FIXXXXX
             elif beginning_elf.hp <= 0: 
-                main_character.gold += beginning_elf.gold
-                main_character.silver += beginning_elf.silver 
-
-                os.system('cls')
-                typingPrint("The " + beginning_elf.name + " dropped " + str(beginning_elf.gold) + " gold and " + str(beginning_elf.silver) + " silver.\n You decide to collect your winnings.")
-                time.sleep(5)
-                os.system('cls')
+                print(f"You defeated a elf.\n (+ golds)\n (+ silvers)")
+                player_in.currency["Gold"] += {elves.gold}
+                player_in.currency["Silver"] += {elves.silver}
+                if random.randint(1,20) == 13:
+                    typingPrint("You gain something some else.")
+                    inventory.adding_items.potions["Health Potion"] += 1
                 
                 typingPrint("After winning the battle against the " + beginning_elf.name + ", you decide to try and find other people.\n On your way, you end up encountering another fork in the road.")
                 time.sleep(5)
