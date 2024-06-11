@@ -5,6 +5,10 @@ from classes import format_line
 from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
+from player import player
+from monster import Floor1_Moonlight_Monarch
+from interface import main_character
+from interface import interface
 
 #Moonlight Monarch
 global Floor1_Beginning
@@ -67,7 +71,33 @@ class FloorOne:
         time.sleep(1)
         os.system('cls')
     def Floor1_Battle():
-        print("")
+        first_t_battle = Floor1_Moonlight_Monarch(name= "Monarch", hp= 100, damage= 10, crit= 15, power= "Tornado")
+        while main_character > 0 and first_t_battle > 1:
+            player.battle(main_character, first_t_battle)
+        if main_character.hp <= 0:
+                d = typingInput("Would you like to restart? YES/NO\n").upper()
+                if d == "YES":
+                    interface()
+                elif d == "NO":
+                    sys.exit()
+        elif first_t_battle.hp <=0: 
+            typingPrint("You defeated the " + first_t_battle.name + "")
+            time.sleep(2)
+            os.system('cls')
+            Floor1_Exit()
+
+        elif first_t_battle == 1:
+            typingPrint("You ran out of the tower, you COWARD! Waiting for you outside was a shadow monster that killed you!")
+            time.sleep(3)
+            os.system('cls')
+
+            d = typingInput("Would you like to restart? YES/NO\n").upper()
+            if d == "YES":
+                interface()
+            elif d == "NO":
+                sys.exit()
+        
+    global Floor1_Exit
     def Floor1_Exit():
         print("You are now moving on to the second floor")
         time.sleep(1)

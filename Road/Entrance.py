@@ -5,7 +5,7 @@ import TowerFloor1
 from TowerFloor2 import FloorTwo
 from TowerFloor3 import FloorThree
 from TowerFloor4 import FloorFour
-from TowerFloor5 import FloorFive
+from TowerBossBattle import FinalBoss
 #System Typing
 #########################################################################################################################################################
 class typer():
@@ -67,11 +67,10 @@ class going_into_tower:
                 elif Picking_Floor == "4".upper:
                     FloorFour.Floor4_Beginning()
                 elif Picking_Floor == "5".upper:
-                    FloorFive.Floor5_Beginning()
+                    FinalBoss.FinalBoss_Beginning()
                 else:
                     Picking_Floor()
         Picking_Floor()
-
             
 
         if Enter_Tower == "NO":
