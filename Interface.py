@@ -35,12 +35,12 @@ class start:
             typingPrint("\x1B[3m You open your eyes to a pounding in your head.\n The surrounding is very different from where you were before.\n Your blurry vision starts to focus on a fork in the road...")
             time.sleep(6)
             os.system('cls')
-            route = typingInput("\x1B[3m Would you like to move A(left), D(right), or W(straight ahead)?\n").upper()
-            if route == "A":
+            route = typingInput("\x1B[3m Would you like to move E(left), W(right), or V(straight ahead)?\n").upper()
+            if route == "E":
                 left()
-            elif route == "D":
-                right()
             elif route == "W":
+                right()
+            elif route == "V":
                 straight_ahead()
             
         elif pick_option == "2":
