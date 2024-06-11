@@ -39,7 +39,7 @@ class FinalBoss:
         time.sleep(3)
         os.system('cls')
     def Boss_Battle():
-        final_t_battle = pikachu(name= "Pikachu", hp= 200, damage= 35, crit= 50, power= "Tornado")
+        final_t_battle = pikachu(name= "Pikachu", hp= 200, damage= 35, crit= 50, power= "LIGHTNING BOLT")
         while main_character > 0 and final_t_battle > 1:
             player.battle(main_character, final_t_battle)
         if main_character.hp <= 0:

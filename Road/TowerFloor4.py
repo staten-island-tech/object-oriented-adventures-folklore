@@ -1,14 +1,12 @@
 import os
 import time
 import sys
-from classes import format_line
-from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 from monster import Floor4_Chikungunya
 from interface import main_character, interface
 from player import player
-# Beaste
+# Beast
 class FloorFour:
     def Floor4_Beginning():
         print("You have reached the fourth floor. ")
