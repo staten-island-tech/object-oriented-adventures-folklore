@@ -48,7 +48,7 @@ class player():
             player_crit = random.randint(1,100)
             monster_crit = random.randint(1,100)
             run = random.randint(1,100)
-            text_duration = 3
+            text_duration = 2
             if choose == 1:
                 if player_attack <= 80: #chances of sucessful player attack
                     if player_crit <= 90: #chance of normal player attack
@@ -69,7 +69,7 @@ class player():
                                         typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                         time.sleep(text_duration)
                                         os.system('cls')
-                                        x.hp == 0 
+                                        x.hp = 0 
                                     elif x.hp > 0:
                                         typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                         time.sleep(text_duration)
@@ -80,7 +80,7 @@ class player():
                                         typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
                                         time.sleep(text_duration)
                                         os.system('cls')
-                                        x.hp == 0 
+                                        x.hp = 0 
                                     elif x.hp > 0:
                                         typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                         time.sleep(text_duration)
@@ -98,7 +98,7 @@ class player():
                             typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
                             time.sleep(text_duration)
                             os.system('cls')
-                            y.hp == 0 
+                            y.hp = 0 
                         elif y.hp > 0:
                             typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                             time.sleep(text_duration)
@@ -110,7 +110,7 @@ class player():
                                     typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                     time.sleep(text_duration)
                                     os.system('cls')
-                                    x.hp == 0 
+                                    x.hp = 0 
                                 elif x.hp > 0:
                                     typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                     time.sleep(text_duration)
@@ -121,7 +121,7 @@ class player():
                                     typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You are now dead!")
                                     time.sleep(text_duration)
                                     os.system('cls')
-                                    x.hp == 0 
+                                    x.hp = 0 
                                 elif x.hp > 0:
                                     typingPrint("The " + y.name + " successfully attacked you. It was a critical hit! You have " + str(x.hp) + " hp now!")
                                     time.sleep(text_duration)
@@ -143,7 +143,7 @@ class player():
                                 typingPrint("The " + y.name + " successfully attacked you. You are now dead!")
                                 time.sleep(text_duration)
                                 os.system('cls')
-                                x.hp == 0 
+                                x.hp = 0 
                             elif x.hp > 0:
                                 typingPrint("The " + y.name + " successfully attacked you. You have " + str(x.hp) + " hp now!")
                                 time.sleep(text_duration)
@@ -154,7 +154,7 @@ class player():
                                 typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " is dead!")
                                 time.sleep(text_duration)
                                 os.system('cls')
-                                y.hp == 0 
+                                y.hp = 0 
                             elif y.hp > 0:
                                 typingPrint("You successfully attacked the " + y.name + ". It was a critical hit! The " + y.name + " has " + str(y.hp) + "hp now!")
                                 time.sleep(text_duration)
