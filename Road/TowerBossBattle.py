@@ -1,8 +1,6 @@
 import os
 import time
 import sys
-from classes import format_line
-from classes import boxed_msg
 from classes import typingInput
 from classes import typingPrint
 from player import player
