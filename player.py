@@ -177,8 +177,8 @@ class player():
                     print()"""
                     #daniel has to figure out inventory system
                 
-            if choose == 3:
-                player_in.display_stats(x)
+            """ if choose == 3:
+                player_in.display_stats(x) """
             if choose == 3:
                 if run <= 50:
                     if "Elf" in y.name:
